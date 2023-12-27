@@ -27,6 +27,10 @@ export default {
                     pContent: "Loa",
                     pText: "Loa là một thiết bị điện tử được sử dụng để phát ra âm thanh. Nó bao gồm các thành phần khác như màng lọc tần số, bộ khuếch đại, điều khiển âm lượng, ... Loa có thể kết nối được với các thiết bị phát âm thanh thông qua dây cáp hoặc kết nối không dây..",
                 },
+                {
+                    pContent: "Hello",
+                    pText: "Loa là một thiết bị điện tử được sử dụng để phát ra âm thanh. Nó bao gồm các thành phần khác như màng lọc tần số, bộ khuếch đại, điều khiển âm lượng, ... Loa có thể kết nối được với các thiết bị phát âm thanh thông qua dây cáp hoặc kết nối không dây..",
+                },
             ],
             itemsName: [
                 { 
