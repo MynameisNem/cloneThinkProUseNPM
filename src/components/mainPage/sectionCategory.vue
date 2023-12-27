@@ -1,0 +1,210 @@
+<template>
+    <section class="section-category mt-12">
+        <h2 class="font-semibold text-[28px] leading-[40px]">Danh mục</h2>
+        <div class="mt-5 relative">
+            <div class="py-6 rounded overflow-hidden bg-[#FFFFFF]">
+                <!-- body danh mục -->
+                <div class="px-9 ml-auto mr-auto relative z-10">
+                    <!-- list danh mục main body -->
+                    <div ref="cateProductContainer"
+                        class="overflow-x-hidden overscroll-auto box-content flex h-full w-full z-10 relative duration-300 transition-transform"
+                        style="transform: translate3d(0px, 0px, 0px);">
+                        <div v-for="(cateItem, index) in cateItems" :key="index"
+                            class="w-32 mr-6 flex-shrink-0 h-full relative">
+                            <a href="#"
+                                class="flex flex-col justify-center px-3 pb-1 rounded-xl transition-all">
+                                <div>
+                                    <img :src="cateItem.cateImgSrc" :alt="cateItem.cateImgAlt">
+                                </div>
+                                <span class="block mt-2 text-center font-semibold">
+                                    {{ cateItem.cateItemName }}
+                                </span>
+                                <span class="block mt-1 text-center text-sm">
+                                    {{ cateItem.cateItemQuantity }}
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- button prev danh mục main body -->
+                    <buttonPREV :scrollFunction="scrollPrevCate" :extraClassesPrev="'buttonPREVClassCate'"></buttonPREV>
+                    <buttonNEXT :scrollFunction="scrollNextCate" :extraClassesNext="'buttonNEXTClassCate'"></buttonNEXT>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<script>
+import buttonPREV from '@/components/sharedVue/button/buttonPREV.vue';
+import buttonNEXT from '@/components/sharedVue/button/buttonNEXT.vue';
+export default {
+    components: {
+        buttonNEXT,
+        buttonPREV,
+    },
+    data() {
+        return {
+            scrollPositionCate: 0,
+            cateItems: [
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461.png",
+                    cateImgAlt: "Laptop",
+                    cateItemName: "Laptop",
+                    cateItemQuantity: "135 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-3.png",
+                    cateImgAlt: "Bàn phím",
+                    cateItemName: "Bàn phím",
+                    cateItemQuantity: "59 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-2.png",
+                    cateImgAlt: "Chuột",
+                    cateItemName: "Chuột",
+                    cateItemQuantity: "16 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2022/1/14/balo-tui.png",
+                    cateImgAlt: "Balo, túi",
+                    cateItemName: "Balo, túi",
+                    cateItemQuantity: "31 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-8.png",
+                    cateImgAlt: "Cổng chuyển đổi",
+                    cateItemName: "Cổng chuyển đổi",
+                    cateItemQuantity: "7 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-13.png",
+                    cateImgAlt: "Giá đỡ Laptop/Tablet",
+                    cateItemName: "Giá đỡ Laptop/Tablet",
+                    cateItemQuantity: "4 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-14.png",
+                    cateImgAlt: "Phần mềm",
+                    cateItemName: "Phần mềm",
+                    cateItemQuantity: "3 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-7.png",
+                    cateImgAlt: "Màn hình",
+                    cateItemName: "Màn hình",
+                    cateItemQuantity: "2 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-2 copy.png",
+                    cateImgAlt: "Máy chơi game",
+                    cateItemName: "Máy chơi game",
+                    cateItemQuantity: "35 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-1 copy.png",
+                    cateImgAlt: "Ghế công thái học",
+                    cateItemName: "Ghế công thái học",
+                    cateItemQuantity: "31 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2023/3/18/logo-ban-nang-ha-thinkpro-01.png",
+                    cateImgAlt: "Bàn nâng hạ",
+                    cateItemName: "Bàn nâng hạ",
+                    cateItemQuantity: "17 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-12.png",
+                    cateImgAlt: "Ram",
+                    cateItemName: "Ram",
+                    cateItemQuantity: "9 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-11.png",
+                    cateImgAlt: "Ổ cứng",
+                    cateItemName: "Ổ cứng",
+                    cateItemQuantity: "16 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-5.png",
+                    cateImgAlt: "Âm thanh",
+                    cateItemName: "Âm thanh",
+                    cateItemQuantity: "29 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2022/3/15/arm-man-hinh-gia-tot-thinkpro.png",
+                    cateImgAlt: "Arm màn hình",
+                    cateItemName: "Arm màn hình",
+                    cateItemQuantity: "9 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2022/12/14/AQUA_05.png",
+                    cateImgAlt: "Nội thất",
+                    cateItemName: "Nội thất",
+                    cateItemQuantity: "2 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2023/7/18/ban-ghe-tre-em-thinkpro-1-thinkpro.png",
+                    cateImgAlt: "Bàn ghế trẻ em",
+                    cateItemName: "Bàn ghế trẻ em",
+                    cateItemQuantity: "1 sản phẩm"
+                },
+                {
+                    cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2023/10/21/gfbeher-thinkpro.png",
+                    cateImgAlt: "Máy chiếu",
+                    cateItemName: "Máy chiếu",
+                    cateItemQuantity: "4 sản phẩm"
+                }
+            ],
+        }
+        
+    },
+    methods: {
+        scrollPrevCate() {
+            const container = this.$refs.cateProductContainer;
+            this.scrollPositionCate -= 150;
+            if (this.scrollPositionCate < 0) {
+                this.scrollPositionCate = 0;
+            }
+            container.scrollTo({
+                left: this.scrollPositionCate,
+                behavior: 'smooth',
+            });
+        },
+        scrollNextCate() {
+            const container = this.$refs.cateProductContainer;
+            this.scrollPositionCate += 150;
+            const maxScrollPosition = container.scrollWidth - container.clientWidth;
+            if (this.scrollPositionCate > maxScrollPosition) {
+                this.scrollPositionCate = maxScrollPosition;
+            }
+            container.scrollTo({
+                left: this.scrollPositionCate,
+                behavior: 'smooth',
+            });
+        },
+    }
+}
+</script>
+
+<style scoped>
+.buttonPREVClassCate {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 40%;
+    border-radius: 9999px; /* hoặc giá trị lớn để tạo hình tròn */
+    padding: 0.5rem;
+    background-color: #E6E8EA;
+    color: #6B7075;
+}
+.buttonNEXTClassCate {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 40%;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    color: #ffffff;
+    background-color: #0065ee;
+}
+</style>

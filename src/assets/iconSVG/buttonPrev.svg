@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="1rem" height="1rem"
+    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+        <path id="iconPrev" fill="currentColor" fill-rule="evenodd" 
+        d="M16.278 4.24a1.5 1.5 0 010 2.12l-5.657 5.657 5.657 5.657a1.5 1.5 0 11-2.121 2.122l-6.718-6.718a1.5 1.5 0 010-2.121l6.718-6.718a1.5 1.5 0 012.121 0Z"
+            clip-rule="evenodd" />    
+</svg>

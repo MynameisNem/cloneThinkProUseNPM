@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+    <path id="openMenuNav" fill="currentColor"
+        d="M2 19.5A1.5 1.5 0 013.5 18h6a1.5 1.5 0 010 3h-6A1.5 1.5 0 012 19.5ZM2 12a1.5 1.5 0 011.5-1.5h11a1.5 1.5 0 010 3h-11A1.5 1.5 0 012 12Zm0-7.5A1.5 1.5 0 013.5 3h17a1.5 1.5 0 010 3h-17A1.5 1.5 0 012 4.5Z"
+        opacity=".99" />
+</svg>
