@@ -11,7 +11,10 @@ import ArmManHinh from '@/components/production/Arm-manhinh/arm-manhinh-mainpage
 import ChuotMaytinh from '@/components/production/Chuot-maytinh/chuot-maytinh-mainpage.vue';
 import ManHinh from '@/components/production/Man-hinh/man-hinh-mainpage.vue';
 import CongChuyen from '@/components/production/Cong-chuyen/cong-chuyen-mainpage.vue'
-import PhanMem from '@/components/production/Phan-mem/phan-mem-mainpage.vue'
+import PhanMem from '@/components/production/Phan-mem/phan-mem-mainpage.vue';
+import NoiThat from '@/components/production/Noi-that/noi-that-mainpage.vue';
+import PhuKienSetup from '@/components/production/Phukien-Setup/phukien-setup-mainpage.vue';
+import GiaDoLaptop from '@/components/production/Gia-do-laptop/gia-do-laptop-mainpage.vue';
 
 
 
@@ -89,6 +92,24 @@ const routes = [
         name: 'Phan-mem',
         component: PhanMem,
         key: 12
+    },
+    {
+        path: '/Noi-that',
+        name: 'Noi-that',
+        component: NoiThat,
+        key: 13
+    },
+    {
+        path: '/Phu-kien-&-Setup',
+        name: 'Phu-kien-&-Setup',
+        component: PhuKienSetup,
+        key: 14
+    },
+    {
+        path: '/Gia-do-laptop',
+        name: 'Gia-do-laptop',
+        component: GiaDoLaptop,
+        key: 15
     },
 ]
 

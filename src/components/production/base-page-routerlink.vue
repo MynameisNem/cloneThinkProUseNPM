@@ -4,6 +4,7 @@
         <div class="container mr-auto ml-auto">
             <section class="category-overview">
                 <div class="p-6 bg-white">
+                    <!--  -->
                     <div v-for="text in interview" :key="text.pContent">
                         <h1 class="text-2xl font-semibold leading-[34px]">{{ text.pContent }}</h1>
                         <p class="mt-2 text-sm leading-[150%] max-w-[600px]">
@@ -87,7 +88,8 @@ export default {
         interview: Array,
         itemsName: Array,
         sortButton: Array,
-        itemsBranch: Array
+        itemsBranch: Array,
+        // selectedInterview: Object,
     },
     data() {
         return {
@@ -98,6 +100,8 @@ export default {
     methods: {
         selectItem(item) {
             this.selectedItem = item;
+            // console.log('Selected Item: ', item)
+            // this.$emit('update:selectedBranch', item.to);
         },
     },
     mounted() {

@@ -11,7 +11,7 @@
                         style="transform: translate3d(0px, 0px, 0px);">
                         <div v-for="(cateItem, index) in cateItems" :key="index"
                             class="w-32 mr-6 flex-shrink-0 h-full relative">
-                            <a href="#"
+                            <router-link :to="cateItem.to"
                                 class="flex flex-col justify-center px-3 pb-1 rounded-xl transition-all">
                                 <div>
                                     <img :src="cateItem.cateImgSrc" :alt="cateItem.cateImgAlt">
@@ -22,7 +22,7 @@
                                 <span class="block mt-1 text-center text-sm">
                                     {{ cateItem.cateItemQuantity }}
                                 </span>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                     <!-- button prev danh mục main body -->
@@ -50,109 +50,143 @@ export default {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461.png",
                     cateImgAlt: "Laptop",
                     cateItemName: "Laptop",
-                    cateItemQuantity: "135 sản phẩm"
+                    cateItemQuantity: "135 sản phẩm",
+                    to: "/Laptop"
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-3.png",
                     cateImgAlt: "Bàn phím",
                     cateItemName: "Bàn phím",
-                    cateItemQuantity: "59 sản phẩm"
+                    cateItemQuantity: "59 sản phẩm",
+                    to: "/Ban-phim"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-2.png",
                     cateImgAlt: "Chuột",
                     cateItemName: "Chuột",
-                    cateItemQuantity: "16 sản phẩm"
+                    cateItemQuantity: "16 sản phẩm",
+                    to: "/Chuot-may-tinh"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2022/1/14/balo-tui.png",
                     cateImgAlt: "Balo, túi",
                     cateItemName: "Balo, túi",
-                    cateItemQuantity: "31 sản phẩm"
+                    cateItemQuantity: "31 sản phẩm",
+                    to: "/Laptop"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-8.png",
                     cateImgAlt: "Cổng chuyển đổi",
                     cateItemName: "Cổng chuyển đổi",
-                    cateItemQuantity: "7 sản phẩm"
+                    cateItemQuantity: "7 sản phẩm",
+                    to: "/Cong-chuyen-doi"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-13.png",
                     cateImgAlt: "Giá đỡ Laptop/Tablet",
                     cateItemName: "Giá đỡ Laptop/Tablet",
-                    cateItemQuantity: "4 sản phẩm"
+                    cateItemQuantity: "9 sản phẩm",
+                    to: "/Gia-do-laptop"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-14.png",
                     cateImgAlt: "Phần mềm",
                     cateItemName: "Phần mềm",
-                    cateItemQuantity: "3 sản phẩm"
+                    cateItemQuantity: "3 sản phẩm",
+                    to: "/Phan-mem"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-7.png",
                     cateImgAlt: "Màn hình",
                     cateItemName: "Màn hình",
-                    cateItemQuantity: "2 sản phẩm"
+                    cateItemQuantity: "2 sản phẩm",
+                    to: "/Man-hinh"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-2 copy.png",
                     cateImgAlt: "Máy chơi game",
                     cateItemName: "Máy chơi game",
-                    cateItemQuantity: "35 sản phẩm"
+                    cateItemQuantity: "35 sản phẩm",
+                    to: "/Laptop"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-1 copy.png",
                     cateImgAlt: "Ghế công thái học",
                     cateItemName: "Ghế công thái học",
-                    cateItemQuantity: "31 sản phẩm"
+                    cateItemQuantity: "31 sản phẩm",
+                    to: "/Ghe-cong-thai-hoc"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2023/3/18/logo-ban-nang-ha-thinkpro-01.png",
                     cateImgAlt: "Bàn nâng hạ",
                     cateItemName: "Bàn nâng hạ",
-                    cateItemQuantity: "17 sản phẩm"
+                    cateItemQuantity: "17 sản phẩm",
+                    to: "/Laptop"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-12.png",
                     cateImgAlt: "Ram",
                     cateItemName: "Ram",
-                    cateItemQuantity: "9 sản phẩm"
+                    cateItemQuantity: "9 sản phẩm",
+                    to: "/Laptop"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-11.png",
                     cateImgAlt: "Ổ cứng",
                     cateItemName: "Ổ cứng",
-                    cateItemQuantity: "16 sản phẩm"
+                    cateItemQuantity: "16 sản phẩm",
+                    to: "/Laptop"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-5.png",
                     cateImgAlt: "Âm thanh",
                     cateItemName: "Âm thanh",
-                    cateItemQuantity: "29 sản phẩm"
+                    cateItemQuantity: "29 sản phẩm",
+                    to: "/Am-thanh"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2022/3/15/arm-man-hinh-gia-tot-thinkpro.png",
                     cateImgAlt: "Arm màn hình",
                     cateItemName: "Arm màn hình",
-                    cateItemQuantity: "9 sản phẩm"
+                    cateItemQuantity: "9 sản phẩm",
+                    to: "/Arm-Man-hinh"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2022/12/14/AQUA_05.png",
                     cateImgAlt: "Nội thất",
                     cateItemName: "Nội thất",
-                    cateItemQuantity: "2 sản phẩm"
+                    cateItemQuantity: "2 sản phẩm",
+                    to: "/Noi-that"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2023/7/18/ban-ghe-tre-em-thinkpro-1-thinkpro.png",
                     cateImgAlt: "Bàn ghế trẻ em",
                     cateItemName: "Bàn ghế trẻ em",
-                    cateItemQuantity: "1 sản phẩm"
+                    cateItemQuantity: "1 sản phẩm",
+                    to: "/Laptop"
+
                 },
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2023/10/21/gfbeher-thinkpro.png",
                     cateImgAlt: "Máy chiếu",
                     cateItemName: "Máy chiếu",
-                    cateItemQuantity: "4 sản phẩm"
+                    cateItemQuantity: "4 sản phẩm",
+                    to: "/Laptop"
                 }
             ],
         }

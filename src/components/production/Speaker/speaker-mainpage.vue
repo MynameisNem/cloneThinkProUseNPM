@@ -14,6 +14,7 @@ export default {
     },
     data() {
         return {
+            selectedBranch: null,
             interview: [
                 {
                     pContent: "Âm thanh",
@@ -47,7 +48,18 @@ export default {
             ],
         }
     },
-    
+    // computed: {
+    //     selectedInterview() {
+    //         return this.interview.find(item => item.pContent === this.selectedBranch) || {};
+    //     },
+    // },
+    // watch: {
+    //     '$route.params.id': function(newVal) {
+    //         console.log('Selected Branch:', newVal);
+    //         this.selectedBranch = newVal;
+    //     },
+    // },
+
 }
 </script>
 

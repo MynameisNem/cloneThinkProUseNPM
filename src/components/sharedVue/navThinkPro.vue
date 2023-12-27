@@ -128,12 +128,12 @@ export default {
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2022/12/14/AQUA_05.png",
                     fastItem: "Nội thất",
-                    to: "/Laptop"
+                    to: "/Noi-that"
                 },
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2023/3/30/phu-kien-va-setup-thinkpro.png",
                     fastItem: "Phụ kiện & Setup",
-                    to: "/Laptop"
+                    to: "/Phu-kien-&-Setup"
                 },
             ]
         }
