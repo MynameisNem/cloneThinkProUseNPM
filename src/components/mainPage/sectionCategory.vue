@@ -27,13 +27,13 @@
                     </div>
                     <!-- button prev danh mục main body -->
                     <buttonPREV 
-                        :scrollFunction="scrollPrevCate" 
+                        :scrollFunction="scrollPrev" 
                         :extraClassesPrev="'buttonPREVClassCate'"
                         :scroll-position-prev="scrollPositionCate"
                         :button-styles-prev="buttonStylesCatePrev">
                     </buttonPREV>
                     <buttonNEXT 
-                        :scrollFunction="scrollNextCate" 
+                        :scrollFunction="scrollNext" 
                         :extraClassesNext="'buttonNEXTClassCate'"
                         :scroll-position-next="scrollPositionCate"
                         :button-styles-next="buttonStylesCateNext">
@@ -56,7 +56,7 @@ export default {
         return {
             // shouldChangeColorCateNext: false,
             scrollPositionCate: 0,
-            maxScrollPosition: undefined,
+            maxScrollPosition: null,
             cateItems: [
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461.png",
@@ -205,10 +205,10 @@ export default {
         
     },
     mounted() {
-        this.shouldChangeColorCateNextFn()
+        this.shouldChangeColorCateNext()
     },
     methods: {
-        scrollPrevCate() {
+        scrollPrev() {
             const container = this.$refs.cateProductContainer;
             this.scrollPositionCate -= 150;
             if (this.scrollPositionCate < 0) {
@@ -218,50 +218,33 @@ export default {
                 left: this.scrollPositionCate,
                 behavior: 'smooth',
             });
-
-            
-            // this.shouldChangeColorCateNextFn();
         },
-        scrollNextCate() {
+        scrollNext() {
             const container = this.$refs.cateProductContainer;
             this.scrollPositionCate += 150;
-            const maxScrollPosition = container.scrollWidth - container.clientWidth;
-            if (this.scrollPositionCate > maxScrollPosition) {
-                this.scrollPositionCate = maxScrollPosition;
+            this.maxScrollPosition = container.scrollWidth - container.clientWidth;
+            if (this.scrollPositionCate > this.maxScrollPosition) {
+                this.scrollPositionCate = this.maxScrollPosition;
             }
             container.scrollTo({
                 left: this.scrollPositionCate,
                 behavior: 'smooth',
             });
-
-            // this.shouldChangeColorCateNextFn();
         },
-        shouldChangeColorCateNextFn() {
+        shouldChangeColorCateNext() {
             // Điều kiện để xác định có nên thay đổi màu sắc hay không
             const container = this.$refs.cateProductContainer;
-
-            console.log(this.$refs, container)
-
-            if(!container) return;
-
-            console.log(container, 'container')
-            
+            if(!container) return;            
             this.maxScrollPosition = container.scrollWidth - container.clientWidth;
-            // console.log(maxScrollPosition, this.scrollPositionCate < maxScrollPosition)
-            // this.shouldChangeColorCateNext = this.scrollPositionCate < maxScrollPosition;
         },
     },
     computed: {
         buttonStylesCatePrev() {
+            const shouldChangeColorCatePrev = this.scrollPositionCate > 0
             return {
-                backgroundColor: this.shouldChangeColorCatePrev ? '#0065ee' : '#E6E8EA',
-                color: this.shouldChangeColorCatePrev ? '#FFFFFF' : '#6B7075',
-                // ... other styles ...
+                backgroundColor: shouldChangeColorCatePrev ? '#0065ee' : '#E6E8EA',
+                color: shouldChangeColorCatePrev ? '#FFFFFF' : '#6B7075',
             };
-        },
-        shouldChangeColorCatePrev() {
-            // Điều kiện để xác định có nên thay đổi màu sắc hay không
-            return this.scrollPositionCate > 0;
         },
         buttonStylesCateNext() {
             const shouldChangeColorCateNext = this.scrollPositionCate < this.maxScrollPosition;
@@ -269,19 +252,7 @@ export default {
                 backgroundColor: shouldChangeColorCateNext ? '#0065ee' : '#E6E8EA', 
                 color: shouldChangeColorCateNext ? '#FFFFFF' : '#6B7075',                
             };
-        },
-        // shouldChangeColorCateNext() {
-        //     // Điều kiện để xác định có nên thay đổi màu sắc hay không
-        //     const container = this.$refs.cateProductContainer;
-
-        //     console.log(this.$refs, container)
-
-        //     if(!container) return;
-            
-        //     const maxScrollPosition = container.scrollWidth - container.clientWidth;
-        //     console.log(maxScrollPosition)
-        //     return this.scrollPositionCate < maxScrollPosition;
-        // },
+        },        
     },
 }
 </script>

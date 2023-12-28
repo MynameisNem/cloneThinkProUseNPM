@@ -257,8 +257,18 @@
                                 </a>
                             </div>
                         </div>
-                        <ButtonPREV :scrollFunction="scrollPrevPromo" :extraClassesPrev="'buttonPREVClassPromo'"></ButtonPREV>
-                        <ButtonNEXT :scrollFunction="scrollNextPromo" :extraClassesNext="'buttonNEXTClassPromo'"></ButtonNEXT>
+                        <ButtonPREV 
+                            :scrollFunction="scrollPrevPromo" 
+                            :extraClassesPrev="'buttonPREVClassPromo'"
+                            :scroll-position-prev="scrollPositionPromo"
+                            :button-styles-prev="buttonStylesPrev">
+                        </ButtonPREV>
+                        <ButtonNEXT 
+                            :scrollFunction="scrollNextPromo" 
+                            :extraClassesNext="'buttonNEXTClassPromo'"
+                            :scroll-position-next="scrollPositionPromo"
+                            :button-styles-next="buttonStylesNext">
+                        </ButtonNEXT>
                     </div>
                 </div>
             </section>
@@ -681,10 +691,15 @@ export default {
                     promoInven: "+11"
                 },
             ],
-            scrollPositionPromo: 0
+            scrollPositionPromo: 0,
+            maxScrollPosition: null,
+            // indexItemPromo: 0,
+            // indexSrc: 0
         };
     },
-    
+    mounted() {
+        this.shouldChangeColorNext()
+    },
     methods: {
         scrollPrevPromo() {
             const container = this.$refs.specialPromotionContainer;
@@ -709,6 +724,33 @@ export default {
                 behavior: 'smooth',
             });
         },
+        shouldChangeColorNext() {
+            const container = this.$refs.specialPromotionContainer;
+            if(!container) return;
+            this.maxScrollPosition = container.scrollWidth - container.clientWidth
+        }
+    },
+    computed: {
+        buttonStylesPrev() {
+            const changeColorPrev = this.scrollPositionPromo > 0
+            return {
+                backgroundColor: changeColorPrev ? '#0065EE' : '#E6E8EA',
+                color: changeColorPrev ? '#FFFFFF' : '#6B7075'
+            };
+        },
+        buttonStylesNext() {
+            const changeColorNext = this.scrollPositionPromo < this.maxScrollPosition
+            return {
+                backgroundColor: changeColorNext ? '#0065EE' : '#E6E8EA',
+                color: changeColorNext ? '#FFFFFF' : '#6B7075'
+            };
+        },
+        // renderListItemPromo() {
+        //     const startItem = this.indexItemPromo * 5;
+        //     const endItem = startItem + 4;
+        //     const srcIndex = this.indexSrc;
+        //     return srcIndex >= startItem && srcIndex <= endItem
+        // }
     }
 }
 </script>
@@ -721,8 +763,6 @@ export default {
     top: 40%;
     border-radius: 9999px; /* hoặc giá trị lớn để tạo hình tròn */
     padding: 0.5rem;
-    background-color: #E6E8EA;
-    color: #6B7075;
 }
 .buttonNEXTClassPromo {
     position: absolute;
@@ -731,7 +771,5 @@ export default {
     top: 40%;
     border-radius: 9999px;
     padding: 0.5rem;
-    color: #ffffff;
-    background-color: #0065ee;
 }
 </style>

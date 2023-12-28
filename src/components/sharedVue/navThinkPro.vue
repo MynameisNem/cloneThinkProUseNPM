@@ -34,8 +34,18 @@
                         </div>
                     </div>
                     <div class="ml-3 space-x-4 flex py-[6px]">
-                        <buttonPREV :scrollFunction="scrollPrev" :extraClassesPrev="'buttonPREVClassNav'"></buttonPREV>
-                        <buttonNEXT :scrollFunction="scrollNext" :extraClassesNext="'buttonNEXTClassNav'"></buttonNEXT>
+                        <buttonPREV 
+                            :scrollFunction="scrollPrev" 
+                            :extraClassesPrev="'buttonPREVClassNav'"
+                            :button-styles-prev="buttonStylesPrev"
+                            :scroll-position-prev="scrollPosition">
+                        </buttonPREV>
+                        <buttonNEXT 
+                            :scrollFunction="scrollNext" 
+                            :extraClassesNext="'buttonNEXTClassNav'"
+                            :button-styles-next="buttonStylesNext"
+                            :scroll-position-next="scrollPosition">
+                        </buttonNEXT>
                     </div>
                 </div>
             </div>
@@ -59,6 +69,7 @@ export default {
             tabSelected: false,
             iconOpenMenu: false,
             isNavSticky: false,
+            maxScrollPosition: null,
             listFastMenu: [
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461.png",
@@ -138,6 +149,9 @@ export default {
             ]
         }
     },
+    mounted() {
+        this.shouldChangeColorNext()
+    },
     methods: {
         changeMenu() {
             this.tabSelected = !this.tabSelected;
@@ -146,7 +160,7 @@ export default {
                 document.body.style.overflow = 'hidden'
             }
             else {
-                document.body.style.overflow = ''
+                document.body.style.overflow = 'auto'
             }
         },
         scrollPrev() {
@@ -163,9 +177,9 @@ export default {
         scrollNext() {
             const container = this.$refs.productListContainer;
             this.scrollPosition += 450;
-            const maxScrollPosition = container.scrollWidth - container.clientWidth;
-            if (this.scrollPosition > maxScrollPosition) {
-                this.scrollPosition = maxScrollPosition;
+            this.maxScrollPosition = container.scrollWidth - container.clientWidth;
+            if (this.scrollPosition > this.maxScrollPosition) {
+                this.scrollPosition = this.maxScrollPosition;
             }
             container.scrollTo({
                 left: this.scrollPosition,
@@ -175,7 +189,27 @@ export default {
         handleNavSticky(isSticky) {
             this.isNavSticky = isSticky;
         },
+        shouldChangeColorNext() {
+            const container = this.$refs.productListContainer;
+            if(!container) return;
+            this.maxScrollPosition = container.scrollWidth - container.clientWidth
+        }
     },
+    computed: {
+        buttonStylesPrev() {
+            const changeColorPrev = this.scrollPosition > 0
+            return {
+                opacity: changeColorPrev ? '1' : '0.4'
+            }
+        },
+        buttonStylesNext() {
+            const changeColorNext = this.scrollPosition < this.maxScrollPosition
+            return {
+                opacity: changeColorNext ? '1' : '0.4'
+            }
+        }
+    }
+
 }
 </script>
 
