@@ -1,5 +1,5 @@
 <template>
-        <button title="PREV" @click="handleScrollPrev" :class="extraClassesPrev">
+    <button title="PREV" @click="handleScrollPrev" :class="extraClassesPrev" :style="buttonStylesPrev">
         <i class="h-4 w-4">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet"
@@ -7,7 +7,7 @@
                 <use href="@/assets/iconSVG/buttonPrev.svg#iconPrev"></use>
             </svg>
         </i>
-        </button>   
+    </button>
 </template>
 
 <script>
@@ -17,7 +17,15 @@ export default {
         extraClassesPrev: {
             type: String,
             default: "" // Giá trị mặc định là chuỗi rỗng
-        }
+        },
+        scrollPositionPrev: {
+            type: Number, // hoặc kiểu dữ liệu phù hợp với scrollPositionCate
+            // required: true,
+        },
+        buttonStylesPrev: {
+            type: Object, // hoặc kiểu dữ liệu phù hợp với buttonStyles
+            // required: true,
+        },
     },
     methods: {
         handleScrollPrev() {

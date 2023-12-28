@@ -26,8 +26,18 @@
                         </div>
                     </div>
                     <!-- button prev danh mục main body -->
-                    <buttonPREV :scrollFunction="scrollPrevCate" :extraClassesPrev="'buttonPREVClassCate'"></buttonPREV>
-                    <buttonNEXT :scrollFunction="scrollNextCate" :extraClassesNext="'buttonNEXTClassCate'"></buttonNEXT>
+                    <buttonPREV 
+                        :scrollFunction="scrollPrevCate" 
+                        :extraClassesPrev="'buttonPREVClassCate'"
+                        :scroll-position-prev="scrollPositionCate"
+                        :button-styles-prev="buttonStylesCatePrev">
+                    </buttonPREV>
+                    <buttonNEXT 
+                        :scrollFunction="scrollNextCate" 
+                        :extraClassesNext="'buttonNEXTClassCate'"
+                        :scroll-position-next="scrollPositionCate"
+                        :button-styles-next="buttonStylesCateNext">
+                    </buttonNEXT>
                 </div>
             </div>
         </div>
@@ -44,7 +54,9 @@ export default {
     },
     data() {
         return {
+            // shouldChangeColorCateNext: false,
             scrollPositionCate: 0,
+            maxScrollPosition: undefined,
             cateItems: [
                 {
                     cateImgSrc: "https://images.thinkgroup.vn/unsafe/300x300/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461.png",
@@ -192,6 +204,9 @@ export default {
         }
         
     },
+    mounted() {
+        this.shouldChangeColorCateNextFn()
+    },
     methods: {
         scrollPrevCate() {
             const container = this.$refs.cateProductContainer;
@@ -203,6 +218,9 @@ export default {
                 left: this.scrollPositionCate,
                 behavior: 'smooth',
             });
+
+            
+            // this.shouldChangeColorCateNextFn();
         },
         scrollNextCate() {
             const container = this.$refs.cateProductContainer;
@@ -215,8 +233,56 @@ export default {
                 left: this.scrollPositionCate,
                 behavior: 'smooth',
             });
+
+            // this.shouldChangeColorCateNextFn();
         },
-    }
+        shouldChangeColorCateNextFn() {
+            // Điều kiện để xác định có nên thay đổi màu sắc hay không
+            const container = this.$refs.cateProductContainer;
+
+            console.log(this.$refs, container)
+
+            if(!container) return;
+
+            console.log(container, 'container')
+            
+            this.maxScrollPosition = container.scrollWidth - container.clientWidth;
+            // console.log(maxScrollPosition, this.scrollPositionCate < maxScrollPosition)
+            // this.shouldChangeColorCateNext = this.scrollPositionCate < maxScrollPosition;
+        },
+    },
+    computed: {
+        buttonStylesCatePrev() {
+            return {
+                backgroundColor: this.shouldChangeColorCatePrev ? '#0065ee' : '#E6E8EA',
+                color: this.shouldChangeColorCatePrev ? '#FFFFFF' : '#6B7075',
+                // ... other styles ...
+            };
+        },
+        shouldChangeColorCatePrev() {
+            // Điều kiện để xác định có nên thay đổi màu sắc hay không
+            return this.scrollPositionCate > 0;
+        },
+        buttonStylesCateNext() {
+            const shouldChangeColorCateNext = this.scrollPositionCate < this.maxScrollPosition;
+            return {
+                backgroundColor: shouldChangeColorCateNext ? '#0065ee' : '#E6E8EA', 
+                color: shouldChangeColorCateNext ? '#FFFFFF' : '#6B7075',                
+            };
+        },
+        // shouldChangeColorCateNext() {
+        //     // Điều kiện để xác định có nên thay đổi màu sắc hay không
+        //     const container = this.$refs.cateProductContainer;
+
+        //     console.log(this.$refs, container)
+
+        //     if(!container) return;
+            
+        //     const maxScrollPosition = container.scrollWidth - container.clientWidth;
+        //     console.log(maxScrollPosition)
+        //     return this.scrollPositionCate < maxScrollPosition;
+        // },
+    },
 }
 </script>
 
@@ -226,10 +292,8 @@ export default {
     z-index: 10;
     left: 0;
     top: 40%;
-    border-radius: 9999px; /* hoặc giá trị lớn để tạo hình tròn */
+    border-radius: 9999px;
     padding: 0.5rem;
-    background-color: #E6E8EA;
-    color: #6B7075;
 }
 .buttonNEXTClassCate {
     position: absolute;
@@ -238,7 +302,5 @@ export default {
     top: 40%;
     border-radius: 9999px;
     padding: 0.5rem;
-    color: #ffffff;
-    background-color: #0065ee;
 }
 </style>
