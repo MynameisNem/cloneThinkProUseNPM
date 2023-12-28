@@ -83,8 +83,18 @@
                             </a>
                         </div>                        
                     </div>
-                    <ButtonPreOrderPrev :scroll-function="scrollPrevPreOrder" :extra-classes-prev="'buttonPreOrder-Prev'"></ButtonPreOrderPrev>
-                    <ButtonPreOrderNext :scroll-function="scrollNextPreOrder" :extra-classes-next="'buttonPreOrder-Next'"></ButtonPreOrderNext>
+                    <ButtonPreOrderPrev 
+                        :scroll-function="scrollPrevPreOrder" 
+                        :extra-classes-prev="'buttonPreOrder-Prev'"
+                        :button-styles-prev="buttonStylesPrev"
+                        :scroll-position-prev="scrollPositionPreOder">                            
+                    </ButtonPreOrderPrev>
+                    <ButtonPreOrderNext 
+                        :scroll-function="scrollNextPreOrder" 
+                        :extra-classes-next="'buttonPreOrder-Next'"
+                        :button-styles-next="buttonStylesNext"
+                        :scroll-position-next="scrollPositionPreOder">                            
+                    </ButtonPreOrderNext>
                 </div>
             </div>
         </div>
@@ -102,6 +112,7 @@ export default {
     data() {
         return {
             scrollPositionPreOder: 0,
+            maxScrollPosition: null,
             listPreOrder: [
             // Nuphy Air75 v2 Brown Sw màu 0 0 0 done
                 {
@@ -232,6 +243,9 @@ export default {
             ],
         }
     },
+    mounted() {
+        this.shouldChangeColorNext()
+    },
     methods: {
         scrollPrevPreOrder() {
             const container = this.$refs.preOrder;
@@ -256,6 +270,27 @@ export default {
                 behavior: 'smooth',
             });
         },
+        shouldChangeColorNext() {
+            const container = this.$refs.preOrder
+            if(!container) return;
+            this.maxScrollPosition = container.scrollWidth - container.clientWidth;
+        }
+    },
+    computed: {
+        buttonStylesPrev() {
+            const changeColorPrev = this.scrollPositionPreOder > 0;
+            return {
+                backgroundColor: changeColorPrev ? '#0065ee' : '#E6E8EA',
+                color: changeColorPrev ? '#FFFFFF' : '#6B7075'
+            }
+        },
+        buttonStylesNext() {
+            const changeColorNext = this.scrollPositionPreOder < this.maxScrollPosition;
+            return {
+                backgroundColor: changeColorNext ? '#0065ee' : '#E6E8EA',
+                color: changeColorNext ? '#FFFFFF' : '#6B7075'
+            }
+        }
     }
 }
 </script>

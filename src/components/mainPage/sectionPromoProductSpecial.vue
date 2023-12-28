@@ -77,8 +77,18 @@
                     </a>
                 </div>
             </div>
-            <ButtonPrevPromoProductSpecial :scrollFunction="scrollPrevPromoProductSpecial" :extraClassesPrev="'buttonPrevSpecial'"></ButtonPrevPromoProductSpecial>
-            <ButtonNextPromoProductSpecial :scrollFunction="scrollNextPromoProductSpecial" :extraClassesNext="'buttonNextSpecial'"></ButtonNextPromoProductSpecial>
+            <ButtonPrevPromoProductSpecial 
+                :scrollFunction="scrollPrevPromoProductSpecial" 
+                :extraClassesPrev="'buttonPrevSpecial'"
+                :button-styles-prev="buttonStylesPrev"
+                :scroll-position-prev="scrollPositionPromoProductSpecial">                    
+            </ButtonPrevPromoProductSpecial>
+            <ButtonNextPromoProductSpecial 
+                :scrollFunction="scrollNextPromoProductSpecial" 
+                :extraClassesNext="'buttonNextSpecial'"
+                :button-styles-next="buttonStylesNext"
+                :scroll-position-next="scrollPositionPromoProductSpecial">                    
+            </ButtonNextPromoProductSpecial>
         </div>
     </div>
 </template>
@@ -470,7 +480,11 @@ export default {
                     ssdInfor: "512GB",
                 }
             ],
+            maxScrollPosition: null
         }
+    },
+    mounted() {
+        this.shouldChangeColorNext()
     },
     methods: {
         scrollPrevPromoProductSpecial() {
@@ -496,6 +510,27 @@ export default {
                 behavior: 'smooth',
             });
         },
+        shouldChangeColorNext() {
+            const container = this.$refs.promoProductSpecialContainer;
+            if(!container) return;
+            this.maxScrollPosition = container.scrollWidth - container.clientWidth
+        }
+    },
+    computed: {
+        buttonStylesPrev() {
+            const changeColorPrev = this.scrollPositionPromoProductSpecial > 0;
+            return {
+                backgroundColor: changeColorPrev ? '#0065ee' : '#E6E8EA',
+                color: changeColorPrev ? '#FFFFFF' : '#6B7075'
+            }            
+        },
+        buttonStylesNext() {
+            const changeColorNext = this.scrollPositionPromoProductSpecial < this.maxScrollPosition;
+            return {
+                backgroundColor: changeColorNext ? '#0065ee' : '#E6E8EA',
+                color: changeColorNext ? '#FFFFFF' : '#6B7075'
+            }
+        },        
     }
 }
 </script>
