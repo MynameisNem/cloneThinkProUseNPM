@@ -94,17 +94,17 @@ export default {
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2023/3/18/logo-ban-nang-ha-thinkpro-01.png",
                     fastItem: "Bàn nâng hạ",
-                    to: "/Laptop"
+                    to: "/Ban-nang-ha"
                 },
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2023/7/18/ban-ghe-tre-em-thinkpro-1-thinkpro.png",
                     fastItem: "Bàn ghế trẻ em",
-                    to: "/Laptop"
+                    to: "/Ban-ghe-tre-em"
                 },
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2021/12/29/Rectangle 1461-2 copy.png",
                     fastItem: "Máy chơi game",
-                    to: "/Laptop"
+                    to: "/Game-console"
                 },
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2022/1/14/balo-tui.png",

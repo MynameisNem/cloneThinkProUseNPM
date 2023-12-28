@@ -3,13 +3,6 @@
         <div class="h-full p-4 rounded bg-[#F6F9FC]">
             <h2 class="text-[18px] font-semibold leading-[150%]">Thông tin hữu ích</h2>
             <div class="mt-3 flex flex-col space-y-2">
-                <!-- <a rel="noopener" target="blank"
-                    href="https://thinkpro.vn/noi-dung/chinh-sach-kiem-hang-thinkpro"
-                    class="flex items-center space-x-3">
-                    <img alt="Chính sách kiểm hàng" src="./assets/picture/scan.svg"
-                        class="w-[17px] h-[17px]">
-                    <span class="text-[14px] leading-[150%]">Chính sách kiểm hàng</span>
-                </a> -->
                 <a v-for="itemHelpful in listHelp" :key="itemHelpful.id" rel="noopener"
                     target="blank" :href="itemHelpful.linkInforHelp"
                     class="flex items-center space-x-3">

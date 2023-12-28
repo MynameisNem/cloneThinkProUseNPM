@@ -13,12 +13,12 @@
             <div class="mt-6">
                 <div class="pre-order-container">
                     <div ref="preOrder"
-                        class="box-content flex h-full relative w-full z-[1] overflow-x-hidden overscroll-auto"
+                        class="box-content flex h-full relative w-full z-[1] overflow-x-hidden overscroll-auto space-x-3"
                         style="transition-property: transform;">
                         <!-- Nuphy Air75 v2 Brown Sw màu 0 0 0 done -->
                         <div v-for="itemPreOrder in listPreOrder"
                             :key="itemPreOrder.id"
-                            class="mr-3 cursor-pointer flex-shrink-0 h-full relative w-[288px]"
+                            class="cursor-pointer flex-shrink-0 h-full relative w-[293px]"
                             style="transition-property: transform; backface-visibility: hidden;">
                             <a class="rounded-xl cursor-pointer flex flex-col overflow-hidden relative ring-0 bg-[#FFFFFF]"
                                 href="">

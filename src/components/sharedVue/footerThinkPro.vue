@@ -7,7 +7,6 @@
             <section class="mt-6">
                 <h2 class="text-[20px] font-semibold leading-[150%]">Hệ thống cửa hàng</h2>
                 <div class="shopLocation mt-4 grid grid-cols-3 gap-3">
-                    <!-- 5 - 7 Nguyễn Huy Tưởng F6 Bình Thạch -->
                     <div v-for="shop in listShop" :key="shop.id" class="bg-[#F6F9FC] rounded-lg p-4">
                         <div class="text-sm font-semibold leading-[150%]">
                             {{ shop.city }}
@@ -27,7 +26,9 @@
                                     :href="shop.ggMap">
                                     Chỉ đường
                                 </a>
-                                <i class="w-3 h-3 ti-arrow-top-right"></i>
+                                <i class="w-3 h-3">
+                                    <img src="@/assets/iconSVG/arrowTopRight.svg" alt="Chỉ đường">
+                                </i>
                             </div>
                         </div>
                     </div>

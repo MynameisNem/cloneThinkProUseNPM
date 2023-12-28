@@ -7,13 +7,13 @@
                 <div class="mt-6 relative">
                     <div class="mr-auto ml-auto relative z-10 touch-pan-y">
                         <div ref="specialPromotionContainer"
-                            class="box-content flex h-full w-full z-10 relative duration-300 transition-transform overflow-x-hidden overscroll-auto"
+                            class="box-content flex h-full w-full z-10 relative duration-300 transition-transform overflow-x-hidden overscroll-auto space-x-3"
                             style="transform: translate3d(0px, 0px, 0px);">
                             <!-- thông tin special promo -->
                             <div v-for="(itemPromo, indexItemPromo) in listPromo" :key="itemPromo.id"
-                                class="w-[500px] flex-shrink-0 relative h-full space-x-4"
+                                class="w-[488px] flex-shrink-0 relative h-full space-x-4"
                                 style="transition-property: transform; backface-visibility: hidden; transform: translateZ(0);">
-                                <a href="#" class="flex flex-col relative rounded p-4 bg-white mr-[12px]">
+                                <a href="#" class="flex flex-col relative rounded p-4 bg-white">
                                     <div class="mb-2 flex items-center space-x-2">
                                         <div
                                             class="text-[12px] bg-[#F6F9FC] text-[#1C1F23] rounded py-[2px] px-2 items-center inline-flex whitespace-nowrap leading-[150%]">

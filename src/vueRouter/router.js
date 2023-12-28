@@ -15,7 +15,9 @@ import PhanMem from '@/components/production/Phan-mem/phan-mem-mainpage.vue';
 import NoiThat from '@/components/production/Noi-that/noi-that-mainpage.vue';
 import PhuKienSetup from '@/components/production/Phukien-Setup/phukien-setup-mainpage.vue';
 import GiaDoLaptop from '@/components/production/Gia-do-laptop/gia-do-laptop-mainpage.vue';
-
+import BanNangHa from '@/components/production/Ban-nang-ha/ban-nang-ha-mainpage.vue';
+import BanGheTreEm from '@/components/production/Ban-ghe-tre-em/ban-ghe-tre-em-mainpage.vue'
+import GameConsole from '@/components/production/Game-console/game-console-mainpage.vue'
 
 
 Vue.use(VueRouter)
@@ -110,6 +112,24 @@ const routes = [
         name: 'Gia-do-laptop',
         component: GiaDoLaptop,
         key: 15
+    },
+    {
+        path: '/Ban-nang-ha',
+        name: 'Ban-nang-ha',
+        component: BanNangHa,
+        key: 16
+    },
+    {
+        path: '/Ban-ghe-tre-em',
+        name: 'Ban-ghe-tre-em',
+        component: BanGheTreEm,
+        key: 17
+    },
+    {
+        path: '/Game-console',
+        name: 'Game-console',
+        component: GameConsole,
+        key: 18
     },
 ]
 

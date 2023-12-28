@@ -2,12 +2,12 @@
     <div class="mt-6">
         <div class="promoProductSpecial">
             <div ref="promoProductSpecialContainer"
-                class="box-content flex h-full relative w-full z-[1] overflow-x-hidden overscroll-auto"
+                class="box-content flex h-full relative w-full z-[1] overflow-x-hidden overscroll-auto space-x-3"
                 style="transition-property: transform;">
                 <!-- product promo, cần xử lý, chưa xong -->
                 <div v-for="itemInforPromo in listSaleProductPromo"
                     :key="itemInforPromo.id"
-                    class="mr-3 cursor-pointer flex-shrink-0 h-full relative w-[288px]"
+                    class="cursor-pointer flex-shrink-0 h-full relative w-[288px]"
                     style="transition-property: transform;">
                     <a class="rounded-xl cursor-pointer flex flex-col overflow-hidden relative ring-0 bg-[#FFFFFF]"
                         href="#">
