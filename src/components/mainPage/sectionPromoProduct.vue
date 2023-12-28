@@ -19,8 +19,18 @@
                     </div>
                 </div>
                 <div class="space-x-4 py-[16px] flex">
-                    <ButtonPrevPromoProduct :scrollFunction="scrollPrevProductPromo" :extraClassesPrev="'buttonPrevPromoProduct'"></ButtonPrevPromoProduct>
-                    <ButtonNextPromoProduct :scrollFunction="scrollNextProductPromo" :extraClassesNext="'buttonNextPromoProduct'"></ButtonNextPromoProduct>
+                    <ButtonPrevPromoProduct 
+                        :scrollFunction="scrollPrevProductPromo" 
+                        :extraClassesPrev="'buttonPrevPromoProduct'"
+                        :button-styles-prev="buttonStylesPrev"
+                        :scroll-position-prev="scrollPositionProductPromo">
+                    </ButtonPrevPromoProduct>
+                    <ButtonNextPromoProduct 
+                        :scrollFunction="scrollNextProductPromo" 
+                        :extraClassesNext="'buttonNextPromoProduct'"
+                        :button-styles-next="buttonStylesNext"
+                        :scroll-position-next="scrollPositionProductPromo">                            
+                    </ButtonNextPromoProduct>
                 </div>
             </div>
             <!-- danh sách sản phẩm khuyến mãi nổi bật kèm thông tin chi tiết -->
@@ -43,6 +53,7 @@ export default {
         return {
             selectedItem: null,
             scrollPositionProductPromo: 0,
+            maxScrollPosition: null,
             listProductPromo: [
                 { id: 1500, nameProduct: "Laptop" }, { id: 1501, nameProduct: "Bàn phím" }, { id: 1502, nameProduct: "Chuột" }, { id: 1503, nameProduct: "Cổng chuyển" }, { id: 1504, nameProduct: "Phần mềm" },
                 { id: 1505, nameProduct: "Phần mềm" }, { id: 1506, nameProduct: "Tai nghe" }, { id: 1507, nameProduct: "Màn hình" }, { id: 1508, nameProduct: "Ghế công thái học" }, { id: 1509, nameProduct: "Arm màn hình" },
@@ -54,6 +65,7 @@ export default {
     mounted() {
         // Thiết lập màu sắc mặc định cho item đầu tiên khi component được mounted
         this.setDefaultSelectedItem();
+        this.shouldChangeColorNext();
     },
     methods: {
         selectItem(item) {
@@ -88,7 +100,26 @@ export default {
                 left: this.scrollPositionProductPromo,
                 behavior: 'smooth',
             });
-        }, 
+        },
+        shouldChangeColorNext() {
+            const container = this.$refs.specialPromotionProductContainer;
+            if(!container) return;
+            this.maxScrollPosition = container.scrollWidth - container.clientWidth
+        }
+    },
+    computed: {
+        buttonStylesPrev() {
+            const changeColorPrev = this.scrollPositionProductPromo > 0;
+            return {
+                backgroundColor: changeColorPrev ? '#FFFFFF' : '#E6E8EA',
+            }
+        },
+        buttonStylesNext() {
+            const changeColorNext = this.scrollPositionProductPromo < this.maxScrollPosition
+            return {
+                backgroundColor: changeColorNext ? '#FFFFFF' : '#E6E8EA'
+            }
+        }
     }
 }
 </script>
@@ -114,8 +145,7 @@ export default {
     justify-content: center;
     border-radius: 9999px;
     padding: 0.5rem; /* Gộp tất cả các giá trị padding thành một dòng */
-    background-color: #E6E8EA;
-    color: #6B7075;
+    
 }
 .buttonNextPromoProduct {
     opacity: 0.4;
@@ -126,7 +156,7 @@ export default {
     justify-content: center; /* Tương đương với justify-center trong Tailwind */
     border-radius: 9999px; /* Tương đương với rounded-full trong Tailwind */
     padding: 0.5rem; /* Gộp tất cả các giá trị padding thành một dòng */
-    background-color: #FFFFFF;
+    
 }
 .selected-item {
     background-color: #F6F9FC; /* Màu nền khi item được chọn */
