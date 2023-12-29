@@ -1,16 +1,16 @@
 <template>
     <main class="py-6 bg-[#F6F9FC]">
-        <BasePageButton :p-content="pContent" :p-text="pText" :items-branch="itemsBranch" :sort-button="sortButton"></BasePageButton>
+        <BasePage :p-content="pContent" :p-text="pText" :items-branch="itemsBranch" :sort-button="sortButton"></BasePage>
         <PhuKienSetupProductContainer></PhuKienSetupProductContainer>
     </main>
 </template>
 
 <script>
-import BasePageButton from '../base-page-button.vue'
+import BasePage from '../base-page.vue'
 import PhuKienSetupProductContainer from './phukien-setup-product-container.vue'
 export default {
     components: {
-        BasePageButton,
+        BasePage,
         PhuKienSetupProductContainer
     },
     data() {

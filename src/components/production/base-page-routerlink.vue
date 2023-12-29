@@ -65,7 +65,25 @@
             </div>
         </div>
         <div class="mt-3 container mr-auto ml-auto flex items-center justify-between">
-            <div></div>
+            <div class="items-center flex space-x-2">
+
+                <!-- <label role="switch" class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" class="sr-only peer" checked>
+                    <span class="bg-[#E6E8EA] rounded-full block h-6 p-[3px] w-10 button-control">
+                        <span class="bg-white shadows-md rounded-full block h-[18px] w-[18px] button-inside"></span>
+                    </span>
+                </label> -->
+                <!-- <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" class="sr-only peer" v-model="isChecked">
+                    <div class="w-11 h-6 bg-[#E6E8EA] rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-[#E6E8EA] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                </label> -->
+                
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" value="" class="sr-only peer" v-model="isChecked">
+                    <div class="w-11 h-6 bg-[#E6E8EA] rounded-full peer dark:bg-[#E6E8EA] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>                        
+                </label>  
+                <span class="text-xs leading-[150%] font-semibold">So sánh</span>                 
+            </div>
             <div class="sortButton">
                 <button class="bg-white button-filter">
                     <span class="text">Sắp xếp: Nổi bật nhất</span>
