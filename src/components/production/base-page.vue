@@ -37,15 +37,41 @@
                                 <!-- còn thiếu 1 đoạn div để sort nữa, làm sau -->
                                 <div v-for="itemButton in sortButton" :key="itemButton.nameButton" class="mr-3">
                                     <div class="items-filter">
-                                        <button class="button-filter bg-white">
-                                            <span class="text">
-                                                {{ itemButton.nameButton }}
-                                            </span>
-                                            <i class="ml-1 w-3 h-3">
-                                                <img :src="iconButtonDown" alt="Down">
-                                            </i>
-                                        </button>
-                                    </div>
+                                        <div>
+                                            <button class="button-filter bg-white" @click="clickShowBox">
+                                                <span class="text">
+                                                    {{ itemButton.nameButton }}
+                                                </span>
+                                                <i class="ml-1 w-3 h-3">
+                                                    <img :src="iconButtonDown" alt="Down">
+                                                </i>
+                                            </button>
+                                        </div>
+                                        <div class="z-[150] w-auto absolute sort-box" v-show="showSortBox">
+                                            <div class="max-h-[400px] bg-white rounded-[0.25rem] overflow-auto">
+                                                <div class="py-2 px-3">
+                                                    <div class="mb-[0.5rem]">
+                                                        <label class="inline-flex items-center cursor-pointer relative overflow-hidden">
+                                                            <input type="radio" class="sr-only">
+                                                            <div class="border-[#0065EE] border-[5px] radio-checkmark"></div>
+                                                            <span class="text-[#1C1F23] text-[14px] leading-[150%] ml-[0.5rem]">Tất cả</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="grid gap-x-4 gap-y-1 sort-content">
+                                                        <div v-for="itemBranch in itemsBranch" :key="itemBranch.nameBranch">
+                                                            <label class="items-center cursor-pointer inline-flex overflow-hidden relative">
+                                                                <input type="checkbox" class="sr-only">
+                                                                <div class="check-mark"></div>
+                                                                <span class="text-[#1C1F23] text-[14px] leading-[150%] ml-[.5rem] flex-1">
+                                                                    {{ itemBranch.nameBranch }}
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
                                 </div>
                             </div>
                         </div>
@@ -98,6 +124,7 @@ export default {
         return {
             iconButtonDown: require("@/assets/iconSVG/laptopIconSVG/semi-chervon-down.svg"),
             isChecked: false,
+            showSortBox: false
         }
     },
     props: {
@@ -109,6 +136,11 @@ export default {
     computed: {
         notNull() {
             return this.itemsBranch && this.itemsBranch.length > 0;
+        }
+    },
+    methods: {
+        clickShowBox() {
+            this.showSortBox = !this.showSortBox
         }
     }
 }
@@ -124,5 +156,32 @@ export default {
     transition-duration: .15s;
     transition-property: all;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+.sort-box {
+    inset: 0px auto auto 0px;
+    margin: 0px;
+    transform: translate(0px, 60px);
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.radio-checkmark {
+    border-radius: 9999px;
+    border-style: solid;
+    display: block;
+    height: 1rem;
+    position: relative;
+    width: 1rem;
+}
+.sort-content {
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+}
+.check-mark {
+    border-style: solid;
+    border-radius: 0.125rem;
+    border-width: 1.5px;
+    flex-shrink: 0;
+    height: 1rem;
+    position: relative;
+    width: 1rem;
 }
 </style>

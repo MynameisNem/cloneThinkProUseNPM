@@ -77,8 +77,6 @@ export default {
                 if (this.displayedProducts <= 20) {
                     this.loadMoreProducts = true;
                 }
-                // this.displayedProducts = 20;
-                // this.loadMoreProducts = true;
             }
         }
     }

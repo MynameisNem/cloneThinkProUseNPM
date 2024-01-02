@@ -79,7 +79,7 @@
                 
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" value="" class="sr-only peer" v-model="isChecked">
-                    <div class="w-11 h-6 bg-[#E6E8EA] rounded-full peer dark:bg-[#E6E8EA] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>                        
+                    <div class="w-11 h-6 bg-[#E6E8EA] rounded-full peer dark:bg-[#E6E8EA] peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>                    
                 </label>  
                 <span class="text-xs leading-[150%] font-semibold">So sánh</span>                 
             </div>
@@ -116,6 +116,7 @@ export default {
             scrollPosition: 0,
             iconButtonDown: require("@/assets/iconSVG/laptopIconSVG/semi-chervon-down.svg"),
             maxScrollPosition: null,
+            isChecked: false
         }
     },
     mounted() {

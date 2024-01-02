@@ -32,6 +32,7 @@ export default {
 
 .items-filter {
     border: 6px solid transparent;
+    margin: -6px;
 }
 .button-filter {
     border-radius: 0.5rem;

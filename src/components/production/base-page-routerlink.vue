@@ -113,6 +113,7 @@ export default {
         return {
             iconButtonDown: require("@/assets/iconSVG/laptopIconSVG/semi-chervon-down.svg"),
             selectedItem: null,
+            isChecked: false
         }
     },
     methods: {
