@@ -16,8 +16,9 @@ import NoiThat from '@/components/production/Noi-that/noi-that-mainpage.vue';
 import PhuKienSetup from '@/components/production/Phukien-Setup/phukien-setup-mainpage.vue';
 import GiaDoLaptop from '@/components/production/Gia-do-laptop/gia-do-laptop-mainpage.vue';
 import BanNangHa from '@/components/production/Ban-nang-ha/ban-nang-ha-mainpage.vue';
-import BanGheTreEm from '@/components/production/Ban-ghe-tre-em/ban-ghe-tre-em-mainpage.vue'
-import GameConsole from '@/components/production/Game-console/game-console-mainpage.vue'
+import BanGheTreEm from '@/components/production/Ban-ghe-tre-em/ban-ghe-tre-em-mainpage.vue';
+import GameConsole from '@/components/production/Game-console/game-console-mainpage.vue';
+import BaloTui from '@/components/production/Balo-tui/balo-tui-mainpage.vue'
 
 
 Vue.use(VueRouter)
@@ -130,6 +131,12 @@ const routes = [
         name: 'Game-console',
         component: GameConsole,
         key: 18
+    },
+    {
+        path: '/Balo-Tui',
+        name: 'Balo-Tui',
+        component: BaloTui,
+        key: 19
     },
 ]
 

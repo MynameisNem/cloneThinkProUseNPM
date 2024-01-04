@@ -109,7 +109,7 @@ export default {
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2022/1/14/balo-tui.png",
                     fastItem: "Balo, túi",
-                    to: "/Laptop"
+                    to: "/Balo-Tui"
                 },
                 {
                     fastSrc: "https://images.thinkgroup.vn/unsafe/96x96/https://media-api-beta.thinkpro.vn/media/core/categories/2022/3/15/arm-man-hinh-gia-tot-thinkpro.png",

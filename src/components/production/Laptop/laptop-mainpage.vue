@@ -1,6 +1,12 @@
 <template>
     <main class="py-6 bg-[#F6F9FC]">
-        <BasePage :p-content="pContent" :p-text="pText" :items-branch="itemsBranch" :sort-button="sortButton"></BasePage>
+        <BasePage 
+            :p-content="pContent" 
+            :p-text="pText" 
+            :items-branch="itemsBranch"
+            :sort-button="sortButton" 
+            :selected-data="selectedData">
+        </BasePage>
         <LaptopProductContainer></LaptopProductContainer>
     </main>
 </template>
@@ -26,6 +32,28 @@ export default {
                 { nameButton: "Thương hiệu" }, { nameButton: "Nhu cầu" }, { nameButton: "Khoảng giá" },
                 { nameButton: "Nguồn hàng" }, { nameButton: "Tình trạng" }, { nameButton: "Màu sắc" },
             ],
+            requireList: [
+                { requireName: "Văn phòng, học tập" }, { requireName: "2D Design" }, { requireName: "Quay dựng Video" }, 
+                { requireName: "3D Design" }, { requireName: "Gaming" }, { requireName: "Lập trình" }, 
+            ],
+            selectedData: null
+        }
+    },
+    methods: {
+        handleButtonClick(buttonName) {
+            this.selectedData = this.itemsBranch
+            console.log('Click ', buttonName)
+            if (buttonName === 'Thương hiệu') 
+            {
+                this.selectedData = this.itemsBranch
+                console.log('itemsBranch: ', this.itemsBranch)
+            }
+            else if (buttonName === 'Nhu cầu') 
+            {
+                this.selectedData = this.requireList
+                console.log('requireList: ', this.requireList)
+
+            }
         }
     }
 }

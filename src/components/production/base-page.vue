@@ -58,12 +58,12 @@
                                                         </label>
                                                     </div>
                                                     <div class="grid gap-x-4 gap-y-1 sort-content">
-                                                        <div v-for="itemBranch in itemsBranch" :key="itemBranch.nameBranch">
+                                                        <div v-for="item in selectedData" :key="item.nameBranch">
                                                             <label class="items-center cursor-pointer inline-flex relative">
-                                                                <input type="checkbox" class="sr-only" :id="itemBranch.nameBranch">
+                                                                <input type="checkbox" class="sr-only" :id="item.nameBranch">
                                                                 <div class="check-mark"></div>
-                                                                <span class="text-[#1C1F23] text-[14px] leading-[150%] ml-[.5rem] flex-1" :for="itemBranch.nameBranch">
-                                                                    {{ itemBranch.nameBranch }}
+                                                                <span class="text-[#1C1F23] text-[14px] leading-[150%] ml-[.5rem] flex-1" :for="item.nameBranch">
+                                                                    {{ item.nameBranch }}
                                                                 </span>
                                                             </label>
                                                         </div>
@@ -131,7 +131,8 @@ export default {
         pContent: String,
         pText: String,
         itemsBranch: Array,
-        sortButton: Array
+        sortButton: Array,
+        selectedData: Array
     },
     computed: {
         notNull() {
