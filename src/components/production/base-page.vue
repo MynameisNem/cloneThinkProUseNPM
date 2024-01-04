@@ -28,12 +28,12 @@
                 </div>
             </section>
         </div>
-        <div class="section-sort" >
+        <div class="section-sort">
             <div class="container mr-auto ml-auto py-3">
                 <div class="align-center flex">
-                    <div class="flex-1 overflow-x-hidden">
-                        <div class="overflow-x-auto overflow-y-hidden flex">
-                            <div class="flex align-center">
+                    <div class="flex-1">
+                        <div class="relative flex">
+                            <div class="flex align-center ">
                                 <!-- còn thiếu 1 đoạn div để sort nữa, làm sau -->
                                 <div v-for="itemButton in sortButton" :key="itemButton.nameButton" class="mr-3">
                                     <div class="items-filter">
@@ -51,7 +51,7 @@
                                             <div class="max-h-[400px] bg-white rounded-[0.25rem] overflow-auto">
                                                 <div class="py-2 px-3">
                                                     <div class="mb-[0.5rem]">
-                                                        <label class="inline-flex items-center cursor-pointer relative overflow-hidden">
+                                                        <label class="inline-flex items-center cursor-pointer relative">
                                                             <input type="radio" class="sr-only">
                                                             <div class="border-[#0065EE] border-[5px] radio-checkmark"></div>
                                                             <span class="text-[#1C1F23] text-[14px] leading-[150%] ml-[0.5rem]">Tất cả</span>
@@ -59,10 +59,10 @@
                                                     </div>
                                                     <div class="grid gap-x-4 gap-y-1 sort-content">
                                                         <div v-for="itemBranch in itemsBranch" :key="itemBranch.nameBranch">
-                                                            <label class="items-center cursor-pointer inline-flex overflow-hidden relative">
-                                                                <input type="checkbox" class="sr-only">
+                                                            <label class="items-center cursor-pointer inline-flex relative">
+                                                                <input type="checkbox" class="sr-only" :id="itemBranch.nameBranch">
                                                                 <div class="check-mark"></div>
-                                                                <span class="text-[#1C1F23] text-[14px] leading-[150%] ml-[.5rem] flex-1">
+                                                                <span class="text-[#1C1F23] text-[14px] leading-[150%] ml-[.5rem] flex-1" :for="itemBranch.nameBranch">
                                                                     {{ itemBranch.nameBranch }}
                                                                 </span>
                                                             </label>
