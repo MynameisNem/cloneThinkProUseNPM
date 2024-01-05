@@ -1,17 +1,17 @@
 <template>
     <main class="py-6 bg-[#F6F9FC]">
         <BasePage :p-content="pContent" :items-branch="itemsBranch" :p-text="pText" :sort-button="sortButton"></BasePage>
-        <GiaDoLaptop></GiaDoLaptop>
+        <OCung></OCung>
     </main>
 </template>
 
 <script>
 import BasePage from '../base-page.vue'
-import GiaDoLaptop from './gia-do-laptop-product-container.vue'
+import OCung from './o-cung-product-container'
 export default {
     components: {
         BasePage,
-        GiaDoLaptop
+        OCung
     },
     data() {
         return {

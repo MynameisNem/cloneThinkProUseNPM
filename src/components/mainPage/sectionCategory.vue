@@ -86,7 +86,7 @@ export default {
                     cateImgAlt: "Balo, túi",
                     cateItemName: "Balo, túi",
                     cateItemQuantity: "31 sản phẩm",
-                    to: "/Laptop"
+                    to: "/Balo-Tui"
 
                 },
                 {
@@ -126,7 +126,7 @@ export default {
                     cateImgAlt: "Máy chơi game",
                     cateItemName: "Máy chơi game",
                     cateItemQuantity: "35 sản phẩm",
-                    to: "/Laptop"
+                    to: "/Game-console"
 
                 },
                 {
@@ -142,7 +142,7 @@ export default {
                     cateImgAlt: "Bàn nâng hạ",
                     cateItemName: "Bàn nâng hạ",
                     cateItemQuantity: "17 sản phẩm",
-                    to: "/Laptop"
+                    to: "/Ban-nang-ha"
 
                 },
                 {
@@ -150,7 +150,7 @@ export default {
                     cateImgAlt: "Ram",
                     cateItemName: "Ram",
                     cateItemQuantity: "9 sản phẩm",
-                    to: "/Laptop"
+                    to: "/Ram-may-tinh"
 
                 },
                 {
@@ -158,7 +158,7 @@ export default {
                     cateImgAlt: "Ổ cứng",
                     cateItemName: "Ổ cứng",
                     cateItemQuantity: "16 sản phẩm",
-                    to: "/Laptop"
+                    to: "/O-cung"
 
                 },
                 {
@@ -190,7 +190,7 @@ export default {
                     cateImgAlt: "Bàn ghế trẻ em",
                     cateItemName: "Bàn ghế trẻ em",
                     cateItemQuantity: "1 sản phẩm",
-                    to: "/Laptop"
+                    to: "/Ban-ghe-tre-em"
 
                 },
                 {

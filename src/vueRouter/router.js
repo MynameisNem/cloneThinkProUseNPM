@@ -18,7 +18,9 @@ import GiaDoLaptop from '@/components/production/Gia-do-laptop/gia-do-laptop-mai
 import BanNangHa from '@/components/production/Ban-nang-ha/ban-nang-ha-mainpage.vue';
 import BanGheTreEm from '@/components/production/Ban-ghe-tre-em/ban-ghe-tre-em-mainpage.vue';
 import GameConsole from '@/components/production/Game-console/game-console-mainpage.vue';
-import BaloTui from '@/components/production/Balo-tui/balo-tui-mainpage.vue'
+import BaloTui from '@/components/production/Balo-tui/balo-tui-mainpage.vue';
+import RamMayTinh from '@/components/production/Ram/ram-mainpage.vue';
+import OCung from '@/components/production/O-cung/o-cung-mainpage.vue';
 
 
 Vue.use(VueRouter)
@@ -137,6 +139,18 @@ const routes = [
         name: 'Balo-Tui',
         component: BaloTui,
         key: 19
+    },
+    {
+        path: '/Ram-may-tinh',
+        name: 'Ram-may-tinh',
+        component: RamMayTinh,
+        key: 20
+    },
+    {
+        path: '/O-cung',
+        name: 'O-cung',
+        component: OCung,
+        key: 21
     },
 ]
 

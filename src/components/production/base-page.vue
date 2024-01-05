@@ -157,18 +157,6 @@ export default {
 </script>
 
 <style scoped>
-.button-control {
-    transition-duration: .15s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-}
-
-.button-inside {
-    transition-duration: .15s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-}
-
 .sort-box {
     inset: 0px auto auto 0px;
     margin: 0px;
