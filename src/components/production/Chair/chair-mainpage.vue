@@ -22,7 +22,27 @@ export default {
                 { nameBranch: "Manson" }, { nameBranch: "Ergo Home" }, { nameBranch: "E-Dra" }, { nameBranch: "Ergonomic Group" },
             ],
             sortButton: [
-                { nameButton: "Thương hiệu" }, { nameButton: "Khoảng giá" }, { nameButton: "Màu sắc" },
+                { 
+                    nameButton: "Thương hiệu",
+                    itemsSortButton: [
+                        { name: "GT Chair" }, { name: "SIHOO" }, { name: "Herman Miller" }, { name: "VChair" }, { name: "MerryFair" },
+                        { name: "Manson" }, { name: "Ergo Home" }, { name: "E-Dra" }, { name: "Ergonomic Group" },
+                    ]
+                }, 
+                { 
+                    nameButton: "Khoảng giá",
+                    itemsSortButton: [
+                        { name: "Dưới 3tr" }, { name: "Từ 3tr - 4.5tr" }, { name: "Từ 4.5tr - 6tr" }, 
+                        { name: "Từ 6tr - 8tr" }, { name: "Từ 8tr - 10tr" }, { name: "Từ 10tr - 14tr" }, { name: "Trên 14tr" }, 
+                    ]
+                },
+                { 
+                    nameButton: "Màu sắc",
+                    itemsSortButton: [
+                        { name: "Xám" }, { name: "Đen" }, { name: "Trắng" }, 
+                        { name: "Xanh dương" }, { name: "Hồng" }, { name: "Đỏ" }, 
+                    ] 
+                },
             ],
         }
     }

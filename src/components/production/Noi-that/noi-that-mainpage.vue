@@ -18,7 +18,13 @@ export default {
             pContent: "Nội thất",
             pText: "Nội thất hiểu đơn giản là những vật dụng, đồ vật được bố trí trong một không gian nhằm phục vụ đa nhu cầu của người dùng như: lưu trữ, giải trí, học tập, làm việc, ...",
             sortButton: [ 
-                { nameButton: "Khoảng giá" }
+                { 
+                    nameButton: "Khoảng giá",
+                    itemsSortButton: [
+                        { name: "Dưới 5tr" }, { name: "Từ 5tr - 10tr" }, { name: "Từ 10tr - 15tr" }, { name: "Từ 15tr - 20tr" }, 
+                        { name: "Từ 20tr - 25tr" }, { name: "Từ 25tr - 30tr" }, { name: "Trên 30tr" }
+                    ]
+                }
             ],
         }
     }

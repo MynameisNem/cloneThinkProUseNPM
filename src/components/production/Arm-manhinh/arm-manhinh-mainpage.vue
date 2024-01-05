@@ -21,7 +21,25 @@ export default {
                 { nameBranch: "Humanmotion" }, { nameBranch: "HyperWork" }
             ],
             sortButton: [
-                { nameButton: "Thương hiệu" }, { nameButton: "Khoảng giá" }, { nameButton: "Màu sắc" },
+                { 
+                    nameButton: "Thương hiệu",
+                    itemsSortButton: [
+                        { name: "HyperWork" }, { name: "Humanmotion" }, 
+                    ]
+                }, 
+                {
+                    nameButton: "Khoảng giá",
+                    itemsSortButton: [
+                        { name: "Dưới 700K" }, { name: "Từ 700K - 1 triệu" }, { name: "Từ 1 triệu - 1.3tr" }, 
+                        { name: "Từ 1.3tr - 1.6tr" }, { name: "Từ 1.6tr - 2tr" }, { name: "Trên 2tr" }, 
+                    ]
+                },
+                { 
+                    nameButton: "Màu sắc",
+                    itemsSortButton: [
+                        { name: "Xám" }, { name: "Trắng" }, { name: "Đen" },
+                    ]
+                },
             ],
         }
     }

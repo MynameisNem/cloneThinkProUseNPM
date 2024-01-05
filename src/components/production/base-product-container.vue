@@ -19,7 +19,7 @@
                                 {{ itemProduct.productDiscount }}
                             </div>
                         </div>
-                        <div class="items-center flex space-x-1">
+                        <div v-if="itemProduct.productColor" class="items-center flex space-x-1">
                             <span class="text-[#6B7075] text-[12px] leading-[150%]">Màu</span>
                             <div class="colorProduct" :style="itemProduct.productColor"></div>
                             <div v-if="itemProduct.productColor2" class="colorProduct" :style="itemProduct.productColor2"></div>

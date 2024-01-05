@@ -47,7 +47,7 @@
                                                 </i>
                                             </button>
                                         </div>
-                                        <div class="z-[19] w-full absolute sort-box" v-show="showSortBox">
+                                        <div class="z-[19] w-[675px] absolute sort-box" v-show="showSortBox">
                                             <div class="max-h-[400px] bg-white rounded-[0.25rem] overflow-auto">
                                                 <div class="py-2 px-3">
                                                     <div class="mb-[0.5rem]">

@@ -22,7 +22,13 @@ export default {
             pContent: "Balo, Túi",
             pText: "Balo là sản phẩm thường được sử dụng để miêu tả một loại túi đeo vai hai quai và được sử dụng để đựng đồ khi đi học, đi du lịch hoặc đi làm. Túi xách là sản phẩm thường được sử dụng để đựng laptop, giúp người dùng có thể dễ dàng mang vác và bảo vệ máy.",
             sortButton: [
-                { nameButton: "Khoảng giá" },
+                { 
+                    nameButton: "Khoảng giá",
+                    itemsSortButton: [
+                        { name: "Dưới 300K" }, { name: "Từ 300K - 500K" }, { name: "Từ 500K - 800K" }, { name: "Từ 800K - 1 triệu" }, 
+                        { name: "Từ 1 triệu - 2tr" }, { name: "Từ 2tr - 3tr" }, { name: "Trên 3tr" }
+                    ]
+                },
             ],
         }
     },

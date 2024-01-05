@@ -1,16 +1,16 @@
 <template>
     <main class="py-6 bg-[#F6F9FC]">
-        <BasePage :p-content="pContent" :p-text="pText" :items-branch="itemsBranch" :sort-button="sortButton"></BasePage>
+        <BasePageButton :p-content="pContent" :p-text="pText" :items-branch="itemsBranch" :sort-button="sortButton"></BasePageButton>
         <PhuKienSetupProductContainer></PhuKienSetupProductContainer>
     </main>
 </template>
 
 <script>
-import BasePage from '../base-page.vue'
+import BasePageButton from '../base-page-button.vue'
 import PhuKienSetupProductContainer from './phukien-setup-product-container.vue'
 export default {
     components: {
-        BasePage,
+        BasePageButton,
         PhuKienSetupProductContainer
     },
     data() {
@@ -21,10 +21,32 @@ export default {
                 { nameBranch: "HyperWork" }, { nameBranch: "NiceDesign" },  { nameBranch: "UpGen" }, { nameBranch: "INNOSTYLE" }, { nameBranch: "TheLeaf" },
                 { nameBranch: "Dandihome" }, { nameBranch: "Pisen" }, { nameBranch: "Keychron" }, { nameBranch: "Marshall" }, { nameBranch: "LANGBIANG" },
                 { nameBranch: "Herman Miller" }, { nameBranch: "Logitech" }, { nameBranch: "Apple" }, { nameBranch: "Watch" }, { nameBranch: "LDNIO" },
-                { nameBranch: "Element" },
+                { nameBranch: "Element" }, { nameBranch: "Intel" },
             ],
             sortButton: [
-                { nameButton: "Thương hiệu" }, { nameButton: "Khoảng giá" }, { nameButton: "Màu sắc" },
+                { 
+                    nameButton: "Thương hiệu",
+                    itemsSortButton: [
+                        { name: "HyperWork" }, { name: "NiceDesign" },  { name: "UpGen" }, { name: "INNOSTYLE" }, { name: "TheLeaf" },
+                        { name: "Dandihome" }, { name: "Pisen" }, { name: "Keychron" }, { name: "Marshall" }, { name: "LANGBIANG" },
+                        { name: "Herman Miller" }, { name: "Logitech" }, { name: "Apple" }, { name: "Watch" }, { name: "LDNIO" },
+                        { name: "Element" }, { name: "Intel" },
+                    ]
+                }, 
+                { 
+                    nameButton: "Khoảng giá",
+                    itemsSortButton: [
+                        { name: "Dưới 500K" }, { name: "Từ 500K - 1 triệu" },  { name: "Từ 1 triệu - 1.5tr" }, { name: "Từ 1.5tr - 2tr" },
+                        { name: "Từ 2tr - 2.5tr" }, { name: "Từ 2.5tr - 3tr" }, { name: "Trên 3tr" },
+                    ]
+                }, 
+                { 
+                    nameButton: "Màu sắc",
+                    itemsSortButton: [
+                        { name: "Đỏ" }, { name: "Xám" },  { name: "Hồng" }, { name: "Trắng" }, { name: "Đen" },
+                        { name: "Xanh dương" }, { name: "Vàng" }, { name: "Tím" }, { name: "Xanh lá" }, { name: "Cam" },
+                    ]
+                },
             ],
         }
     }

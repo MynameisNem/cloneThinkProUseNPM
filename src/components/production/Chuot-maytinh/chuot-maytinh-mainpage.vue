@@ -22,7 +22,27 @@ export default {
                 { nameBranch: "HyperWork" }, { nameBranch: "Ugreen" }, { nameBranch: "Moonsgeek" }
             ],
             sortButton: [
-                { nameButton: "Thương hiệu" }, { nameButton: "Khoảng giá" }, { nameButton: "Màu sắc" },
+                { 
+                    nameButton: "Thương hiệu",
+                    itemsSortButton: [
+                        { name: "Logitech" }, { name: "E-Dra" }, { name: "Keychron" }, { name: "Microsoft" }, 
+                        { name: "HyperWork" }, { name: "Ugreen" }, { name: "Moonsgeek" }
+                    ]
+                }, 
+                { 
+                    nameButton: "Khoảng giá",
+                    itemsSortButton: [
+                        { name: "Dưới 200K" }, { name: "Từ 200K - 400K" }, { name: "Từ 400K - 600K" }, { name: "Từ 600K - 1 triệu" }, 
+                        { name: "Từ 1 triệu - 2tr" }, { name: "Trên 2tr" }
+                    ]
+                }, 
+                { 
+                    nameButton: "Màu sắc",
+                    itemsSortButton: [
+                        { name: "Trắng" }, { name: "Đen" }, { name: "Hồng" }, { name: "Xám" }, 
+                        { name: "Xanh dương" }, { name: "Xanh lá" }, { name: "Đỏ" }, { name: "Vàng" }, 
+                    ]
+                },
             ],
         }
     }
