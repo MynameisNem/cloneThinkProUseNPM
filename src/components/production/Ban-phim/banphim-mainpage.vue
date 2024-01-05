@@ -24,7 +24,28 @@ export default {
                 { nameBranch: "Monsgeek" }, { nameBranch: "Zuoya" }, { nameBranch: "XINMENG" }, { nameBranch: "Lofree" }, { nameBranch: "NuPhy" },
             ],
             sortButton: [
-                { nameButton: "Thương hiệu" }, { nameButton: "Khoảng giá" }, { nameButton: "Màu sắc" },
+                { 
+                    nameButton: "Thương hiệu",
+                    itemsSortButton: [
+                        { name: "Keychron" }, { name: "IQUINIX" }, { name: "FL-ESPORT" }, { name: "Keydous" }, { name: "CIDOO" },
+                        { name: "Newmen" }, { name: "James Donkey" }, { name: "Darmonshark" }, { name: "WEIKAV" }, { name: "Dell" },
+                        { name: "Microsoft" }, { name: "Logitech" }, { name: "Akko" }, { name: "Mistel" }, { name: "HyperWork" },
+                        { name: "Monsgeek" }, { name: "Zuoya" }, { name: "XINMENG" }, { name: "Lofree" }, { name: "NuPhy" },
+                    ]
+                }, 
+                { 
+                    nameButton: "Khoảng giá",
+                    itemsSortButton: [
+                        { name: "Dưới 1 triệu" }, { name: "Từ 1 triệu - 2tr" }, { name: "Từ 2tr - 3tr" }, { name: "Từ 3tr - 4tr" }, { name: "Trên 4tr" },
+                    ]
+                }, 
+                { 
+                    nameButton: "Màu sắc",
+                    itemsSortButton: [
+                        { name: "Đen" }, { name: "Xanh lá" }, { name: "Xám" }, { name: "Trắng" }, { name: "Tím" },
+                        { name: "Xanh dương" }, { name: "Hồng" }, { name: "Cam" }, { name: "Đỏ" }, { name: "Vàng" },
+                    ]
+                },
             ],
         }
     }

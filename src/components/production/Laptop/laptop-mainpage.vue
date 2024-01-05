@@ -4,8 +4,7 @@
             :p-content="pContent" 
             :p-text="pText" 
             :items-branch="itemsBranch"
-            :sort-button="sortButton" 
-            :selected-data="selectedData">
+            :sort-button="sortButton">
         </BasePage>
         <LaptopProductContainer></LaptopProductContainer>
     </main>
@@ -29,33 +28,53 @@ export default {
                 { nameBranch: "MSI" },
             ],
             sortButton: [
-                { nameButton: "Thương hiệu" }, { nameButton: "Nhu cầu" }, { nameButton: "Khoảng giá" },
-                { nameButton: "Nguồn hàng" }, { nameButton: "Tình trạng" }, { nameButton: "Màu sắc" },
+                { 
+                    nameButton: "Thương hiệu", 
+                    itemsSortButton: [
+                        { name: "Dell" }, { name: "Lenovo" }, { name: "LG" }, { name: "Microsoft" }, { name: "Asus" },
+                        { name: "HP" }, { name: "Acer" }, { name: "GIGABYTE" }, { name: "Apple" }, { name: "VAIO" },
+                        { name: "MSI" },
+                    ]
+                },
+                { 
+                    nameButton: "Nhu cầu", 
+                    itemsSortButton: [
+                        { name: "Văn phòng, học tập" }, { name: "2D Design" }, { name: "Quay dựng Video" }, 
+                        { name: "3D Design" }, { name: "Gaming" }, { name: "Lập trình" },
+                    ],
+                }, 
+                { 
+                    nameButton: "Khoảng giá", 
+                    itemsSortButton: [
+                        { name: "Dưới 10tr " }, { name: "Từ 10tr - 15tr" }, { name: "Từ 15tr - 20tr" }, 
+                        { name: "Từ 20tr - 25tr" }, { name: "Từ 25tr - 30tr" }, { name: "Từ 30tr - 40tr" },
+                        { name: "Trên 40tr" },
+                    ]
+                },
+                { 
+                    nameButton: "Nguồn hàng", 
+                    itemsSortButton: [
+                        { name: "Chính hãng" }, { name: "Nhập khẩu" },
+                    ]
+                }, 
+                { 
+                    nameButton: "Tình trạng", 
+                    itemsSortButton: [
+                        { name: "Mới, Sealed" }, { name: "Mới, Full box" }, { name: "Outlet" }, 
+                        { name: "Used" },
+                    ]
+                }, 
+                { 
+                    nameButton: "Màu sắc", 
+                    itemsSortButton: [
+                        { name: "Trắng" }, { name: "Đen" }, { name: "Hồng" }, { name: "Xám" }, 
+                        { name: "Đỏ" }, { name: "Vàng" }, { name: "Xanh dương" }, { name: "Cam" }, 
+                        { name: "Xanh lá" }, { name: "Tím" }, 
+                    ]
+                },
             ],
-            requireList: [
-                { requireName: "Văn phòng, học tập" }, { requireName: "2D Design" }, { requireName: "Quay dựng Video" }, 
-                { requireName: "3D Design" }, { requireName: "Gaming" }, { requireName: "Lập trình" }, 
-            ],
-            selectedData: null
         }
     },
-    methods: {
-        handleButtonClick(buttonName) {
-            this.selectedData = this.itemsBranch
-            console.log('Click ', buttonName)
-            if (buttonName === 'Thương hiệu') 
-            {
-                this.selectedData = this.itemsBranch
-                console.log('itemsBranch: ', this.itemsBranch)
-            }
-            else if (buttonName === 'Nhu cầu') 
-            {
-                this.selectedData = this.requireList
-                console.log('requireList: ', this.requireList)
-
-            }
-        }
-    }
 }
 </script>
 
