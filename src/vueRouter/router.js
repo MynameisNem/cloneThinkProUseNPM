@@ -21,6 +21,7 @@ import GameConsole from '@/components/production/Game-console/game-console-mainp
 import BaloTui from '@/components/production/Balo-tui/balo-tui-mainpage.vue';
 import RamMayTinh from '@/components/production/Ram/ram-mainpage.vue';
 import OCung from '@/components/production/O-cung/o-cung-mainpage.vue';
+import MarshallPromo from '@/components/promoProduction/marshall-promo.vue';
 
 
 Vue.use(VueRouter)
@@ -152,6 +153,13 @@ const routes = [
         component: OCung,
         key: 21
     },
+    {
+        path: '/Marshall-mon-qua-tuyet-voi-cho-nguoi-ban-yeu-thuong',
+        name: 'Marshall-mon-qua-tuyet-voi-cho-nguoi-ban-yeu-thuong',
+        component: MarshallPromo,
+        key: 22
+    },
+    
 ]
 
 const router = new VueRouter({

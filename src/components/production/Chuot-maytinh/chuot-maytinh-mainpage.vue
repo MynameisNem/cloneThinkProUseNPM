@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import BasePage from '../base-page.vue'
+import BasePage from '@/components/sharedVue/base-page/base-page.vue'
 import ChuotMaytinhProductContainer from './chuot-maytinh-product-container.vue'
 export default {
     components: {

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import BasePage from '../base-page.vue'
+import BasePage from '@/components/sharedVue/base-page/base-page.vue'
 import ChairProductContainer from './chair-product-container'
 export default {
     components: {

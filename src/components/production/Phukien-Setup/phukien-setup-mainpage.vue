@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import BasePageButton from '../base-page-button.vue'
+import BasePageButton from '@/components/sharedVue/base-page/base-page-button.vue'
 import PhuKienSetupProductContainer from './phukien-setup-product-container.vue'
 export default {
     components: {

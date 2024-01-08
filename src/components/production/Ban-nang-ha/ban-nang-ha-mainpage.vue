@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import BasePage from '../base-page.vue'
+import BasePage from '@/components/sharedVue/base-page/base-page.vue'
 import BanNangHaProductContainer from './ban-nang-ha-product-container.vue'
 export default {
     components: {

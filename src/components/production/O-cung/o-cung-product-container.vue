@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import BaseProductContainer from '../base-product-container.vue';
+import BaseProductContainer from '@/components/sharedVue/base-page/base-product-container.vue';
 export default {
     components: {
         BaseProductContainer
@@ -13,125 +13,135 @@ export default {
             productInfor: [
                 // inspiron 14 5430
                 {
-                    id: 21200,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/22/RAM-Laptop-DDR5-Micron-8GB-4800-thinkpro-01.jpeg",
-                    productName: "Ram Laptop DDR5 Micron 8Gb DDR5 4800Mhz",
-                    productPrice: "499.000",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;"
+                    id: 21300,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/30/o-cung-ssd-kioxia-thinkpro-01.png",
+                    productName: "Ổ cứng SSD KIOXIA 128Gb M.2 NVMe 2280",
+                    productPrice: "199.000",
+                    productColor: "border: 1px solid #5C2101; background: #5C2101;"
                 },
                 // có quà
                 {
-                    id: 21201,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/SK-Hynix-8GB-DDR4-3200MHz-1.png",
-                    productName: "Ram Laptop SK Hynix Ram Laptop SK Hynix 8GB DDR5 5600Mhz",
-                    productPrice: "649.000",
-                    productColor: "border: 1px solid #0C532E; background: #0C532E;"
+                    id: 21301,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/20/ssd-intel-6-series-670p-thinkpro.png",
+                    productName: "SSD Intel 6 Series NVMe 512GB Nvme Gen 3 x 4",
+                    productPrice: "899.000",
+                    productColor: "border: 1px solid #3E6800; background: #3E6800;"
                 },
                 // có quà
                 {
-                    id: 21202,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/ram-laptop-micron-8gb-ddr4-3200m.png",
-                    productName: "Ram Laptop Micron Ram Laptop Micron 8GB DDR5 4800Mhz",
-                    productPrice: "599.000",
+                    id: 21302,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/26/ssd-samsung-m2-nvme-pm991-thinkpro-YvE.png",
+                    productName: "SSD Samsung M.2 NVMe PM991 Samsung PM991A 1TB",
+                    productPrice: "1.599.000",
                     productColor: "border: 1px solid #000000; background: #000000;"
                 },
                 {
-                    id: 21203,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/SK-Hynix-8GB-DDR4-3200MHz-1.png",
-                    productName: "Ram Laptop SK Hynix Ram Laptop SK Hynix 16GB DDR5 4800Mhz",
-                    productPrice: "1.399.000",
+                    id: 21303,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/23/digital pc sn810.png",
+                    productName: "Western Digital PC SN810 NVMe SSD 2TB",
+                    productPrice: "2.999.000",
                     productColor: "border: 1px solid #000000; background: #000000;"
                 },
                 {
-                    id: 21204,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/22/RAM-Laptop-DDR5-Micron-8GB-4800-thinkpro-01.jpeg",
-                    productName: "Ram Laptop DDR5 Crucial 16GB DDR5 4800Mhz",
-                    productPrice: "1.499.000",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;"
-                },
-                // có quà
-                {
-                    id: 21206,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/22/RAM-Laptop-DDR5-Micron-8GB-4800-thinkpro-01.jpeg",
-                    productName: "Ram Laptop DDR5 SK Hynix 32GB DDR5 5600Mhz",
-                    productPrice: "3.300.000",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;"
-                },
-                // có quà
-                {
-                    id: 21207,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/SK-Hynix-8GB-DDR4-3200MHz-1.png",
-                    productName: "Ram Laptop SK Hynix Ram Laptop SK Hynix 8GB DDR5 4800Mhz",
-                    productPrice: "599.000",
-                    productColor: "border: 1px solid #0C532E; background: #0C532E;",
-                },
-                {
-                    id: 21208,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/22/RAM-Laptop-DDR5-Micron-8GB-4800-thinkpro-01.jpeg",
-                    productName: "Ram Laptop DDR5 Samsung 32GB DDR5 5600Mhz",
-                    productPrice: "3.300.000",
-                    productDiscount: "-23%",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;",
-                },
-                {
-                    id: 21209,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/22/RAM-Laptop-DDR5-Micron-8GB-4800-thinkpro-01.jpeg",
-                    productName: "Ram Laptop DDR5 Samsung 8GB DDR5 5600Mhz",
-                    productPrice: "649.000",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;",
-                },        
-                {
-                    id: 21210,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/ss32gb3200-01 (1).png",
-                    productName: "Ram Laptop 32GB DDR4 SKHYNIX",
+                    id: 21304,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/7/ssd-di-dong-samsung-t7-thinkpro.png",
+                    productName: "SSD Di động Samsung T7",
                     productPrice: "1.999.000",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;",
-                    productColor2: "border: 1px solid #ECECEC; background: #ECECEC;",
-                    productColor3: "border: 1px solid #5F5C5C; background: #5F5C5C;",
+                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;"
+                },
+                // có quà
+                {
+                    id: 21306,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/30/o-cung-ssd-wd-black-512gb-m2-thinkpro-01.png",
+                    productName: "Ổ cứng SSD WD 512GB M.2 NVMe 2280",
+                    productPrice: "899.000",
+                    productColor: "border: 1px solid #000000; background: #000000;"
+                },
+                // có quà
+                {
+                    id: 21307,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/10/o-cung-hdd-2.5-hgst-thinkpro-01.jpeg",
+                    productName: "Ổ cứng HDD 2.5\" HGST 320Gb",
+                    productPrice: "399.000",
+                    productColor: "border: 1px solid #000000; background: #000000;",
                 },
                 {
-                    id: 21211,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/22/RAM-Laptop-DDR5-Micron-8GB-4800-thinkpro-01.jpeg",
-                    productName: "Ram Laptop DDR5 Micro 16GB DDR5 4800MMhz",
-                    productPrice: "1.990.000",
-                    productDiscount: "-23%",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;",
-                },
-                {
-                    id: 21212,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/6/3200_01.jpg",
-                    productName: "Ram Laptop Lexar DDR4 3200Mhz 8GB",
+                    id: 21308,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/10/o-cung-hdd-2.5-hgst-500gb-thinkpro-01.jpeg",
+                    productName: "Ổ cứng HDD 2.5\" HGST 500Gb",
                     productPrice: "499.000",
                     productColor: "border: 1px solid #000000; background: #000000;",
                 },
                 {
-                    id: 21213,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/SK-Hynix-8GB-DDR4-3200MHz-1.png",
-                    productName: "Ram Laptop SK Hynix",
+                    id: 21309,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/10/o-cung-hdd-2.5-seagate-1tb-thinkpro-02.jpeg",
+                    productName: "Ổ cứng HDD 2.5\" Seagate 160Gb",
+                    productPrice: "199.000",
+                    productColor: "border: 1px solid #000000; background: #000000;",
+                },        
+                {
+                    id: 21310,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/10/o-cung-ssd-m2-sata-256gb-sk-hynix-sc313-2280-thinkpro-02.jpg",
+                    productName: "Ổ cứng SSD SK Hynix 256Gb M.2 Sata 2280",
                     productPrice: "499.000",
-                    productDiscount: "-18%",
-                    productColor: "border: 1px solid #0C532E; background: #0C532E;",
+                    productColor: "border: 1px solid #000000; background: #000000;",
                 },
                 {
-                    id: 21214,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/2/12/1663127188-908-ram-ddr5-laptop-8gb-samsung-4800mhz-1.jpg",
-                    productName: "Ram Laptop Samsung DDR5 8GB - 4800Mhz",
-                    productPrice: "599.000",
+                    id: 21311,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/10/o-cung-ssd-m2-sata-128gb-samsung-pm871b-2280-thinkpro-01.jpeg",
+                    productName: "Ổ cứng SSD Samsung 128Gb M.2 Sata 2280",
+                    productPrice: "199.000",
+                    productColor: "border: 1px solid #000000; background: #000000;",
+                },
+                {
+                    id: 21312,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/3/22/o-cung-ssd-liteon-ca3-512gb-m2-2280-pcie-nvme-1jpg",
+                    productName: "Ổ cứng SSD LITE-ON",
+                    productPrice: "199.000",
                     productColor: "border: 1px solid #DADDE0; background: #FFFFFF;",
                 },
                 {
-                    id: 21215,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/ram-laptop-sk-hynix-ddr4-thinkpr.png",
-                    productName: "Ram Laptop SK Hynix DDR4 3200Mhz",
+                    id: 21313,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/10/o-cung-ssd-m2-sata-2280-thinkpro-128gb-thinkpro-02.jpeg",
+                    productName: "Ổ cứng SSD LITE-ON 128Gb M.2 Sata 2280",
+                    productPrice: "199.000",
+                    productColor: "border: 1px solid #000000; background: #000000;",
+                },
+                {
+                    id: 21314,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2020/7/27/o-cung-ssd-samsung-1tb-m2-nvme-2280-M2NVME2280SAM1024.jpg",
+                    productName: "Ổ cứng SSD Samsung 1Tb M.2 NVMe 2280",
+                    productPrice: "2.690.000",
+                    productDiscount: "-33%",
+                    productColor: "border: 1px solid #000000; background: #000000;",
+                },
+                {
+                    id: 21315,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/2/18/pm9912280-0jpg",
+                    productName: "SSD Samsung M.2 NVMe PM991",
+                    productPrice: "1.590.000",
+                    productColor: "border: 1px solid #000000; background: #000000;",
+                },
+                {
+                    id: 21316,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2020/9/10/kingston256gb-00jpg",
+                    productName: "Ổ cứng SSD Kingston M.2 NVME 2280",
                     productPrice: "199.000",
                     productColor: "border: 1px solid #87A96B; background: #87A96B;",
                 },
                 {
-                    id: 21216,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/ss8gb3200-01.png",
-                    productName: "Ram Laptop Samsung 8GB DDR4 3200Mhz",
-                    productPrice: "499.000",
-                    productColor: "border: 1px solid #87A96B; background: #87A96B;",
+                    id: 21317,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2020/7/27/o-cung-ssd-wd-blue-512gb-m2-nvme-2280-M2NVME2280WDBL512.jpg",
+                    productName: "Ổ cứng SSD WD 512GB M.2 NVMe 2280",
+                    productPrice: "899.000",
+                    productColor: "border: 1px solid #000000; background: #000000;",
+                },               
+                {
+                    id: 21318,
+                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/10/o-cung-hdd-2-5-toshiba-250gb-thinkpro-01.jpeg",
+                    productName: "Ổ cứng HDD 2.5\" Toshiba 250Gb",
+                    productPrice: "199.000",
+                    productColor: "border: 1px solid #000000; background: #000000;",
                 },                
             ],
         }

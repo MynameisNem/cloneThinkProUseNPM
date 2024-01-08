@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import SharedStyles from '@/components/sharedVue/sharedCSS/sharedCSSProductContainer.vue'
+import SharedStyles from '../sharedCSS/sharedCSSProductContainer.vue'
 export default {
     components: {
         SharedStyles

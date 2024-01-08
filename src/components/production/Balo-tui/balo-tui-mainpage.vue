@@ -11,7 +11,7 @@
 
 <script>
 import BaloTuiProductContainer from './balo-tui-product-container.vue'
-import BasePage from '../base-page.vue';
+import BasePage from '@/components/sharedVue/base-page/base-page.vue';
 export default {
     components: {
         BaloTuiProductContainer,

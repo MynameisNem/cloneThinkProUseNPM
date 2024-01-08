@@ -13,7 +13,7 @@
                             <div v-for="(itemPromo, indexItemPromo) in listPromo" :key="itemPromo.id"
                                 class="w-[488px] flex-shrink-0 relative h-full space-x-4"
                                 style="transition-property: transform; backface-visibility: hidden; transform: translateZ(0);">
-                                <a href="#" class="flex flex-col relative rounded p-4 bg-white">
+                                <router-link :to="itemPromo.to" class="flex flex-col relative rounded p-4 bg-white">
                                     <div class="mb-2 flex items-center space-x-2">
                                         <div
                                             class="text-[12px] bg-[#F6F9FC] text-[#1C1F23] rounded py-[2px] px-2 items-center inline-flex whitespace-nowrap leading-[150%]">
@@ -254,7 +254,7 @@
                                             </template>
                                         </div>
                                     </div>
-                                </a>
+                                </router-link>
                             </div>
                         </div>
                         <ButtonPREV 
@@ -304,6 +304,7 @@ export default {
                     promoDown: "-54%",
                     promoPrice: "Chỉ từ 2.390.000",
                     promoStart: "Từ 18/03/2023",
+                    to: "/Marshall-mon-qua-tuyet-voi-cho-nguoi-ban-yeu-thuong"
                     // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-stanmore-2-5104-thumb.png",
                     // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-stanmore-2-5106-thumb.png",
                     // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-stanmore-2-5107-thumb.png",

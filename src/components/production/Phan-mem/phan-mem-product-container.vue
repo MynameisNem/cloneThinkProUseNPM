@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import BaseProductContainer from '../base-product-container.vue';
+import BaseProductContainer from '@/components/sharedVue/base-page/base-product-container.vue';
 export default {
     components: {
         BaseProductContainer

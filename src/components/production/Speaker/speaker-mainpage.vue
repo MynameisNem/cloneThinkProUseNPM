@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import BasePageRouterlink from '../base-page-routerlink.vue';
+import BasePageRouterlink from '@/components/sharedVue/base-page/base-page-routerlink.vue';
 export default {
     components: {
         BasePageRouterlink,

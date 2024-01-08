@@ -97,7 +97,7 @@
 </template>
 
 <script>
-import SharedStylesMainpage from '../sharedVue/sharedCSS/sharedCSSMainpage.vue';
+import SharedStylesMainpage from '../sharedCSS/sharedCSSMainpage.vue';
 export default {
     components: {
         SharedStylesMainpage
