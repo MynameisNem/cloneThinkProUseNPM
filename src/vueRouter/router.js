@@ -21,8 +21,12 @@ import GameConsole from '@/components/production/Game-console/game-console-mainp
 import BaloTui from '@/components/production/Balo-tui/balo-tui-mainpage.vue';
 import RamMayTinh from '@/components/production/Ram/ram-mainpage.vue';
 import OCung from '@/components/production/O-cung/o-cung-mainpage.vue';
-import MarshallPromo from '@/components/promoProduction/marshall-promo.vue';
-
+import MarshallPromo from '@/components/promoProduction/Marshall/marshall-promo.vue';
+import LaptopPromo from '@/components/promoProduction/Laptop/laptop-promo.vue';
+import SpeakerPromo from '@/components/promoProduction/Speaker/speaker-promo.vue';
+import BaloPromo from '@/components/promoProduction/Balo/balo-promo.vue';
+import SoftwarePromo from '@/components/promoProduction/Phan-mem/software-promo.vue';
+import LaptopGiaRePromo from '@/components/promoProduction/Laptop-gia-re/laptop-gia-re-promo.vue'
 
 Vue.use(VueRouter)
 
@@ -158,6 +162,36 @@ const routes = [
         name: 'Marshall-mon-qua-tuyet-voi-cho-nguoi-ban-yeu-thuong',
         component: MarshallPromo,
         key: 22
+    },
+    {
+        path: '/Sale-tung-bung-mung-nam-moi',
+        name: 'Sale-tung-bung-mung-nam-moi',
+        component: LaptopPromo,
+        key: 23
+    },
+    {
+        path: '/Loa-di-dong-thang-3-xa-kho-cuc-nhieu',
+        name: 'Loa-di-dong-thang-3-xa-kho-cuc-nhieu',
+        component: SpeakerPromo,
+        key: 24
+    },
+    {
+        path: '/Xa-kho-balo-tui-bao-ve-do-cong-nghe',
+        name: 'Xa-kho-balo-tui-bao-ve-do-cong-nghe',
+        component: BaloPromo,
+        key: 25
+    },
+    {
+        path: '/Ctkm-giam-100k',
+        name: 'Ctkm-giam-100k',
+        component: SoftwarePromo,
+        key: 26
+    },
+    {
+        path: '/Ngay-vang-gia-soc',
+        name: 'Ngay-vang-gia-soc',
+        component: LaptopGiaRePromo,
+        key: 27
     },
     
 ]

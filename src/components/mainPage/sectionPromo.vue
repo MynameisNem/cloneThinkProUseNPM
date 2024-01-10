@@ -83,7 +83,7 @@
                                                             :src="srcImg.srcImgPromo" :alt="srcImg.imgAlt">
                                                     </div>
                                                 </div>
-                                                <div v-else-if="indexItemPromo === 4 && indexSrc >= 20 && indexSrc <= 24"
+                                                <div v-else-if="indexItemPromo === 4 && indexSrc >= 30 && indexSrc <= 32"
                                                     :key="srcImg.id"
                                                     class="rounded relative border overflow-hidden cursor-pointer w-1/6">
                                                     <div class="relative">
@@ -92,22 +92,6 @@
                                                     </div>
                                                 </div>
                                                 <div v-else-if="indexItemPromo === 5 && indexSrc >= 25 && indexSrc <= 29"
-                                                    :key="srcImg.id"
-                                                    class="rounded relative border overflow-hidden cursor-pointer w-1/6">
-                                                    <div class="relative">
-                                                        <img class="w-full h-full object-cover bg-[#FFFFFF]"
-                                                            :src="srcImg.srcImgPromo" :alt="srcImg.imgAlt">
-                                                    </div>
-                                                </div>
-                                                <div v-else-if="indexItemPromo === 6 && indexSrc >= 30 && indexSrc <= 32"
-                                                    :key="srcImg.id"
-                                                    class="rounded relative border overflow-hidden cursor-pointer w-1/6">
-                                                    <div class="relative">
-                                                        <img class="w-full h-full object-cover bg-[#FFFFFF]"
-                                                            :src="srcImg.srcImgPromo" :alt="srcImg.imgAlt">
-                                                    </div>
-                                                </div>
-                                                <div v-else-if="indexItemPromo === 7 && indexSrc >= 33 && indexSrc < 38"
                                                     :key="srcImg.id"
                                                     class="rounded relative border overflow-hidden cursor-pointer w-1/6">
                                                     <div class="relative">
@@ -294,6 +278,17 @@ export default {
     data() {
         return {
             listPromo: [
+                {
+                    id: 0,
+                    promoQuanti1: "30 Laptop",
+                    promoQuanti2: "",
+                    promoGift: "",
+                    promoName: "SALE TƯNG BỪNG - MỪNG NĂM MỚI",
+                    promoDown: "-100%",
+                    promoPrice: "Chỉ từ 17.990.000",
+                    promoStart: "Từ 06/12/2023",
+                    to: "/Sale-tung-bung-mung-nam-moi"
+                },
                 // Loa Marshall
                 {
                     id: 1,
@@ -305,13 +300,6 @@ export default {
                     promoPrice: "Chỉ từ 2.390.000",
                     promoStart: "Từ 18/03/2023",
                     to: "/Marshall-mon-qua-tuyet-voi-cho-nguoi-ban-yeu-thuong"
-                    // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-stanmore-2-5104-thumb.png",
-                    // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-stanmore-2-5106-thumb.png",
-                    // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-stanmore-2-5107-thumb.png",
-                    // srcImgPromo4: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-acton-2-5116-thumb.png",
-                    // srcImgPromo5: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-acton-2-5118-thumb.png",
-                    // imgAlt: "Marshall - Âm Thanh Đỉnh Cao - Giá Hợp Lý",
-                    // promoInven: "+31"
                 },
                 // Âm thanh giải nhiệt mùa hè
                 {
@@ -319,17 +307,11 @@ export default {
                     promoQuanti1: "50 Loa",
                     promoQuanti2: "3 Tai nghe",
                     promoGift: "",
-                    promoName: "Âm Thanh Đỉnh Cao - Giải nhiệt mùa hè",
+                    promoName: "ÂM THANH ĐỈNH CAO - SIÊU SALE NĂM MỚI",
                     promoDown: "-41%",
                     promoPrice: "Chỉ từ 2.090.000",
                     promoStart: "Từ 18/03/2023",
-                    // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-bang-olufsen-beolit-20-5395-thumb.png",
-                    // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-bang-olufsen-beolit-20-5396-thumb.png",
-                    // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-bose-soundlink-revolve-plus-ii-5397-thumb.png",
-                    // srcImgPromo4: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-bose-soundlink-revolve-plus-ii-5398-thumb.png",
-                    // srcImgPromo5: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/10/25/loa-bluetooth-jbl-partybox-encore-essential-1.jpg",
-                    // imgAlt: "Âm Thanh Đỉnh Cao - Giải nhiệt mùa hè",
-                    // promoInven: "+47"
+                    to: "/Loa-di-dong-thang-3-xa-kho-cuc-nhieu"
                 },
                 // Xả kho balo túi
                 {
@@ -337,75 +319,15 @@ export default {
                     promoQuanti1: "28 Balo",
                     promoQuanti2: "36 Túi",
                     promoGift: "1 Quà tặng",
-                    promoName: "Xả Kho Balo, Túi - Bảo Vệ Đồ Công Nghệ",
+                    promoName: "Xả Kho Balo, Túi - SIÊU SALE ĐÓN NĂM MỚI",
                     promoDown: "-47%",
                     promoPrice: "Chỉ từ 290.000",
                     promoStart: "Từ 18/03/2023",
-                    // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/balo-acer-predator-suv-1475-thumb.png",
-                    // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/balo-lenovo-156-laptop-everyday-b510-1637-thumb.png",
-                    // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/28/balo-acer-predator-utility-thinkpro-01.png",
-                    // srcImgPromo4: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/tui-chong-soc-tomtoc-360-protective-13-1748-thumb.png",
-                    // srcImgPromo5: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/balo-laptop-da-nang-reeyee-15-ry10071008-1817-thumb.png",
-                    // imgAlt: "Xả Kho Balo, Túi - Bảo Vệ Đồ Công Nghệ",
-                    // promoInven: "+60"
-                },
-                // LGGram
-                {
-                    id: 4,
-                    promoQuanti1: "17 Laptop",
-                    promoQuanti2: "",
-                    promoGift: "",
-                    promoName: "LG gram nhẹ mức giá - khỏe hiệu năng",
-                    promoDown: "-100%",
-                    promoPrice: "Chỉ từ 17.990.000",
-                    promoStart: "Từ 07/06/2023",
-                    // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/6/lg-gram-17-2022-nhap-khau-thinkpro-GUA.png",
-                    // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/lg-gram-16-2-in-1-2022-5236-thumb.png",
-                    // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/11/15/D_01.jpeg",
-                    // srcImgPromo4: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/9/30/lg-gram-16-2-in-1-2022-thinkpro-1.png",
-                    // srcImgPromo5: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/lg-gram-14-2022-6280-thumb.png",
-                    // imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng",
-                    // promoInven: "+11"
-                },
-                // thinkbook
-                {
-                    id: 5,
-                    promoQuanti1: "16 Laptop",
-                    promoQuanti2: "",
-                    promoGift: "",
-                    promoName: "Lenovo thinkbook giảm cực sâu",
-                    promoDown: "-28%",
-                    promoPrice: "Chỉ từ 15.990.000",
-                    promoStart: "Từ 07/06/2023",
-                    // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/lenovo-thinkbook-14-g4-amd-4326-thumb.png",
-                    // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/lenovo-thinkbook-13x-gen-2-thinkpro-sr7.png",
-                    // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/lenovo-thinkbook-16p-gen-4-2023-thinkpro.png",
-                    // srcImgPromo4: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/5/lenovo-thinkbook-16-g5-thinkpro.png",
-                    // srcImgPromo5: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/6/lenovo-thinkbook-14-g5-thinkpro-bmA.png",
-                    // imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng",
-                    // promoInven: "+10"
-                },
-                // xps
-                {
-                    id: 6,
-                    promoQuanti1: "46 Laptop",
-                    promoQuanti2: "3 Tai nghe",
-                    promoGift: "",
-                    promoName: "XPS - LAPTOP WINDOW ĐẸP NHẤT",
-                    promoDown: "-44%",
-                    promoPrice: "Chỉ từ 9.990.000",
-                    promoStart: "Từ 08/06/2023",
-                    // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/19/xps 1.jpg",
-                    // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/dell-xps-13-9315-2022-thinkpro.png",
-                    // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/9/30/dell-xps-15-9510-thinkpro-01.jpg",
-                    // srcImgPromo4: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/dell-xps-13-2-in-1-9315-2022-4725-thumb.png",
-                    // srcImgPromo5: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/dell-xps-13-plus-9320-thinkpro-5wj.png",
-                    // imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng",
-                    // promoInven: "+40"
+                    to: "/Xa-kho-balo-tui-bao-ve-do-cong-nghe"
                 },
                 // phần mềm
                 {
-                    id: 7,
+                    id: 4,
                     promoQuanti1: "3 phần mềm",
                     promoQuanti2: "",
                     promoGift: "",
@@ -413,16 +335,11 @@ export default {
                     promoDown: "-33%",
                     promoPrice: "Chỉ từ 990.000",
                     promoStart: "Từ 21/08/2023",
-                    // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/16/1-600x600.png",
-                    // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/16/3-600x600-1.png",
-                    // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/8/10/office-home-student-2021-thinkpro-01.jpeg",
-                    // srcImgPromo4: "",
-                    // srcImgPromo5: "",
-                    // imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
+                    to: "/Ctkm-giam-100k"
                 },
                 // laptop chính hãng
                 {
-                    id: 8,
+                    id: 5,
                     promoQuanti1: "15 Laptop",
                     promoQuanti2: "2 Màn hình",
                     promoGift: "",
@@ -430,17 +347,37 @@ export default {
                     promoDown: "-47%",
                     promoPrice: "Chỉ từ 3.990.000",
                     promoStart: "Từ 01/10/2023",
-                    // srcImgPromo1: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/acer-nitro-5-15-2021-amd-1899-thumb.png",
-                    // srcImgPromo2: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/9/30/apple-macbook-pro-16-m1-thinkpro-1.png",
-                    // srcImgPromo3: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/17/asus-vivobook-15-pro-oled-thinkp.png",
-                    // srcImgPromo4: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/17/msi-modern-md241pw-238inch-thinkpro-07-thinkpro.png",
-                    // srcImgPromo5: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/17/lg-gram-16-2022-16z90q-gah52a5-thinkpro-01-thinkpro-NmT.png",
-                    // imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng",
-                    // promoInven: "+11"
+                    to: "/Ngay-vang-gia-soc"
                 }
             ],
             // indexItemPromo = 0,
             listImgPromo: [
+                // Sale năm mới
+                {
+                    id: 195,
+                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/12/27/surface-laptop-4-135-amd-thinkpro.jpeg",
+                    imgAlt: "SALE TƯNG BỪNG - MỪNG NĂM MỚI"
+                },
+                {
+                    id: 196,
+                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/lenovo-thinkbook-14-g4-amd-4326-thumb.png",
+                    imgAlt: "SALE TƯNG BỪNG - MỪNG NĂM MỚI"
+                },
+                {
+                    id: 197,
+                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/12/27/dell-inspiron-14-plus-7420-thinkpro.jpeg",
+                    imgAlt: "SALE TƯNG BỪNG - MỪNG NĂM MỚI"
+                },
+                {
+                    id: 198,
+                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/12/27/macbook-air-2022-apple-m2-mly13saa-thinkpro.jpeg",
+                    imgAlt: "SALE TƯNG BỪNG - MỪNG NĂM MỚI"
+                },
+                {
+                    id: 199,
+                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/dell-latitude-7320-detachable-kem-ban-phim-thinkpro-62Q.png",
+                    imgAlt: "SALE TƯNG BỪNG - MỪNG NĂM MỚI"
+                },
                 // Marshall
                 {
                     id: 200,
@@ -642,6 +579,13 @@ export default {
             ],
             // indexSrc = 0,
             listLastImgPromo: [
+                // Sale năm mới
+                {
+                    id: 999,
+                    srcLastImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/dell-xps-13-9315-2022-5693-thumb.png",
+                    imgLastAlt: "Âm Thanh Đỉnh Cao - Giải nhiệt mùa hè",
+                    promoInven: "+24"
+                },
                 // marshall
                 {
                     id: 1000,

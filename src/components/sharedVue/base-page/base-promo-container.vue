@@ -31,29 +31,31 @@
                                 {{ item.priceDown }}
                             </div>
                         </div>
-                        <div class="items-center flex">
-                            <span class="text-xs text-opacity-100 text-[#6B7075]">Màu</span>
-                            <template v-if="item.styleProduct">
-                                <span class="rounded-sm w-3 h-3 ml-1"
-                                :style="item.styleProduct"></span>
-                            </template>
-                            <template v-if="item.styleProduct2">
-                                <span class="rounded-sm w-3 h-3 ml-1"
-                                :style="item.styleProduct2"></span>
-                            </template>                         
-                            <template v-if="item.styleProduct3">
-                                <span class="rounded-sm w-3 h-3 ml-1"
-                                :style="item.styleProduct3"></span>
-                            </template>
-                            <template v-if="item.styleProduct4">
-                                <span class="rounded-sm w-3 h-3 ml-1"
-                                :style="item.styleProduct4"></span>
-                            </template>
-                            <template v-if="item.styleProduct5">
-                                <span class="rounded-sm w-3 h-3 ml-1"
-                                :style="item.styleProduct5"></span>
-                            </template>
-                        </div>
+                        <template v-if="item.styleProduct">
+                            <div class="items-center flex">
+                                <span class="text-xs text-opacity-100 text-[#6B7075]">Màu</span>
+                                <template v-if="item.styleProduct">
+                                    <span class="rounded-sm w-3 h-3 ml-1"
+                                    :style="item.styleProduct"></span>
+                                </template>
+                                <template v-if="item.styleProduct2">
+                                    <span class="rounded-sm w-3 h-3 ml-1"
+                                    :style="item.styleProduct2"></span>
+                                </template>                         
+                                <template v-if="item.styleProduct3">
+                                    <span class="rounded-sm w-3 h-3 ml-1"
+                                    :style="item.styleProduct3"></span>
+                                </template>
+                                <template v-if="item.styleProduct4">
+                                    <span class="rounded-sm w-3 h-3 ml-1"
+                                    :style="item.styleProduct4"></span>
+                                </template>
+                                <template v-if="item.styleProduct5">
+                                    <span class="rounded-sm w-3 h-3 ml-1"
+                                    :style="item.styleProduct5"></span>
+                                </template>
+                            </div>
+                        </template>                        
                         <template v-if="item.cpuInfor">
                             <div class="flow-root mt-2"
                             style="--gap-x-negative: calc((8px)*-1); --gap-y-negative: calc((8px)*-1);">
@@ -91,6 +93,6 @@
 export default {
     props: {
         inforProduct: Array
-    }
+    },
 }
 </script>

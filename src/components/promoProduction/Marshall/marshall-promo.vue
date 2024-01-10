@@ -7,18 +7,18 @@
                 :textHeadPromo="textHeadPromo"
                 :product-promo="productPromo">
             </BasePageImg>
-            <component :is="selectedItemComponent"></component>
+            <MarshallAllProducts></MarshallAllProducts>
         </section>
     </main>
 </template>
 
 <script>
-import BasePageImg from '../sharedVue/base-page/base-page-img.vue';
-import MarshallSpeaker from './marshall-speaker.vue'
+import BasePageImg from '@/components/sharedVue/base-page/base-page-img.vue';
+import MarshallAllProducts from '../Marshall/marshall-all-products.vue';
 export default {
     components: {
         BasePageImg,
-        MarshallSpeaker
+        MarshallAllProducts
     },
     data() {
         return {
@@ -39,34 +39,8 @@ export default {
                 },
             ],
             selectedItem: null,
-            // tabSelected: false
         }
     },
-    methods:  {
-        selectItem(item) {
-            this.selectedItem = item;
-        },
-        setDefaultSelectedItem() {
-            if(!this.selectedItem && this.productPromo.length > 0) {
-                this.selectedItem = this.productPromo[0];
-            }
-        }
-    },
-    mounted() {
-        this.setDefaultSelectedItem();
-    },
-    computed: {
-        selectedItemComponent() {
-            const promoMapping = {
-                'Loa': MarshallSpeaker,
-            };
-            if (this.selectedItem) {
-                const selectedProduct = this.selectedItem;
-                return promoMapping[selectedProduct] || MarshallSpeaker;
-            }
-            return MarshallSpeaker
-        }
-    }
 }
 </script>
 
