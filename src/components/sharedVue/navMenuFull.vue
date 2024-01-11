@@ -4,6 +4,7 @@
         <div class="menuOutside1">
             <div class="max-h-[540px] flex-1 overflow-hidden">
                 <div class="menuOutside2 container">
+                    <!-- menu left -->
                     <div class="menu-side-left h-full w-[200px]">
                         <div class="overflow-auto h-full flex flex-col space-y-2">
                             <div v-for="itemNavMenuLeft in listItemsNav" :key="itemNavMenuLeft.id"
@@ -20,6 +21,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- menu right -->
                     <div class="flex-1 space-x-5 overflow-auto">
                         <div class="flex space-x-5">
                             <component :is="selectedItemComponent" :selected-item="selectedItem"></component>

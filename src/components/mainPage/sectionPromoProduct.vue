@@ -34,7 +34,7 @@
                 </div>
             </div>
             <!-- danh sách sản phẩm khuyến mãi nổi bật kèm thông tin chi tiết -->
-            <SectionPromoProductSpecial></SectionPromoProductSpecial>
+            <component :is="selectedItemComponent" :selected-item="selectedItem"></component>
         </div>
     </section>
 </template>
@@ -42,12 +42,14 @@
 <script>
 import ButtonPrevPromoProduct from "../sharedVue/button/buttonPREV.vue";
 import ButtonNextPromoProduct from "../sharedVue/button/buttonNEXT.vue";
-import SectionPromoProductSpecial from "./sectionPromoProductSpecial.vue";
+import LaptopSpecial from '../promoProductSpecial/laptop-special'
+import KeyboardSpecial from '../promoProductSpecial/keyboard-special'
 export default {
     components: {
         ButtonPrevPromoProduct,
         ButtonNextPromoProduct,
-        SectionPromoProductSpecial
+        LaptopSpecial,
+        KeyboardSpecial
     },
     data() {
         return {
@@ -119,6 +121,17 @@ export default {
             return {
                 backgroundColor: changeColorNext ? '#FFFFFF' : '#E6E8EA'
             }
+        },
+        selectedItemComponent() {
+            const productPromoMapping = {
+                'Laptop': LaptopSpecial,
+                'Bàn phím': KeyboardSpecial,
+            };
+            if (this.selectedItem) {
+                const selectedProduct = this.selectedItem.nameProduct;
+                return productPromoMapping[selectedProduct] || LaptopSpecial
+            }
+            return LaptopSpecial
         }
     }
 }
