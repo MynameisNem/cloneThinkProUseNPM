@@ -83,7 +83,7 @@
                                                             :src="srcImg.srcImgPromo" :alt="srcImg.imgAlt">
                                                     </div>
                                                 </div>
-                                                <div v-else-if="indexItemPromo === 4 && indexSrc >= 30 && indexSrc <= 32"
+                                                <div v-else-if="indexItemPromo === 4 && indexSrc >= 20 && indexSrc <= 22"
                                                     :key="srcImg.id"
                                                     class="rounded relative border overflow-hidden cursor-pointer w-1/6">
                                                     <div class="relative">
@@ -91,7 +91,7 @@
                                                             :src="srcImg.srcImgPromo" :alt="srcImg.imgAlt">
                                                     </div>
                                                 </div>
-                                                <div v-else-if="indexItemPromo === 5 && indexSrc >= 25 && indexSrc <= 29"
+                                                <div v-else-if="indexItemPromo === 5 && indexSrc >= 23 && indexSrc <= 28"
                                                     :key="srcImg.id"
                                                     class="rounded relative border overflow-hidden cursor-pointer w-1/6">
                                                     <div class="relative">
@@ -179,7 +179,7 @@
                                                     </div>
                                                 </div>
                                                 <div :key="indexLast"
-                                                    v-else-if="indexItemPromo === 4 && indexLast === 4"
+                                                    v-else-if="indexItemPromo === 5 && indexLast === 4"
                                                     class="rounded relative border overflow-hidden cursor-pointer w-1/6">
                                                     <div>
                                                         <div
@@ -187,46 +187,8 @@
                                                         </div>
                                                         <div
                                                             class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[2]">
-                                                            <span class="text-white font-semibold">{{
-                                                                srcLastImg.promoInven }}</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="relative">
-                                                        <img class="w-full h-full object-cover bg-[#FFFFFF]"
-                                                            :src="srcLastImg.srcLastImgPromo"
-                                                            :alt="srcLastImg.imgLastAlt">
-                                                    </div>
-                                                </div>
-                                                <div :key="indexLast"
-                                                    v-else-if="indexItemPromo === 5 && indexLast === 5"
-                                                    class="rounded relative border overflow-hidden cursor-pointer w-1/6">
-                                                    <div>
-                                                        <div
-                                                            class="z-[1] absolute inset-0 bg-opacity-30 bg-[#1C1F19]">
-                                                        </div>
-                                                        <div
-                                                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[2]">
-                                                            <span class="text-white font-semibold">{{
-                                                                srcLastImg.promoInven }}</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="relative">
-                                                        <img class="w-full h-full object-cover bg-[#FFFFFF]"
-                                                            :src="srcLastImg.srcLastImgPromo"
-                                                            :alt="srcLastImg.imgLastAlt">
-                                                    </div>
-                                                </div>
-                                                <div :key="indexLast"
-                                                    v-else-if="indexItemPromo === 7 && indexLast === 6"
-                                                    class="rounded relative border overflow-hidden cursor-pointer w-1/6">
-                                                    <div>
-                                                        <div
-                                                            class="z-[1] absolute inset-0 bg-opacity-30 bg-[#1C1F19]">
-                                                        </div>
-                                                        <div
-                                                            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-[2]">
-                                                            <span class="text-white font-semibold">{{
-                                                                srcLastImg.promoInven }}</span>
+                                                            <span class="text-white font-semibold">
+                                                                {{ srcLastImg.promoInven }}</span>
                                                         </div>
                                                     </div>
                                                     <div class="relative">
@@ -455,85 +417,7 @@ export default {
                     id: 214,
                     srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/balo-laptop-da-nang-reeyee-15-ry10071008-1817-thumb.png",
                     imgAlt: "Xả Kho Balo, Túi - Bảo Vệ Đồ Công Nghệ"
-                },
-                // LG gram
-                {
-                    id: 215,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/6/lg-gram-17-2022-nhap-khau-thinkpro-GUA.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 216,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/lg-gram-16-2-in-1-2022-5236-thumb.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 217,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/11/15/D_01.jpeg",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 218,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/9/30/lg-gram-16-2-in-1-2022-thinkpro-1.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 219,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/lg-gram-14-2022-6280-thumb.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                // thinkbook
-                {
-                    id: 220,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/lenovo-thinkbook-14-g4-amd-4326-thumb.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 221,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/lenovo-thinkbook-13x-gen-2-thinkpro-sr7.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 222,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/lenovo-thinkbook-16p-gen-4-2023-thinkpro.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 223,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/5/lenovo-thinkbook-16-g5-thinkpro.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 224,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/6/lenovo-thinkbook-14-g5-thinkpro-bmA.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                // xps laptop
-                {
-                    id: 225,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/12/19/xps 1.jpg",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 226,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/dell-xps-13-9315-2022-thinkpro.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 227,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2022/9/30/dell-xps-15-9510-thinkpro-01.jpg",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 228,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/dell-xps-13-2-in-1-9315-2022-4725-thumb.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
-                {
-                    id: 229,
-                    srcImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/2/dell-xps-13-plus-9320-thinkpro-5wj.png",
-                    imgAlt: "LG gram nhẹ mức giá - khỏe hiệu năng"
-                },
+                },                
                 // phần mềm
                 {
                     id: 230,
@@ -606,27 +490,6 @@ export default {
                     srcLastImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/balo-laptop-da-nang-reeyee-17-ry10181019-1818-thumb.png",
                     imgLastAlt: "Xả Kho Balo, Túi - Bảo Vệ Đồ Công Nghệ",
                     promoInven: "+60"
-                },
-                // lggram
-                {
-                    id: 1003,
-                    srcLastImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/6/lg-gram-17-2022-nhap-khau-thinkpro-qnk.png",
-                    imgLastAlt: "LG gram nhẹ mức giá - khỏe hiệu năng",
-                    promoInven: "+11"
-                },
-                // thinkbook
-                {
-                    id: 1004,
-                    srcLastImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/5/lenovo-thinkbook-16-g5-thinkpro-xxv.png",
-                    imgLastAlt: "LG gram nhẹ mức giá - khỏe hiệu năng",
-                    promoInven: "+10"
-                },
-                // xps
-                {
-                    id: 1005,
-                    srcLastImgPromo: "https://images.thinkgroup.vn/unsafe/200x200/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/2/18/dellxps9500sil-00jpg",
-                    imgLastAlt: "LG gram nhẹ mức giá - khỏe hiệu năng",
-                    promoInven: "+40"
                 },
                 // laptop giá rẻ
                 {

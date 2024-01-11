@@ -201,4 +201,10 @@ const router = new VueRouter({
     mode: 'history',
 })
 
+router.beforeEach((to, from, next) => {
+    // Cuộn lên đầu trang trước khi chuyển trang
+    window.scrollTo(0, 0);
+    next();
+});
+
 export default router
