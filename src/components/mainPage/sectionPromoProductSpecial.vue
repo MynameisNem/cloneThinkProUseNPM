@@ -41,10 +41,27 @@
                             </div>
                             <template v-if="itemInforPromo.styleProduct">
                                 <div class="items-center flex">
-                                    <span
-                                        class="text-xs text-[#6B7075] leading-[150%]">Màu</span>
-                                    <span class="rounded-sm w-3 h-3 ml-1"
-                                        :style="itemInforPromo.styleProduct"></span>
+                                    <span class="text-xs text-[#6B7075] leading-[150%]">Màu</span>
+                                    <template v-if="itemInforPromo.styleProduct">
+                                        <span class="rounded-sm w-3 h-3 ml-1"
+                                        :style="itemInforPromo.styleProduct">
+                                        </span>
+                                    </template>
+                                    <template v-if="itemInforPromo.styleProduct2">
+                                        <span class="rounded-sm w-3 h-3 ml-1"
+                                        :style="itemInforPromo.styleProduct2">
+                                        </span>
+                                    </template>
+                                    <template v-if="itemInforPromo.styleProduct3">
+                                        <span class="rounded-sm w-3 h-3 ml-1"
+                                        :style="itemInforPromo.styleProduct3">
+                                        </span>
+                                    </template>
+                                    <template v-if="itemInforPromo.styleProduct4">
+                                        <span class="rounded-sm w-3 h-3 ml-1"
+                                        :style="itemInforPromo.styleProduct4">
+                                        </span>
+                                    </template>
                                 </div>
                             </template>                   
                             <div class="mt-1 flow-root"
@@ -69,7 +86,12 @@
                                             <div class="rounded cursor-pointer inline-flex text-xs whitespace-nowrap px-2 py-[2px] ml-2 mt-2 text-[#1C1F23] bg-[#F6F9FC] leading-[150%]">
                                                 {{ itemInforPromo.inforProduct4 }}
                                             </div>
-                                        </template>                                        
+                                        </template>
+                                        <template v-if="itemInforPromo.inforProduct5">
+                                            <div class="rounded cursor-pointer inline-flex text-xs whitespace-nowrap px-2 py-[2px] ml-2 mt-2 text-[#1C1F23] bg-[#F6F9FC] leading-[150%]">
+                                                {{ itemInforPromo.inforProduct5 }}
+                                            </div>
+                                        </template>                                      
                                     </div>
                                 </template>
                                 <template v-if="itemInforPromo.giftInfor">

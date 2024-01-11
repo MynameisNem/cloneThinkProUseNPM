@@ -116,7 +116,7 @@ export default {
                     inforProduct2: "QHD+ 165Hz",
                     inforProduct3: "16GB",
                     inforProduct4: "512GB",
-                    vgaInfor: "RTX3050Ti",
+                    inforProduct5: "RTX3050Ti",
                 },
                 // Dell Inspiron 14 5430 bản QHD+ done
                 {

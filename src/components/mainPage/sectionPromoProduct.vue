@@ -42,14 +42,35 @@
 <script>
 import ButtonPrevPromoProduct from "../sharedVue/button/buttonPREV.vue";
 import ButtonNextPromoProduct from "../sharedVue/button/buttonNEXT.vue";
-import LaptopSpecial from '../promoProductSpecial/laptop-special'
-import KeyboardSpecial from '../promoProductSpecial/keyboard-special'
+import LaptopSpecial from '../promoProductSpecial/laptop-special.vue';
+import KeyboardSpecial from '../promoProductSpecial/keyboard-special.vue';
+import MouseSpecial from '../promoProductSpecial/mouse-special.vue';
+import ConvertSpecial from '../promoProductSpecial/convert-special.vue';
+import SoftwareSpecial from '../promoProductSpecial/software-special.vue';
+import HeadphoneSpecial from '../promoProductSpecial/headphone-special.vue';
+import MonitorSpecial from '../promoProductSpecial/monitor-special.vue';
+import EgronomicChairSpecial from '../promoProductSpecial/egronomic-chair-special.vue';
+import ArmMonitorSpecial from '../promoProductSpecial/arm-monitor-special.vue';
+import SetupSpecial from '../promoProductSpecial/setup-special.vue';
+import VRConsoleSpecial from '../promoProductSpecial/vr-console-special.vue';
+import CompactDiskGameSpecial from '../promoProductSpecial/compact-disk-game-special.vue';
+
 export default {
     components: {
         ButtonPrevPromoProduct,
         ButtonNextPromoProduct,
         LaptopSpecial,
-        KeyboardSpecial
+        KeyboardSpecial,
+        MouseSpecial,
+        ConvertSpecial,
+        SoftwareSpecial,
+        HeadphoneSpecial,
+        MonitorSpecial,
+        EgronomicChairSpecial,
+        ArmMonitorSpecial,
+        SetupSpecial,
+        VRConsoleSpecial,
+        CompactDiskGameSpecial
     },
     data() {
         return {
@@ -57,7 +78,7 @@ export default {
             scrollPositionProductPromo: 0,
             maxScrollPosition: null,
             listProductPromo: [
-                { id: 1500, nameProduct: "Laptop" }, { id: 1501, nameProduct: "Bàn phím" }, { id: 1502, nameProduct: "Chuột" }, { id: 1503, nameProduct: "Cổng chuyển" }, { id: 1504, nameProduct: "Phần mềm" },
+                { id: 1500, nameProduct: "Laptop" }, { id: 1501, nameProduct: "Bàn phím" }, { id: 1502, nameProduct: "Chuột" }, { id: 1503, nameProduct: "Cổng chuyển" },
                 { id: 1505, nameProduct: "Phần mềm" }, { id: 1506, nameProduct: "Tai nghe" }, { id: 1507, nameProduct: "Màn hình" }, { id: 1508, nameProduct: "Ghế công thái học" }, { id: 1509, nameProduct: "Arm màn hình" },
                 { id: 1510, nameProduct: "Phụ kiện & Setup" }, { id: 1511, nameProduct: "Mặt bàn" }, { id: 1512, nameProduct: "Máy game & Thực tế ảo" }, { id: 1513, nameProduct: "Đĩa game & Phụ kiện game" },
                 { id: 1514, nameProduct: "Túi" }, { id: 1515, nameProduct: "Balo" }, { id: 1516, nameProduct: "Loa" }, { id: 1517, nameProduct: "Bộ bàn" }, { id: 1518, nameProduct: "Khung bàn" }, { id: 1519, nameProduct: "Bàn ghế trẻ em" },
@@ -126,6 +147,16 @@ export default {
             const productPromoMapping = {
                 'Laptop': LaptopSpecial,
                 'Bàn phím': KeyboardSpecial,
+                'Chuột': MouseSpecial,
+                'Cổng chuyển': ConvertSpecial,
+                'Phần mềm': SoftwareSpecial,
+                'Tai nghe': HeadphoneSpecial,
+                'Màn hình': MonitorSpecial,
+                'Ghế công thái học': EgronomicChairSpecial,
+                'Arm màn hình': ArmMonitorSpecial,
+                'Phụ kiện & Setup': SetupSpecial,
+                'Máy game & Thực tế ảo': VRConsoleSpecial,
+                'Đĩa game & Phụ kiện game': CompactDiskGameSpecial
             };
             if (this.selectedItem) {
                 const selectedProduct = this.selectedItem.nameProduct;
