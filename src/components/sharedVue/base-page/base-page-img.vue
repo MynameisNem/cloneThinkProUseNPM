@@ -58,7 +58,7 @@ export default {
         if(this.productPromo.length > 0) {
             this.selectedItem = this.productPromo[0].allProduct;
         }
-    }    
+    }
 }
 </script>
 

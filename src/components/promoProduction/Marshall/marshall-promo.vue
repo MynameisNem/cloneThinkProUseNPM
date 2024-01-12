@@ -8,6 +8,7 @@
                 :product-promo="productPromo">
             </BasePageImg>
             <MarshallAllProducts></MarshallAllProducts>
+            <!-- <component :is="selectedItemComponent" :selected-item="selectedItem"></component> -->
         </section>
     </main>
 </template>
@@ -15,6 +16,7 @@
 <script>
 import BasePageImg from '@/components/sharedVue/base-page/base-page-img.vue';
 import MarshallAllProducts from '../Marshall/marshall-all-products.vue';
+// import MarshallHeadphone from './marshall-headphone.vue';
 export default {
     components: {
         BasePageImg,
@@ -41,6 +43,24 @@ export default {
             selectedItem: null,
         }
     },
+    methods: {
+        selectItem(item) {
+            this.selectedItem = item;
+        },
+    },
+    // computed: {
+    //     selectedItemComponent() {
+    //         const productPromoMapping = {
+    //             'Tất cả': MarshallAllProducts,
+    //             'Tai nghe': MarshallHeadphone
+    //         };
+    //         if (this.selectedItem) {
+    //             const selectedProduct = this.selectedItem.allProduct
+    //             return productPromoMapping[selectedProduct] || MarshallAllProducts
+    //         }
+    //         return MarshallAllProducts
+    //     }
+    // } 
 }
 </script>
 

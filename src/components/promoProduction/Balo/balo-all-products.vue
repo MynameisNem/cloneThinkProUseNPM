@@ -281,8 +281,5 @@ export default {
             ]
         }        
     },
-    mounted() {
-        console.log('lenght: ', this.inforProduct.length)
-    }
 }
 </script>
