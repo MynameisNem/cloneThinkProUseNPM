@@ -2,11 +2,11 @@
     <main class="page-home bg-[#F6F9FC]">
         <div class="container py-8 mr-auto ml-auto">
             <!-- intro section -->
-            <section class="introSection rounded overflow-hidden h-[300px]"
-                style="color: rgb(255, 255, 255); background-color: rgb(11, 203, 224);">
+            <section class="introSection rounded overflow-hidden h-[350px]"
+                style="color: rgb(255, 255, 255); background-color: rgb(0, 219, 255);">
                 <div class="flex h-full">
                     <div class="w-1/3 px-6 py-8">
-                        <h1 class="font-semibold text-[28px] leading-[40px]">Tháng ThinkPro Fans 😉🎁</h1>
+                        <h1 class="font-semibold text-[28px] leading-[40px]">Tận Hưởng Năm Mới 🎉</h1>
                         <p class="mt-2">
                             {{ pTagIntro }}
                         </p>
@@ -41,8 +41,8 @@ export default {
     },
     data() {
         return {
-            pTagIntro: "Tháng ThinkPro Fans đã đến và đem theo ngàn ưu đãi hấp dẫn. ThinkPro, mang đến những món đồ công nghệ hiện đại, tiện lợi và giải pháp thông minh tối ưu cho cuộc sống của bạn.Đừng bỏ lỡ cơ hội trải nghiệm những sản phẩm và dịch vụ tốt nhất với giá Ưu Đãi đặc biệt trong tháng này!!",
-            imgSrcIntro: "https://images.thinkgroup.vn/unsafe/1600x600/https://media-api-beta.thinkpro.vn/media/core/categories/2023/10/6/thinkpro-backgroud-thinkpro.jpg"
+            pTagIntro: "Thinkpro gửi tặng bạn những lời chúc tốt lành cùng hàng loạt \"Deal Hot\" đầy hấp dẫn. Tại đây, bạn sẽ khám phá những sản phẩm công nghệ chất lượng và tiên tiến nhất để bắt đầu một năm mới tràn đầy cơ hội và thành công!",
+            imgSrcIntro: "https://images.thinkgroup.vn/unsafe/1600x600/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/categories/2023/12/26/frame-95551666-thinkpro-6bX.jpeg"
         }
     }
 }
