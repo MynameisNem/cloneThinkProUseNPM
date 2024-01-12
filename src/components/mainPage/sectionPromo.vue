@@ -257,7 +257,7 @@ export default {
                     promoQuanti1: "34 Loa",
                     promoQuanti2: "3 Tai nghe",
                     promoGift: "",
-                    promoName: "Marshall - Âm Thanh Đỉnh Cao - Giá Hợp Lý",
+                    promoName: "MARSHALL SALE TO - LO CHI VỀ GIÁ",
                     promoDown: "-54%",
                     promoPrice: "Chỉ từ 2.390.000",
                     promoStart: "Từ 18/03/2023",
