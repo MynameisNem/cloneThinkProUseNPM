@@ -54,6 +54,13 @@ import ArmMonitorSpecial from '../promoProductSpecial/arm-monitor-special.vue';
 import SetupSpecial from '../promoProductSpecial/setup-special.vue';
 import VRConsoleSpecial from '../promoProductSpecial/vr-console-special.vue';
 import CompactDiskGameSpecial from '../promoProductSpecial/compact-disk-game-special.vue';
+import DesktopSpecial from '../promoProductSpecial/mat-ban-special.vue';
+import BagSpecial from '../promoProductSpecial/bag-special.vue';
+import BaloSpecial from '../promoProductSpecial/balo-special.vue';
+import SpeakerSpecial from '../promoProductSpecial/speaker-special.vue';
+import TableSpecial from '../promoProductSpecial/table-special.vue';
+import TableFrameSpecial from '../promoProductSpecial/table-frame-special.vue';
+import TableKidSpecial from '../promoProductSpecial/table-kid-special.vue'
 
 export default {
     components: {
@@ -70,7 +77,14 @@ export default {
         ArmMonitorSpecial,
         SetupSpecial,
         VRConsoleSpecial,
-        CompactDiskGameSpecial
+        CompactDiskGameSpecial,
+        DesktopSpecial,
+        BagSpecial,
+        BaloSpecial,
+        SpeakerSpecial,
+        TableSpecial,
+        TableFrameSpecial,
+        TableKidSpecial
     },
     data() {
         return {
@@ -156,7 +170,14 @@ export default {
                 'Arm màn hình': ArmMonitorSpecial,
                 'Phụ kiện & Setup': SetupSpecial,
                 'Máy game & Thực tế ảo': VRConsoleSpecial,
-                'Đĩa game & Phụ kiện game': CompactDiskGameSpecial
+                'Đĩa game & Phụ kiện game': CompactDiskGameSpecial,
+                'Mặt bàn': DesktopSpecial,
+                'Túi': BagSpecial,
+                'Balo': BaloSpecial,
+                'Loa': SpeakerSpecial,
+                'Bộ bàn': TableSpecial,
+                'Khung bàn': TableFrameSpecial,
+                'Bàn ghế trẻ em': TableKidSpecial
             };
             if (this.selectedItem) {
                 const selectedProduct = this.selectedItem.nameProduct;
