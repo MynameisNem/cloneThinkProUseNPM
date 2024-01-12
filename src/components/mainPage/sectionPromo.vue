@@ -19,14 +19,16 @@
                                             class="text-[12px] bg-[#F6F9FC] text-[#1C1F23] rounded py-[2px] px-2 items-center inline-flex whitespace-nowrap leading-[150%]">
                                             {{ itemPromo.promoQuanti1 }}
                                         </div>
-                                        <div
-                                            class="text-[12px] bg-[#F6F9FC] text-[#1C1F23] rounded py-[2px] px-2 items-center inline-flex whitespace-nowrap leading-[150%]">
-                                            {{ itemPromo.promoQuanti2 }}
-                                        </div>
-                                        <div
-                                            class="text-[12px] bg-[#F6F9FC] text-[#1C1F23] rounded py-[2px] px-2 items-center inline-flex whitespace-nowrap leading-[150%]">
-                                            {{ itemPromo.promoGift }}
-                                        </div>
+                                        <template v-if="itemPromo.promoQuanti2">
+                                            <div class="text-[12px] bg-[#F6F9FC] text-[#1C1F23] rounded py-[2px] px-2 items-center inline-flex whitespace-nowrap leading-[150%]">
+                                                {{ itemPromo.promoQuanti2 }}
+                                            </div>
+                                        </template>
+                                        <template v-if="itemPromo.promoGift">
+                                            <div class="text-[12px] bg-[#F6F9FC] text-[#1C1F23] rounded py-[2px] px-2 items-center inline-flex whitespace-nowrap leading-[150%]">
+                                                {{ itemPromo.promoGift }}
+                                            </div>
+                                        </template>                                        
                                     </div>
                                     <div class="flex items-center space-x-2">
                                         <span
@@ -243,8 +245,6 @@ export default {
                 {
                     id: 0,
                     promoQuanti1: "30 Laptop",
-                    promoQuanti2: "",
-                    promoGift: "",
                     promoName: "SALE TƯNG BỪNG - MỪNG NĂM MỚI",
                     promoDown: "-100%",
                     promoPrice: "Chỉ từ 17.990.000",
@@ -256,7 +256,6 @@ export default {
                     id: 1,
                     promoQuanti1: "34 Loa",
                     promoQuanti2: "3 Tai nghe",
-                    promoGift: "",
                     promoName: "MARSHALL SALE TO - LO CHI VỀ GIÁ",
                     promoDown: "-54%",
                     promoPrice: "Chỉ từ 2.390.000",
@@ -268,7 +267,6 @@ export default {
                     id: 2,
                     promoQuanti1: "50 Loa",
                     promoQuanti2: "3 Tai nghe",
-                    promoGift: "",
                     promoName: "ÂM THANH ĐỈNH CAO - SIÊU SALE NĂM MỚI",
                     promoDown: "-41%",
                     promoPrice: "Chỉ từ 2.090.000",
@@ -291,8 +289,6 @@ export default {
                 {
                     id: 4,
                     promoQuanti1: "3 phần mềm",
-                    promoQuanti2: "",
-                    promoGift: "",
                     promoName: "FLASH SALE - ĐỘC QUYỀN MICROSOFT",
                     promoDown: "-33%",
                     promoPrice: "Chỉ từ 990.000",
@@ -304,7 +300,6 @@ export default {
                     id: 5,
                     promoQuanti1: "15 Laptop",
                     promoQuanti2: "2 Màn hình",
-                    promoGift: "",
                     promoName: "Laptop Chính Hãng - Giá Rẻ Nhất Thị Trường",
                     promoDown: "-47%",
                     promoPrice: "Chỉ từ 3.990.000",
@@ -553,12 +548,6 @@ export default {
                 color: changeColorNext ? '#FFFFFF' : '#6B7075'
             };
         },
-        // renderListItemPromo() {
-        //     const startItem = this.indexItemPromo * 5;
-        //     const endItem = startItem + 4;
-        //     const srcIndex = this.indexSrc;
-        //     return srcIndex >= startItem && srcIndex <= endItem
-        // }
     }
 }
 </script>
