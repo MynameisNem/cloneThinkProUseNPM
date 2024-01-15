@@ -19,7 +19,8 @@
                                     <div v-for="itemService in listService"
                                         :key="itemService.id"
                                         class="h-[var(--box-size)] w-[100%] relative rounded cursor-pointer"
-                                        :style="itemService.styleService">
+                                        :style="itemService.styleService"
+                                        @click="changeService">
                                         <!-- w-[var(--box-size)] -->
                                         <span
                                             class="left-3 absolute text-[14px] font-semibold max-w-[85px] top-3 leading-[150%]">
@@ -39,8 +40,6 @@
                                         </div>
                                     </div>
                                 </template>
-
-                                <!-- thành viên onward -->
                                 <div class="h-[var(--box-size)] w-[100%] relative rounded bg-[#FFFFFF] p-3">
                                     <div class="w-5 h-5 rounded-full flex items-center justify-center relative bg-[#3BB346]">
                                         <i class="w-3 h-3 inline-block text-[15px] absolute">
@@ -59,11 +58,16 @@
                 </div>
             </div>
         </div>
+        <ServiceThinkpro :show-service="showService" :change-service="changeService"></ServiceThinkpro>
     </section>
 </template>
 
 <script>
+import ServiceThinkpro from './service-thinkpro.vue';
 export default {
+    components: {
+        ServiceThinkpro
+    },
     data() {
         return {
             checkSVG: require("@/assets/iconSVG/check.svg"),
@@ -97,8 +101,20 @@ export default {
                     srcService: "https://thinkpro.vn/usp/usp-4.png"
                 },
             ],
-            onwardPara: "Thành viên thuộc Onward Together Group. Tập đoàn bán lẻ từ 2013 với nguyên tắc hoạt động: Khách hàng là trung tâm."
+            onwardPara: "Thành viên thuộc Onward Together Group. Tập đoàn bán lẻ từ 2013 với nguyên tắc hoạt động: Khách hàng là trung tâm.",
+            showService: false
         }
+    },
+    methods: {
+        changeService() {
+            this.showService = !this.showService
+            if(this.showService) {
+                document.body.style.overflow = 'hidden'
+            }
+            else {
+                document.body.style.overflow = 'auto'
+            }
+        },
     }
 }
 </script>

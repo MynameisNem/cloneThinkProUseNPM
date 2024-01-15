@@ -62,30 +62,10 @@ import navMenuSpeaker from './menuRight/menuProduct/navMenuSpeaker.vue'
 
 export default {
     components: {
-        navMenuLaptop,
-        navMenuEnd,
-        navMenuKeyBoard,
-        navMenuSounds,
-        navMenuChair,
-        navMenuLiftTable,
-        navMenuVRGameConsole,
-        navTableFrame,
-        navTableSets,
-        navBaloAndBag,
-        navArmMonitor,
-        navHeadphone,
-        navSmartHome,
-        navMouseComputer,
-        navMenuMonitor,
-        navMenuPort,
-        navMenuSoftware,
-        navMenuSetup,
-        navMenuGameAccessory,
-        navMenuFurniture,
-        navMenuTabletops,
-        navMenuBalo,
-        navMenuBags,
-        navMenuSpeaker
+        navMenuEnd
+        // phần này có thể bỏ
+        // navMenuLaptop,
+        // ...
     },
     props: {
         tabSelected: Boolean,

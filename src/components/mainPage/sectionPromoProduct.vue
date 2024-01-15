@@ -70,24 +70,7 @@ export default {
         // Phần dưới này có thể bỏ
 
         // LaptopSpecial,
-        // KeyboardSpecial,
-        // MouseSpecial,
-        // ConvertSpecial,
-        // SoftwareSpecial,
-        // HeadphoneSpecial,
-        // MonitorSpecial,
-        // EgronomicChairSpecial,
-        // ArmMonitorSpecial,
-        // SetupSpecial,
-        // VRConsoleSpecial,
-        // CompactDiskGameSpecial,
-        // DesktopSpecial,
-        // BagSpecial,
-        // BaloSpecial,
-        // SpeakerSpecial,
-        // TableSpecial,
-        // TableFrameSpecial,
-        // TableKidSpecial
+        // ...
     },
     data() {
         return {
