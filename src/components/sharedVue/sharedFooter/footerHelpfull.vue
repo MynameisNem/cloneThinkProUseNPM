@@ -3,14 +3,14 @@
         <div class="h-full p-4 rounded bg-[#F6F9FC]">
             <h2 class="text-[18px] font-semibold leading-[150%]">Thông tin hữu ích</h2>
             <div class="mt-3 flex flex-col space-y-2">
-                <a v-for="itemHelpful in listHelp" :key="itemHelpful.id" rel="noopener"
-                    target="blank" :href="itemHelpful.linkInforHelp"
+                <router-link v-for="itemHelpful in listHelp" :key="itemHelpful.id" rel="noopener"
+                    target="blank" :to="itemHelpful.linkInforHelp"
                     class="flex items-center space-x-3">
                     <i class="w-4 h-4">
                         <img :src="itemHelpful.iconInforHelp" :alt="itemHelpful.inforHelp">
                     </i>
                     <span class="text-[14px] leading-[150%]">{{ itemHelpful.inforHelp }}</span>
-                </a>
+                </router-link>
             </div>
         </div>
     </section>
@@ -23,13 +23,13 @@ export default {
             listHelp: [
                 {
                     id: 14999,
-                    linkInforHelp: "https://thinkpro.vn/noi-dung/chinh-sach-kiem-hang-thinkpro",
+                    linkInforHelp: "/Chinh-sach-bao-hanh-thinkpro",
                     inforHelp: "Chính sách bảo hành",
                     iconInforHelp: require("@/assets/iconSVG/footerIconSVG/footerHelpfull/semi-check.svg")
                 },
                 {
                     id: 15000,
-                    linkInforHelp: "https://thinkpro.vn/noi-dung/chinh-sach-doi-tra-thinkpro",
+                    linkInforHelp: "/Chinh-sach-doi-tra-thinkpro",
                     inforHelp: "Chính sách đổi trả",
                     iconInforHelp: require("@/assets/iconSVG/footerIconSVG/footerPayment/rotate.svg")
                 },

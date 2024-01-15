@@ -26,7 +26,9 @@ import LaptopPromo from '@/components/promoProduction/Laptop/laptop-promo.vue';
 import SpeakerPromo from '@/components/promoProduction/Speaker/speaker-promo.vue';
 import BaloPromo from '@/components/promoProduction/Balo/balo-promo.vue';
 import SoftwarePromo from '@/components/promoProduction/Phan-mem/software-promo.vue';
-import LaptopGiaRePromo from '@/components/promoProduction/Laptop-gia-re/laptop-gia-re-promo.vue'
+import LaptopGiaRePromo from '@/components/promoProduction/Laptop-gia-re/laptop-gia-re-promo.vue';
+import WarrantyService from '@/components/service-footer/warranty-service.vue';
+import ExchangeService from '@/components/service-footer/exchange-service.vue';
 
 Vue.use(VueRouter)
 
@@ -192,6 +194,18 @@ const routes = [
         name: 'Ngay-vang-gia-soc',
         component: LaptopGiaRePromo,
         key: 27
+    },
+    {
+        path: '/Chinh-sach-bao-hanh-thinkpro',
+        name: 'Chinh-sach-bao-hanh-thinkpro',
+        component: WarrantyService,
+        key: 28
+    },
+    {
+        path: '/Chinh-sach-doi-tra-thinkpro',
+        name: 'Chinh-sach-doi-tra-thinkpro',
+        component: ExchangeService,
+        key: 29
     },
     
 ]
