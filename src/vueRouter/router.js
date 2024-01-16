@@ -29,6 +29,8 @@ import SoftwarePromo from '@/components/promoProduction/Phan-mem/software-promo.
 import LaptopGiaRePromo from '@/components/promoProduction/Laptop-gia-re/laptop-gia-re-promo.vue';
 import WarrantyService from '@/components/service-footer/warranty-service.vue';
 import ExchangeService from '@/components/service-footer/exchange-service.vue';
+import DeliveryService from '@/components/service-footer/delivery-service.vue';
+import ConfidentialService from '@/components/service-footer/confidential-service.vue';
 
 Vue.use(VueRouter)
 
@@ -206,6 +208,18 @@ const routes = [
         name: 'Chinh-sach-doi-tra-thinkpro',
         component: ExchangeService,
         key: 29
+    },
+    {
+        path: '/Chinh-sach-van-chuyen-thinkpro',
+        name: 'Chinh-sach-van-chuyen-thinkpro',
+        component: DeliveryService,
+        key: 30
+    },
+    {
+        path: '/Chinh-sach-bao-mat-thinkpro',
+        name: 'Chinh-sach-bao-mat-thinkpro',
+        component: ConfidentialService,
+        key: 31
     },
     
 ]

@@ -24,17 +24,27 @@ export default {
     font-size: 28px;
     line-height: 40px;
     font-weight: 800;
+    text-align: justify;
 }
 .text-h3 {
     font-size: 24px;
     line-height: 34px;
     font-weight: 700;
+    text-align: justify;
 }
 .pText {
     text-align: justify;
     font-weight: 400;
 }
-.liLeft {
+.liDecimal {
+    list-style-type: decimal;
     padding-left: 3rem;
+}
+.liDisc {
+    list-style-type: disc;
+    padding-left: 3rem;
+}
+.textBold {
+    font-weight: 700;
 }
 </style>

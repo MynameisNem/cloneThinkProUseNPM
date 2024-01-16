@@ -35,14 +35,14 @@ export default {
                 },
                 {
                     id: 15001,
-                    linkInforHelp: "https://thinkpro.vn/noi-dung/chinh-sach-bao-hanh-thinkpro",
+                    linkInforHelp: "/Chinh-sach-van-chuyen-thinkpro",
                     inforHelp: "Chính sách vận chuyển",
                     iconInforHelp: require("@/assets/iconSVG/footerIconSVG/footerHelpfull/semi-truck.svg")
 
                 },
                 {
                     id: 15002,
-                    linkInforHelp: "https://thinkpro.vn/noi-dung/chinh-sach-van-chuyen-thinkpro",
+                    linkInforHelp: "/Chinh-sach-bao-mat-thinkpro",
                     inforHelp: "Chính sách bảo mật",
                     iconInforHelp: require("@/assets/iconSVG/footerIconSVG/footerHelpfull/semi-shield.svg")
 
