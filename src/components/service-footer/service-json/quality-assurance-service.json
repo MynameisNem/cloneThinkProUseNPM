@@ -1,0 +1,28 @@
+{
+    "title": "Chính sách kiểm hàng",
+    "content": [
+        "<h2 class=\"text-h2\">Thời điểm kiểm hàng</h2>",
+        "<p class=\"pText\">ThinkPro chấp nhận cho khách hàng đồng kiểm với nhân viên giao hàng tại thời điểm nhận hàng. Không hỗ trợ thử hàng.</p>",
+        "<p class=\"pText\">Sau khi nhận hàng, khách hàng kiểm lại phát hiện sai có thể liên lạc với bộ phận chăm sóc khách hàng để được hỗ trợ đổi trả.</p>",
+        "<p class=\"pText\"><em><strong class=\"textBold\">Lưu ý: Quý khách vui lòng quay video lúc mở hàng để đối chiếu khi cần thiết.</strong></em></p>",
+        "<h2 class=\"text-h2\">Thời điểm kiểm hàng</h2>",
+        "<p class=\"pText\">Khách hàng được kiểm tra các sản phẩm thực nhận, đối chiếu, so sánh các sản phẩm nhận được với sản phẩm đã đặt trên đơn sau khi nhân viên ThinkPro xác nhận đơn hàng theo các tiêu chí: ảnh mẫu, mã sản phẩm, kích thước, màu sắc, chất liệu,...</p>",
+        "<ul class=\"liDisc\">",
+            "<li>Khi kiểm tra hàng hóa, khách hàng chỉ kiểm tra bên ngoài chứ không mở lên sử dụng.</li>",
+            "<li>Tuyệt đối không bóc, mở các hộp sản phẩm có tem niêm phong, tem đảm bảo.</li>",
+            "<li>Không được cào lấy mã các sản phẩm có tích điểm, đổi quà.</li>",
+        "</ul>",
+        "<p class=\"pText\"><em><strong class=\"textBold\">Lưu ý: Với những sản phẩm nguyên seal sẽ phải thanh toán với Shiper (nếu có COD) mới được bóc mở.</strong></em></p>",
+        "<h2 class=\"text-h2\">Các bước xử lý khi hàng hóa nhận được không như đơn đặt hàng</h2>",
+        "<p class=\"pText\">Khi quý khách đồng kiểm, sản phẩm nhận được không như sản phẩm khách đặt trên đơn hàng. Xin hãy liên hệ với hotline <em><strong class=\"textBold\">1900.63.3579</strong></em> để được gặp bộ phận chăm sóc khách hàng xác nhận lại đơn hàng.</p>",
+        "<p class=\"pText\">Trường hợp ThinkPro đóng sai đơn hàng theo yêu cầu của khách, khách có thể <strong class=\"textBold\">không nhận hàng, không thanh toán</strong>. Trong trường hợp đơn hàng đã thanh toán, khách hàng có thể yêu cầu gửi lại đơn mới hoặc không, ThinkPro sẽ hoàn lại tiền cho quý khách trong thời gian sớm nhất.</p>",
+        "<p class=\"pText\">Trường hợp ThinkPro đóng hàng đúng theo đơn hàng, nhưng khách hàng thay đổi nhu cầu, khách hàng có thể yêu cầu đổi trả và áp dụng chính sách đổi trả hàng hóa. Trường hợp này khách hàng sẽ phải thanh toán chi phí giao hàng (nếu có).</p>",
+        "<p class=\"pText\"><strong class=\"textBold\">Các kênh thông tin tiếp nhận khiếu nại của khách hàng.</strong></p>",
+        "<ul class=\"liDisc\">",
+            "<li>Hotline <strong class=\"textBold\">1900.63.3579</strong></li>",
+            "<li>Fanpage <a target=\"_blank\" href=\"https://www.facebook.com/thinkpro.vn\" class=\"text-[#0065EE] hover:text-[#00008B]\"><strong class=\"textBold\">ThinkPro - Hệ thống máy tính và Phụ kiện</strong></a></li>",
+            "<li>Group <a target=\"_blank\" href=\"http://t.me/thinkprocommunity\" class=\"text-[#0065EE] hover:text-[#00008B]\"><strong class=\"textBold\">Telegram ThinkPro Community</strong></a></li>",
+            "<li>Zalo <a target=\"_blank\" href=\"https://zalo.me/3877075650294314763\" class=\"text-[#0065EE] hover:text-[#00008B]\"><strong class=\"textBold\">ThinkPro</strong></a></li>",
+        "</ul>"
+    ]
+}

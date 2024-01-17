@@ -49,14 +49,14 @@ export default {
                 },
                 {
                     id: 15003,
-                    linkInforHelp: "https://thinkpro.vn/noi-dung/chinh-sach-bao-mat-thinkpro-4831",
+                    linkInforHelp: "/Chinh-sach-thanh-toan-thinkpro",
                     inforHelp: "Chính sách thanh toán",
                     iconInforHelp: require("@/assets/iconSVG/footerIconSVG/footerPayment/card.svg")
 
                 },
                 {
                     id: 15004,
-                    linkInforHelp: "https://thinkpro.vn/noi-dung/chinh-sach-thanh-toan-thinkpro",
+                    linkInforHelp: "/Chinh-sach-kiem-hang-thinkpro",
                     inforHelp: "Chính sách kiểm hàng",
                     iconInforHelp: require("@/assets/iconSVG/footerIconSVG/footerHelpfull/semi-scan.svg")
 

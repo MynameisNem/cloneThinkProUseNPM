@@ -31,6 +31,8 @@ import WarrantyService from '@/components/service-footer/warranty-service.vue';
 import ExchangeService from '@/components/service-footer/exchange-service.vue';
 import DeliveryService from '@/components/service-footer/delivery-service.vue';
 import ConfidentialService from '@/components/service-footer/confidential-service.vue';
+import AccountingService from '@/components/service-footer/accounting-service.vue';
+import QualityAssuranceService from '@/components/service-footer/quality-assurance-service.vue';
 
 Vue.use(VueRouter)
 
@@ -221,7 +223,18 @@ const routes = [
         component: ConfidentialService,
         key: 31
     },
-    
+    {
+        path: '/Chinh-sach-thanh-toan-thinkpro',
+        name: 'Chinh-sach-thanh-toan-thinkpro',
+        component: AccountingService,
+        key: 32
+    },
+    {
+        path: '/Chinh-sach-kiem-hang-thinkpro',
+        name: 'Chinh-sach-kiem-hang-thinkpro',
+        component: QualityAssuranceService,
+        key: 33
+    },
 ]
 
 const router = new VueRouter({
