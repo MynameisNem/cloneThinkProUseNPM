@@ -18,7 +18,8 @@ export default {
                     productName: "Dell Inspiron 14 5430",
                     productPrice: "17.990.000",
                     productDiscount: "-38%",
-                    productColor: "border: 1px solid rgb(192 192 192); background: rgb(192 192 192);"
+                    productColor: "border: 1px solid rgb(192 192 192); background: rgb(192 192 192);",
+                    name: 'detailsProduct'       
                 },
                 // có quà
                 {
@@ -28,7 +29,8 @@ export default {
                     productPrice: "26.990.000",
                     productDiscount: "-33%",
                     productColor: "border: 1px solid #000000; background: #000000;",
-                    productGift: "Quà tặng 399.000"
+                    productGift: "Quà tặng 399.000",                    
+                    
                 },
                 // có quà
                 {
@@ -38,7 +40,9 @@ export default {
                     productPrice: "22.390.000",
                     productDiscount: "-25%",
                     productColor: "border: 1px solid rgb(102 102 102); background: rgb(102 102 102);",
-                    productGift: "Quà tặng 100.000"
+                    productGift: "Quà tặng 100.000",                    
+                    
+
                 },
                 {
                     id: 20003,
@@ -46,7 +50,8 @@ export default {
                     productName: "Lenovo ThinkBook 14 G5+",
                     productPrice: "23.990.000",
                     productDiscount: "-20%",
-                    productColor: "border: 1px solid rgb(110 109 109); background: rgb(110 109 109);"
+                    productColor: "border: 1px solid rgb(110 109 109); background: rgb(110 109 109);",                    
+                    
                 },
                 {
                     id: 20004,
@@ -55,7 +60,8 @@ export default {
                     productPrice: "18.990.000",
                     productDiscount: "-34%",
                     productColor: "border: 1px solid rgb(139 203 255); background: rgb(139 203 255);",
-                    productColor2: "border: 1px solid rgb(113 65 65); background: rgb(113 65 65);"
+                    productColor2: "border: 1px solid rgb(113 65 65); background: rgb(113 65 65);",                    
+                    
                 },
                 // có quà
                 {
@@ -65,7 +71,8 @@ export default {
                     productPrice: "21.990.000",
                     productDiscount: "-37%",
                     productColor: "border: 1px solid #000000; background: #000000;",
-                    productGift: "Quà tặng 898.000"
+                    productGift: "Quà tặng 898.000",                    
+                    
                 },
                 // có quà
                 {
@@ -75,7 +82,8 @@ export default {
                     productPrice: "20.790.000",
                     productDiscount: "-31%",
                     productColor: "border: 1px solid #000000; background: #000000;",
-                    productGift: "Quà tặng 499.000"
+                    productGift: "Quà tặng 499.000",                    
+                    
                 },
                 // có quà
                 {
@@ -86,7 +94,8 @@ export default {
                     productDiscount: "-41%",
                     productColor: "border: 1px solid rgb(236 236 236); background: rgb(236 236 236);",
                     productColor2: "border: 1px solid #353535; background: #353535;",
-                    productGift: "Quà tặng 399.000"
+                    productGift: "Quà tặng 399.000",                    
+                    
                 },
                 {
                     id: 20008,
@@ -94,7 +103,8 @@ export default {
                     productName: "Lenovo Legion 5 Pro 2022",
                     productPrice: "26.990.000",
                     productDiscount: "-33%",
-                    productColor: "border: 1px solid #666666; background: #666666;"
+                    productColor: "border: 1px solid #666666; background: #666666;",                    
+                    
                 },
                 {
                     id: 20009,
@@ -102,7 +112,8 @@ export default {
                     productName: "Dell Latitude 7320 Detachable",
                     productPrice: "11.990.000",
                     productDiscount: "-25%",
-                    productColor: "border: 1px solid #000000; background: #000000;"
+                    productColor: "border: 1px solid #000000; background: #000000;",                    
+                    
                 },
                 // có quà
                 {
@@ -112,7 +123,8 @@ export default {
                     productPrice: "26.990.000",
                     productDiscount: "-10%",
                     productColor: "border: 1px solid #E5E4E2; background: #E5E4E2;",
-                    productGift: "Quà tặng 399.000"
+                    productGift: "Quà tặng 399.000",                    
+                    
                 },
                 {
                     id: 20011,
@@ -120,7 +132,8 @@ export default {
                     productName: "Lenovo ThinkPad E14 Gen 4",
                     productPrice: "15.490.000",
                     productDiscount: "-34%",
-                    productColor: "border: 1px solid #000000; background: #000000;"
+                    productColor: "border: 1px solid #000000; background: #000000;",                    
+                    
                 },
                 // có quà
                 {
@@ -130,7 +143,8 @@ export default {
                     productPrice: "12.990.000",
                     productDiscount: "-19%",
                     productColor: "border: 1px solid #C0C0C0; background: #C0C0C0;",
-                    productGift: "Quà tặng 100.000"
+                    productGift: "Quà tặng 100.000",                    
+                    
                 },
                 {
                     id: 20013,
@@ -138,7 +152,8 @@ export default {
                     productName: "Dell XPS 15 9520",
                     productPrice: "27.990.000",
                     productDiscount: "-15%",
-                    productColor: "border: 1px solid #ECECEC; background: #ECECEC;"
+                    productColor: "border: 1px solid #ECECEC; background: #ECECEC;",                    
+                    
                 },
                 // có quà
                 {
@@ -151,7 +166,8 @@ export default {
                     productColor2: "border: 1px solid #302C2C; background: #302C2C;",
                     productColor3: "border: 1px solid #F2F2F2; background: #F2F2F2;",
                     productColor4: "border: 1px solid #747272; background: #747272;",
-                    productGift: "Quà tặng 499.000"
+                    productGift: "Quà tặng 499.000",                    
+                    
                 },
                 {
                     id: 20015,
@@ -159,7 +175,8 @@ export default {
                     productName: "Lenovo ThinkBook 16 G4+",
                     productPrice: "21.490.000",
                     productDiscount: "-12%",
-                    productColor: "border: 1px solid #8C8C8C; background: #8C8C8C;"
+                    productColor: "border: 1px solid #8C8C8C; background: #8C8C8C;",                    
+                    
                 },
                 // có quà
                 {
@@ -169,7 +186,8 @@ export default {
                     productPrice: "18.990.000",
                     productDiscount: "-39%",
                     productColor: "border: 1px solid #8D8D8D; background: #8D8D8D;",
-                    productGift: "Quà tặng 399.000"
+                    productGift: "Quà tặng 399.000",                    
+                    
                 },
                 {
                     id: 20017,
@@ -177,7 +195,8 @@ export default {
                     productName: "Lenovo ThinkPad T14 Gen 3 AMD",
                     productPrice: "18.490.000",
                     productDiscount: "-38%",
-                    productColor: "border: 1px solid #000000; background: #000000;"
+                    productColor: "border: 1px solid #000000; background: #000000;",                    
+                    
                 },
                 // có quà
                 {
@@ -188,7 +207,8 @@ export default {
                     productDiscount: "-30%",
                     productColor: "border: 1px solid #ECECEC; background: #ECECEC;",
                     productColor2: "border: 1px solid #134953; background: #134953;",
-                    productGift: "Quà tặng 399.000"
+                    productGift: "Quà tặng 399.000",                    
+                    
                 },
                 // có quà
                 {
@@ -198,7 +218,8 @@ export default {
                     productPrice: "14.390.000",
                     productDiscount: "-28%",
                     productColor: "border: 1px solid #B2AFAF; background: #B2AFAF;",
-                    productGift: "Quà tặng 100.000"
+                    productGift: "Quà tặng 100.000",                    
+                    
                 },
             ],
         }

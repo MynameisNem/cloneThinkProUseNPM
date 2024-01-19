@@ -29,7 +29,7 @@
                                                 {{ itemPreOrder.saleSlot }}
                                             </span>
                                         </div>
-                                        <div class="inline-flex">
+                                        <div class="inline-flex" v-if="itemPreOrder.endTime">
                                             <span class="bg-[#F93920] text-[#FFFFFF] rounded py-[2px] px-2 items-center cursor-pointer inline-flex text-xs whitespace-nowrap leading-[150%]">
                                                 {{ itemPreOrder.endTime }}
                                             </span>
@@ -118,7 +118,7 @@ export default {
                 {
                     id: 2500,
                     saleSlot: "Đã bán 1/10",
-                    endTime: () => new Date('2025-01-20T00:00:00').getTime(),
+                    endTime:  '2025-01-20T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/3/ban-phim-co-nuphy-air75-v2-qmkvia-thinkpro.png",
                     namePreOrder: "Bàn Phím Cơ NuPhy Air75 v2 - QMK/VIA",
                     pricePreOrder: "2.750.000",
@@ -127,11 +127,10 @@ export default {
                     switchPreOrder: "Gateron Brown Switch 2.0",
                     countdownTime: 0,
                 },
-                // Nuphy Air75 v2 Red Sw màu 0 0 0 done
                 {
                     id: 2501,
                     saleSlot: "Còn 10 suất",
-                    endTime: () => new Date('2024-06-06T00:00:00').getTime(),
+                    endTime: '2024-06-06T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/3/ban-phim-co-nuphy-air75-v2-qmkvia-thinkpro.png",
                     namePreOrder: "Bàn Phím Cơ NuPhy Air75 v2 - QMK/VIA",
                     pricePreOrder: "2.750.000",
@@ -140,11 +139,10 @@ export default {
                     switchPreOrder: "Gateron Red Switch 2.0",
                     countdownTime: 0
                 },
-                // Keychron V1 Max Wireless Jupiter Brown Sw done
                 {
                     id: 2502,
                     saleSlot: "Còn 10 suất",
-                    endTime: () => new Date('2024-12-01T00:00:00').getTime(),
+                    endTime: '2024-12-01T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/8/ban-phim-co-keychron-v1-max-qmkvia-wireless-thinkpro-9M7.jpg",
                     namePreOrder: "Bàn phím cơ Keychron V1 Max QMK/VIA Wireless",
                     pricePreOrder: "2.090.000",
@@ -153,11 +151,10 @@ export default {
                     switchPreOrder: "Gateron Jupiter Brown",
                     countdownTime: 0
                 },
-                // Keychron V1 Max Wireless Jupiter Red Sw done
                 {
                     id: 2503,
                     saleSlot: "Còn 10 suất",
-                    endTime: () => new Date('2024-11-05T00:00:00').getTime(),
+                    endTime: '2024-11-05T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/8/ban-phim-co-keychron-v1-max-qmkvia-wireless-thinkpro-9M7.jpg",
                     namePreOrder: "Bàn phím cơ Keychron V1 Max QMK/VIA Wireless",
                     pricePreOrder: "2.090.000",
@@ -166,11 +163,10 @@ export default {
                     switchPreOrder: "Gateron Jupiter Red",
                     countdownTime: 0
                 },
-                // Nuphy Air75 v2 Brown Sw màu 105 104 104 done
                 {
                     id: 2504,
                     saleSlot: "Còn 10 suất",
-                    endTime: () => new Date('2024-10-13T00:00:00').getTime(),
+                    endTime: '2024-10-13T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/8/ban-phim-co-keychron-v1-max-qmkvia-wireless-thinkpro-9M7.jpg",
                     namePreOrder: "Bàn Phím Cơ NuPhy Air75 v2 - QMK/VIA",
                     pricePreOrder: "2.750.000",
@@ -179,11 +175,10 @@ export default {
                     switchPreOrder: "Gateron Brown Switch 2.0",
                     countdownTime: 0
                 },
-                // Nuphy Air75 v2 Red Sw màu 105 104 104 done
                 {
                     id: 2505,
                     saleSlot: "Đã bán 2/10",
-                    endTime: () => new Date('2024-08-23T00:00:00').getTime(),
+                    endTime: '2024-08-23T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/3/nuphy-air75-v2-03-thinkpro.png",
                     namePreOrder: "Bàn Phím Cơ NuPhy Air75 v2 - QMK/VIA",
                     pricePreOrder: "2.750.000",
@@ -192,11 +187,10 @@ export default {
                     switchPreOrder: "Gateron Red Switch 2.0",
                     countdownTime: 0
                 },
-                // Keychron V1 Max Wireless Jupiter Banana Sw done
                 {
                     id: 2506,
                     saleSlot: "Còn 10 suất",
-                    endTime: () => new Date('2024-10-14T00:00:00').getTime(),
+                    endTime: '2024-10-14T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/8/ban-phim-co-keychron-v1-max-qmkvia-wireless-thinkpro-cw0.jpg",
                     namePreOrder: "Bàn phím cơ Keychron V1 Max QMK/VIA Wireless",
                     pricePreOrder: "2.090.000",
@@ -205,11 +199,10 @@ export default {
                     switchPreOrder: "Gateron Jupiter Banana",
                     countdownTime: 0
                 },
-                // Chuột không dây Keychron M6 Ergonomic màu 3 3 3 done
                 {
                     id: 2507,
                     saleSlot: "Đã bán 1/10",
-                    endTime: () => new Date('2024-09-24T00:00:00').getTime(),
+                    endTime: '2024-09-24T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/9/keychron-m6-wireless-mouse-03-thinkpro-FQP.jpg",
                     namePreOrder: "Chuột không dây Keychron M6 Ergonomic",
                     pricePreOrder: "1.290.000",
@@ -218,11 +211,10 @@ export default {
                     switchPreOrder: "",
                     countdownTime: 0
                 },
-                // Chuột không dây Keychron M6 Ergonomic màu 255 255 255 done
                 {
                     id: 2508,
                     saleSlot: "Còn 10 suất",
-                    endTime: () => new Date('2024-07-11T00:00:00').getTime(),
+                    endTime: '2024-07-11T00:00:00',
                     srcPreOrder: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/9/chuot-khong-day-keychron-m6-ergonomic-thinkpro.png",
                     namePreOrder: "Chuột không dây Keychron M6 Ergonomic",
                     pricePreOrder: "1.290.000",
@@ -273,29 +265,34 @@ export default {
         formatTwoDigits(number) {
             return number < 10 ? `0${number}` : `${number}`;
         },
+        countDown(item) {
+            if (item.countdownTime > 0) {
+                item.countdownTime -= 1;
+
+                const days = Math.floor(item.countdownTime / (60 * 60 * 24));
+                const hours = Math.floor((item.countdownTime % (60 * 60 * 24)) / (60 * 60));
+                const minutes = Math.floor((item.countdownTime % (60 * 60)) / 60);
+                const seconds = Math.floor(item.countdownTime % 60);
+
+                item.endTime = `${this.formatTwoDigits(days)} ngày, ${this.formatTwoDigits(hours)}h ${this.formatTwoDigits(minutes)}p ${this.formatTwoDigits(seconds)}s`;
+            } else {
+                item.endTime = "Hết thời gian";
+            }
+        },
         startCountDown() {
             this.listPreOrder.forEach(item => {
                 // Chắc chắn rằng item.endTime là một hàm
-                const endTime = item.endTime();
+                const endTime = new Date(item.endTime).getTime();
                 const now = Date.now();
 
                 const timeRemaining = Math.max(0, endTime - now) / 1000;
 
+
                 item.countdownTime = timeRemaining;
+                this.countDown(item)
 
                 setInterval(() => {
-                    if (item.countdownTime > 0) {
-                        item.countdownTime -= 1;
-
-                        const days = Math.floor(item.countdownTime / (60 * 60 * 24));
-                        const hours = Math.floor((item.countdownTime % (60 * 60 * 24)) / (60 * 60));
-                        const minutes = Math.floor((item.countdownTime % (60 * 60)) / 60);
-                        const seconds = Math.floor(item.countdownTime % 60);
-
-                        item.endTime = `${this.formatTwoDigits(days)} ngày, ${this.formatTwoDigits(hours)}h ${this.formatTwoDigits(minutes)}p ${this.formatTwoDigits(seconds)}s`;
-                    } else {
-                        item.endTime = "Hết thời gian";
-                    }
+                    this.countDown(item)
                 }, 1000);
             });
         },

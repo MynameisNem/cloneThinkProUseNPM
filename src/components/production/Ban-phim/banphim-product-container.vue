@@ -31,7 +31,7 @@ export default {
                     productPrice: "2.179.000",
                     productDiscount: "-19%",
                     productColor: "border: 1px solid #1BB4E0; background: #1BB4E0;",
-                    productColor2: "border: 1px solid #585252; background: #585252;",
+                    productColor2: "border: 1px solid #585252; background: #585252;",                    
                 },
                 // có quà
                 {
@@ -40,7 +40,7 @@ export default {
                     productName: "Bàn phím Keychron K3 v2",
                     productPrice: "1.690.000",
                     productDiscount: "-11%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
+                    productColor: "border: 1px solid #000000; background: #000000;",                    
                 },
                 {
                     id: 20103,
@@ -50,8 +50,7 @@ export default {
                     productDiscount: "-14%",
                     productColor: "border: 1px solid #000000; background: #000000;",
                     productColor2: "border: 1px solid #4A4F94; background: #4A4F94;",
-                    productColor3: "border: 1px solid #DADDE0; background: #FFFFFF;"
-
+                    productColor3: "border: 1px solid #DADDE0; background: #FFFFFF;",                    
                 },
                 {
                     id: 20104,
@@ -59,7 +58,8 @@ export default {
                     productName: "Bàn phím cơ IQUNIX ZX75 Gravity Wave",
                     productPrice: "4.400.000",
                     productDiscount: "-6%",
-                    productColor: "border: 1px solid #8D8D8D; background: #8D8D8D;"
+                    productColor: "border: 1px solid #8D8D8D; background: #8D8D8D;",
+                    
                 },
                 // có quà
                 {
@@ -68,7 +68,8 @@ export default {
                     productName: "Kit Bàn Phím Cơ Keydous NJ80 AP",
                     productPrice: "1.490.000",
                     productDiscount: "-29%",
-                    productColor: "border: 1px solid #73BDEE; background: #73BDEE;"
+                    productColor: "border: 1px solid #73BDEE; background: #73BDEE;",
+                    
                 },
                 // có quà
                 {
@@ -77,7 +78,8 @@ export default {
                     productName: "Bàn phím cơ Newmen GM780 - Nebula Gasket",
                     productPrice: "1.590.000",
                     productDiscount: "-47%",
-                    productColor: "border: 1px solid #E6E6FA; background: #E6E6FA;"
+                    productColor: "border: 1px solid #E6E6FA; background: #E6E6FA;",
+                    
                 },
                 // có quà
                 {
@@ -86,7 +88,8 @@ export default {
                     productName: "Bàn phím cơ FL Esport Q75 Azure Green - 3 Mode",
                     productPrice: "1.990.000",
                     productDiscount: "-43%",
-                    productColor: "border: 1px solid #50806B; background: #50806B;"
+                    productColor: "border: 1px solid #50806B; background: #50806B;",
+                    
                 },
                 {
                     id: 20108,
@@ -94,7 +97,8 @@ export default {
                     productName: "Bàn phím cơ CIDOO V75 Pro - Aluminum CNC",
                     productPrice: "2.790.000",
                     productDiscount: "-10%",
-                    productColor: "border: 1px solid #E7E0A5; background: #E7E0A5;"
+                    productColor: "border: 1px solid #E7E0A5; background: #E7E0A5;",
+                    
                 },
                 {
                     id: 20109,
@@ -102,7 +106,8 @@ export default {
                     productName: "Bàn phím cơ CIDOO V65 v2 - Aluminum CNC",
                     productPrice: "2.490.000",
                     productDiscount: "-17%",
-                    productColor: "border: 1px solid #E7E0A5; background: #E7E0A5;"
+                    productColor: "border: 1px solid #E7E0A5; background: #E7E0A5;",
+                    
                 },
                 // có quà
                 {
@@ -111,7 +116,8 @@ export default {
                     productName: "Bàn phím cơ CIDOO V87 Pro - Aluminum CNC",
                     productPrice: "2.890.000",
                     productDiscount: "-12%",
-                    productColor: "border: 1px solid #E7E0A5; background: #E7E0A5;"
+                    productColor: "border: 1px solid #E7E0A5; background: #E7E0A5;",
+                    
                 },
                 {
                     id: 20111,
@@ -119,7 +125,8 @@ export default {
                     productName: "Bàn Phím Cơ KeyDous NJ80 AP - Ninja Gradient",
                     productPrice: "2.490.000",
                     productDiscount: "-22%",
-                    productColor: "border: 1px solid #545050; background: #545050;"
+                    productColor: "border: 1px solid #545050; background: #545050;",
+                    
                 },
                 // có quà
                 {
@@ -130,7 +137,8 @@ export default {
                     productDiscount: "-15%",
                     productColor: "border: 1px solid #030303; background: #030303;",
                     productColor2: "border: 1px solid #C9C0BB; background: #C9C0BB;",
-                    productColor3: "border: 1px solid #000000; background: #000000;"
+                    productColor3: "border: 1px solid #000000; background: #000000;",
+                    
                 },
                 {
                     id: 20113,
@@ -138,7 +146,8 @@ export default {
                     productName: "Bàn phím cơ Keychron K1 Pro QMK/VIA",
                     productPrice: "2.290.000",
                     productDiscount: "-15%",
-                    productColor: "border: 1px solid #ECECEC; background: #ECECEC;"
+                    productColor: "border: 1px solid #ECECEC; background: #ECECEC;",
+                    
                 },
                 // có quà
                 {
@@ -147,7 +156,8 @@ export default {
                     productName: "Bàn Phím Cơ Zuoya LMK81 Aluminium CNC VIA",
                     productPrice: "1.990.000",
                     productDiscount: "-15%",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;"
+                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;",
+                    
                 },
                 {
                     id: 20115,
@@ -155,7 +165,8 @@ export default {
                     productName: "Bàn phím cơ Keychron K7 Pro QMK/VIA",
                     productPrice: "2.090.000",
                     productDiscount: "-19%",
-                    productColor: "border: 1px solid #000000; background: #000000;"
+                    productColor: "border: 1px solid #000000; background: #000000;",
+                    
                 },
                 // có quà
                 {
@@ -164,7 +175,8 @@ export default {
                     productName: "Bàn Phím Cơ IQUNIX ZX75 Camping",
                     productPrice: "4.850.000",
                     productDiscount: "-8%",
-                    productColor: "border: 1px solid #9DC35D; background: #9DC35D;"
+                    productColor: "border: 1px solid #9DC35D; background: #9DC35D;",
+                    
                 },
                 {
                     id: 20117,
@@ -172,7 +184,8 @@ export default {
                     productName: "Bàn phím cơ Keychron K10 Pro QMK/VIA",
                     productPrice: "2.490.000",
                     productDiscount: "-17%",
-                    productColor: "border: 1px solid #1E3568; background: #1E3568;"
+                    productColor: "border: 1px solid #1E3568; background: #1E3568;",
+                    
                 },
                 // có quà
                 {
@@ -181,7 +194,8 @@ export default {
                     productName: "Bàn phím cơ Keychron K4 Pro QMK/VIA",
                     productPrice: "2.490.000",
                     productDiscount: "-15%",
-                    productColor: "border: 1px solid #4A4F94; background: #4A4F94;"
+                    productColor: "border: 1px solid #4A4F94; background: #4A4F94;",
+                    
                 },
                 // có quà
                 {
@@ -190,7 +204,8 @@ export default {
                     productName: "Bàn phím cơ Keydous NJ81 - Smoke",
                     productPrice: "2.100.000",
                     productDiscount: "-28%",
-                    productColor: "border: 1px solid #545050; background: #545050;"
+                    productColor: "border: 1px solid #545050; background: #545050;",
+                    
                 },
             ],
         }

@@ -47,4 +47,22 @@ export default {
 .textBold {
     font-weight: 700;
 }
+.view-image {
+    --tw-aspect-h: 9;
+    border-radius: 4px;
+    overflow: hidden;
+    --tw-aspect-w: 16;
+    padding-bottom: calc(var(--tw-aspect-h)/var(--tw-aspect-w)*100%);
+    position: relative;
+}
+.image-shopping {
+    object-fit: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
 </style>

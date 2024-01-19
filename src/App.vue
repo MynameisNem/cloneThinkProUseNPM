@@ -2,8 +2,8 @@
   <div id="app" class="border-[#E6E8EA]">
     <HeaderThink></HeaderThink>
     <NavThink></NavThink>
-    <router-view v-slot="{Component}">
-      <component :is="Component"/>
+    <router-view>
+      <!-- <component :is="Component"/>  v-slot="{Component}" -->
     </router-view>
     <FooterThink></FooterThink>
     <ChatButton></ChatButton>

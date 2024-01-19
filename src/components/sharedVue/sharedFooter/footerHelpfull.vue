@@ -63,14 +63,14 @@ export default {
                 },
                 {
                     id: 15005,
-                    linkInforHelp: "https://thinkpro.vn/noi-dung/ve-chung-toi-thinkpro-4833",
+                    linkInforHelp: "/Huong-dan-mua-hang-online-thinkpro",
                     inforHelp: "Hướng dẫn mua hàng online",
                     iconInforHelp: require("@/assets/iconSVG/footerIconSVG/footerHelpfull/semi-shoping-bag.svg")
 
                 },
                 {
                     id: 15006,
-                    linkInforHelp: "https://thinkpro.vn/noi-dung/ve-chung-toi-thinkpro-4833",
+                    linkInforHelp: "/Ve-chung-toi",
                     inforHelp: "Về chúng tôi",
                     iconInforHelp: require("@/assets/iconSVG/footerIconSVG/footerHelpfull/semi-infor-circle.svg")
 

@@ -33,6 +33,9 @@ import DeliveryService from '@/components/service-footer/delivery-service.vue';
 import ConfidentialService from '@/components/service-footer/confidential-service.vue';
 import AccountingService from '@/components/service-footer/accounting-service.vue';
 import QualityAssuranceService from '@/components/service-footer/quality-assurance-service.vue';
+import ShoppingTutorialService from '@/components/service-footer/shopping-tutorial-service.vue';
+import AboutMe from '@/components/service-footer/about-me.vue';
+import test from '@/components/sharedVue/base-page/base-page-details.vue';
 
 Vue.use(VueRouter)
 
@@ -43,12 +46,24 @@ const routes = [
         component: MainPage,
         key: 1
     },
+    // {
+    //     path: '/category/:slug',
+    //     name: 'catategory',
+    //     component: Category,
+    // },
+    // {    
+
+    // {
+    //     path: '/:category/:id',
+    //     name: 'detailsProduct',
+    //     component: test,
+    // },
     {
         path: '/Laptop',
         name: 'Laptop',
         component: Laptop,
-        key: 2
-    },
+        key: 2,
+    },    
     {
         path: '/Ban-phim',
         name: 'Ban-phim',
@@ -234,6 +249,23 @@ const routes = [
         name: 'Chinh-sach-kiem-hang-thinkpro',
         component: QualityAssuranceService,
         key: 33
+    },
+    {
+        path: '/Huong-dan-mua-hang-online-thinkpro',
+        name: 'Huong-dan-mua-hang-online-thinkpro',
+        component: ShoppingTutorialService,
+        key: 34
+    },
+    {
+        path: '/Ve-chung-toi',
+        name: 'Ve-chung-toi',
+        component: AboutMe,
+        key: 35
+    },
+    {
+        path: '/Laptop/:id',
+        name: 'detailsProduct',
+        component: test
     },
 ]
 

@@ -1,5 +1,5 @@
 <template>
-    <NavMenuRight :name-product="nameProduct" :list-nav="listNav" :list-price="listPrice"></NavMenuRight>
+    <NavMenuRight :name-product="nameProduct" :list-price="listPrice"></NavMenuRight>
 </template>
 
 <script>
