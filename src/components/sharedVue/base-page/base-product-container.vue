@@ -55,6 +55,8 @@ export default {
     },
     data() {
         return {
+
+            // 'category[]'
             displayedProducts: 20,
             loadMoreProducts: true
         }
