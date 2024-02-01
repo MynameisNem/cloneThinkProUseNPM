@@ -376,6 +376,105 @@
                             </div>
                         </div>
                     </div>
+                    <div class="card mt-4 divide-y space-y-5">
+                        <div class="section-attribute">
+                            <div class="flex items-center justify-between">
+                                <h2 class="font-semibold text-[18px] leading-[150%]">
+                                    Cấu hình đặc điểm
+                                </h2>
+                            </div> 
+                            <div class="grid-cols-2 grid gap-4 mt-5">
+                                <div v-for="item in attributeList" :key="item.infor0" class="flex flex-col space-y-1 text-sm">
+                                    <span class="font-semibold">{{ item.infor0 }}</span>
+                                    <div class="block">
+                                        <span>{{ item.infor1 }}</span>
+                                    </div>
+                                    <div v-if="item.infor2" class="block">
+                                        <span>{{ item.infor2 }}</span>
+                                    </div>
+                                    <div v-if="item.infor3" class="block">
+                                        <span>{{ item.infor3 }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-rentail-outlet pt-5">
+                            <div class="flex items-center justify-between">
+                                <h2 class="font-semibold text-[18px] leading-[150%]">
+                                    Sẵn hàng & Trưng bày
+                                </h2>
+                                <button @click="changeRentailOutlet" class="flex items-center space-x-1">
+                                    <span class="text-sm leading-[150%] text-[#0065EE]">
+                                        3 chi nhánh
+                                    </span>
+                                    <i class="w-3 h-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.75rem" height="0.75rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <use href="@/assets/iconSVG/buttonNext.svg#iconNext"></use>
+                                        </svg>
+                                    </i>
+                                </button>
+                            </div> 
+                        </div>
+                        <div class="section-transport pt-5">
+                            <div class="flex items-center justify-between">
+                                <h2 class="font-semibold text-[18px] leading-[150%]">
+                                    Vận chuyển
+                                </h2>
+                                <button class="flex items-center space-x-1">
+                                    <span class="text-sm leading-[150%] text-[#0065EE]">
+                                        Chọn địa chỉ giao hàng
+                                    </span>
+                                    <i class="w-3 h-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.75rem" height="0.75rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <use href="@/assets/iconSVG/buttonNext.svg#iconNext"></use>
+                                        </svg>
+                                    </i>
+                                </button>
+                            </div> 
+                            <div class="mt-2 flex justify-start">
+                                <span class="text-sm leading-[150%] text-[#3BB346]">
+                                    Miễn phí HN, TP HCM
+                                </span>
+                            </div>
+                        </div>
+                        <div class="section-guarantee pt-5">
+                            <div class="flex justify-between items-center">
+                                <h2 class="font-semibold text-[18px] leading-[150%]">
+                                    Bảo hành & đổi trả
+                                </h2>
+                                <button class="flex items-center space-x-1">
+                                    <span class="text-sm leading-[150%] text-[#0065EE]">
+                                        12 tháng 
+                                    </span>
+                                    <i class="w-3 h-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.75rem" height="0.75rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <use href="@/assets/iconSVG/buttonNext.svg#iconNext"></use>
+                                        </svg>
+                                    </i>
+                                </button>
+                            </div>
+                            <div class="mt-2 text-sm leading-[150%]">
+                                <ul class="list-disc list-inside pl-3">
+                                    <li>Bảo hành <strong>12 tháng tại chuỗi cửa hàng</strong></li>
+                                    <li>Đổi mới trong <strong>15 ngày đầu tiên</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section-article pt-5">
+                            <h2 class="font-semibold text-[18px] leading-[150%]">
+                                Bài viết mô tả
+                            </h2>
+                            <div class="section-article-wrapper space-y-6" v-html="datatest.content"></div>
+                            <div class="mt-4 justify-center flex">
+                                <button class="w-full !bg-transparent px-3 button-readmore">
+                                    <span class="text-[#0065EE] font-semibold">
+                                        Xem thêm
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -437,7 +536,7 @@
         </div>
         <div v-show="showDemand" role="dialog" class="main-dialog main-dialog-center">
             <div class="dialog-overlay"></div>
-            <div class="bg-white dialog-wrapper">
+            <div class="bg-white dialog-wrapper w-[600px]">
                 <div class="py-[0.75rem] px-[1.5rem] pr-[60px]">
                     <div class="text-xl leading-[150%] font-semibold">
                         Đánh giá từ chuyên gia
@@ -466,21 +565,83 @@
                             </div>
                             <div class="mt-2">
                                 <p>
-                                    Đánh giá này dựa trên các chuyên gia máy tính từ ThinkPro. Qua các bài kiểm tra và kinh nghiệm thực
-                                    tế sử dụng, có tham khảo đánh giá từ các chuyên trang đánh giá trong và ngoài nước.
+                                    {{ assessmentExperts }}
                                 </p>
+                            </div>
+                            <div class="flex justify-between mt-4">
+                                <div  v-for="item in assessmentList" :key="item.scoreEx" class="flex flex-col space-y-2 w-[72px]">
+                                    <div class="py-[2px] rounded-2xl text-center text-xs leading-[150%] text-white" :class="item.bgEx">
+                                        {{ item.scoreEx }}
+                                    </div>
+                                    <span class="text-sm leading-[150%] text-center">
+                                        {{ item.descriptEx }}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- đoạn này sau thêm bằng mảng từ file js -->
+        <div v-show="showRentailOutlet" role="dialog" class="main-dialog main-dialog-center">
+            <div class="dialog-overlay"></div>
+            <div class="bg-white dialog-wrapper w-[600px]">
+                <div class="py-[0.75rem] px-[1.5rem] pr-[60px]">
+                    <div class="text-xl leading-[150%] font-semibold">
+                        Sẵn hàng và Trưng bày
+                    </div>
+                    <button @click="closeRentailOutlet" class="dialog-close-button h-12 w-12 bg-white">
+                        <i class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="1.5rem" height="1.5rem" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 24 24">
+                                <use href="@/assets/iconSVG/navIconSVG/closeMenuNav.svg#closeMenuNav"></use>
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+                <div class="dialog-body">
+                    <div class="flex flex-col divide-y px-6">
+                        <div class="flex flex-col py-5">
+                            <span class="font-semibold text-base leading-[150%]">
+                                Thành phố Hồ Chí Minh
+                            </span>
+                            <div class="mt-3 flex flex-col space-y-5">
+                                <div class="flex flex-col justify-between space-x-3 ">
+                                    <div class="space-y-1">
+                                        <div class="text-sm leading-[150%]">Số 5 - 7 Nguyễn Huy Tưởng, Phường 6, Quận Bình Thạnh, Hồ Chí Minh</div>
+                                        <div class="flex items-center space-x-1 text-[#3BB346]">
+                                            <i class="w-3 h-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="evenodd" 
+                                                    d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </i>
+                                            <span class="text-sm">Còn hàng</span>
+                                        </div>
+                                        <div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col py-5">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- thêm đến hết đây -->
     </main>    
 </template>
 
 <script>
 import { Swiper, SwiperSlide, Thumbs } from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
+import { datatest } from './data-test.js'
 
 export default {
     components: {
@@ -491,8 +652,10 @@ export default {
         return {
             selectedItem: null,
             showMarquee: false,
-            showDemand: true,
+            showDemand: false,
+            showRentailOutlet: false,
             count: 1,
+            datatest: datatest,
             ariaList: [
                 { ariaLabel: "Đánh giá 1 sao" },
                 { ariaLabel: "Đánh giá 2 sao" },
@@ -525,6 +688,29 @@ export default {
                     span: 'Bạn bận, ThinkPro phục vụ từ sáng tới khuya.',
                     p: 'Khách hàng bận bịu. Cán bộ, nhân viên ThinkPro càng phải phục vụ ngoài giờ để trải nghiệm của khách hàng được thông suốt.'
                 }
+            ],
+            assessmentExperts: "Đánh giá này dựa trên các chuyên gia máy tính từ ThinkPro. Qua các bài kiểm tra và kinh nghiệm thực tế sử dụng, có tham khảo đánh giá từ các chuyên trang đánh giá trong và ngoài nước.",
+            assessmentList: [
+                {
+                    bgEx: "bg-[#F93920]",
+                    scoreEx: "1, 2, 3",                    
+                    descriptEx: "Không phù hợp"
+                },
+                {
+                    bgEx: "bg-[#FC8800]",
+                    scoreEx: "4, 5, 6, 7",                    
+                    descriptEx: "Bình thường"
+                },
+                {
+                    bgEx: "bg-[#3BB346]",
+                    scoreEx: "8, 9",                    
+                    descriptEx: "Tốt"
+                },
+                {
+                    bgEx: "bg-[#3BB346]",
+                    scoreEx: "10",                    
+                    descriptEx: "Tuyệt vời"
+                },
             ],
 
             // sau bỏ mảng dưới để truyền props, nhớ đổi tên trừ cái sectionDemand để tên như cũ 
@@ -583,28 +769,7 @@ export default {
                     src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/in5430nt-cnb-00055lf110-sl-nonfpr-2pc.jpg"
                 },
             ],
-            test7: "Dell Inspiron 14 5430 - i7 1360P, 16GB, 1TB, 2.5K - Platinum Silver - Mới, Full box, Nhập khẩu",
-            swiperOptionTop: {
-                modules: [Thumbs],
-                spaceBetween: 10,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev'
-                },
-                thumbs: {
-                    swiper: this.swiperOptionThumbs
-                }
-            },
-            swiperOptionThumbs: {
-                spaceBetween: 10,
-                centeredSlides: false,
-                slidesPerView: 'auto',
-                touchRatio: 0.2,
-                slideToClickedSlide: true,
-                direction: 'vertical',
-                height: 105,
-            },
-            thumbsSwiper: null,
+            test7: "Dell Inspiron 14 5430 - i7 1360P, 16GB, 1TB, 2.5K - Platinum Silver - Mới, Full box, Nhập khẩu",            
             sectionDemand: [
                 {
                     demand: 'Văn phòng, học tập',
@@ -636,7 +801,87 @@ export default {
                     score: '6/10',
                     progressBar: 'width: 60%; background-color: #FC8800;'
                 },
-            ]
+            ],
+            attributeList: [
+                {
+                    infor0: "Bộ xử lý",
+                    infor1: "Loại CPU: Intel Core i7 1360P, 12C/16T",
+                    infor2: "Tốc độ: 1GHz , Lên tới",
+                    infor3: "Bộ nhớ đệm: 12MB"
+                },
+                {
+                    infor0: "Card đồ họa",
+                    infor1: "Card onboard: Intel Iris Xe Graphics",
+                    infor2: "Card rời: Không"
+                },
+                {
+                    infor0: "RAM",
+                    infor1: "Dung lượng: 16GB LPDDR5 4800MHz",
+                    infor2: "Hỗ trợ tối đa: 16GB (Không thể nâng cấp)"
+                },
+                {
+                    infor0: "Ổ cứng",
+                    infor1: "Dung lượng SSD: 1024GB (M.2 NVMe)",
+                    infor2: "Khả năng nâng cấp: Hỗ trợ 1 SSD",
+                },
+                {
+                    infor0: "Màn hình",
+                    infor1: "Màn hình: 14inches, 2560 x 1600px, 90Hz",
+                    infor2: "Tấm phủ: Nhám, Không cảm ứng",
+                    infor3: "Thông số khác: Tỉ lệ 16:10, WVA, 300Nits, 100 sRGB"
+                },
+                {
+                    infor0: "Khối lượng & Kích thước",
+                    infor1: "Khối lượng: 1.55kg",
+                    infor2: "Kích thước: 314mm x 226.6mm x 15.74mm",
+                    infor3: "Chất liệu vỏ: Kim loại"
+                },
+                {
+                    infor0: "Pin",
+                    infor1: "54WHr Li-Polymer"
+                },
+                {
+                    infor0: "Webcam và Âm thanh",
+                    infor1: "Có"
+                },
+                {
+                    infor0: "Cổng kết nối",
+                    infor1: "Cổng kết nối: 1 x USB Type C, 2 x USB Type A, HDMI, Jack tai nghe 3.5mm.",
+                    infor2: "Khe thẻ SD/ Micro SD: 1 khe thẻ SD, khe micro SD"
+                },
+                {
+                    infor0: "Kết nối",
+                    infor1: "Bluetooth: Có",
+                    infor2: "Kết nối LTE/WWAN: Không hỗ trợ"
+                },
+                {
+                    infor0: "Hệ điều hành",
+                    infor1: "Windows 11"
+                }
+            ],
+            // bỏ đến đây
+
+            swiperOptionTop: {
+                modules: [Thumbs],
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                thumbs: {
+                    swiper: this.swiperOptionThumbs
+                }
+            },
+            swiperOptionThumbs: {
+                spaceBetween: 10,
+                centeredSlides: false,
+                slidesPerView: 'auto',
+                touchRatio: 0.2,
+                slideToClickedSlide: true,
+                direction: 'vertical',
+                height: 105,
+            },
+            thumbsSwiper: null,
         }
     },
     methods: {
@@ -660,6 +905,18 @@ export default {
         },
         closeMarquee() {
             this.showMarquee = !this.showMarquee
+        },
+        changeDemand() {
+            this.showDemand = !this.showDemand
+        },
+        closeDemand() {
+            this.showDemand = !this.showDemand
+        },
+        changeRentailOutlet() {
+            this.showRentailOutlet = !this.showRentailOutlet
+        },
+        closeRentailOutlet() {
+            this.showRentailOutlet = !this.showRentailOutlet
         }
     },
     mounted() {
@@ -673,7 +930,26 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style scoped>
+.image-viewer {
+    --tw-aspect-h: 9;
+    --tw-aspect-w: 16;
+    padding-bottom: calc(var(--tw-aspect-h)/var(--tw-aspect-w)*100%);
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.button-readmore {
+    height: 44px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+.section-article-wrapper {
+    /* max-height: 300px; */
+    overflow: hidden;
+    position: relative;
+}
 .progressLabel {
     left: 50%;
     position: absolute;
@@ -907,10 +1183,10 @@ export default {
     display: flex;
     justify-content: center;
 }
-.selected-item {
+/* .selected-item {
     border: 1px solid;
     border-color: #0065ee;
-}
+} */
 .swiper {
     .swiper-slide {
         background-size: cover;
