@@ -2,8 +2,8 @@ export const datatest = {
     title: 'Datatest',
     content: `
         <p>
-            Là một trong những sản phẩm đáng mong đợi của dòng <a class="text-[#0065EE] hover:text-[##3300CC]" href=""><strong>Dell Inspiron</strong></a> trứ danh,
-            <a class="text-[#0065EE] hover:text-[##3300CC]" href=""><strong>Dell Inspiron 5430 i7</strong></a>  là sự kết hợp hoàn hảo giữa thiết kế tinh tế với những 
+            Là một trong những sản phẩm đáng mong đợi của dòng <a class="text-[#0065EE] hover:text-[#3300CC]" href=""><strong>Dell Inspiron</strong></a> trứ danh,
+            <a class="text-[#0065EE] hover:text-[#3300CC]" href=""><strong>Dell Inspiron 5430 i7</strong></a>  là sự kết hợp hoàn hảo giữa thiết kế tinh tế với những 
             tính năng hiện đại được tích hợp. Với con chip Intel Core i7 thế hệ mới nhất 2023 đem lại hiệu năng vô cùng mạnh mẽ cùng màn hình sắc nét và hàng loại các ưu 
             điểm nổi bật khác giúp dòng Dell Inspiron này trở thành laptop văn phòng được yêu thích trong thời gian tới!
         </p>
@@ -26,12 +26,12 @@ export const datatest = {
         </p>
         <h2 class="text-[16px] font-semibold leading-[150%]">Hiệu năng mạnh mẽ từ con chip Intel I7 mới nhất hiện nay</h2>
         <p>
-            Dell Inspiron là một trong những dòng sản phẩm được Dell chăm chút nhất nên không quá bất ngờ khi <a class="text-[#0065EE] hover:text-[##3300CC]" href=""><strong>laptop Dell Inspiron 14</strong></a> 
+            Dell Inspiron là một trong những dòng sản phẩm được Dell chăm chút nhất nên không quá bất ngờ khi <a class="text-[#0065EE] hover:text-[#3300CC]" href=""><strong>laptop Dell Inspiron 14</strong></a> 
             được trang bị con chip mới nhất từ Intel thế hệ 13. Với bộ xử lý <strong>Intel Core i7 1360P</strong> cùng cấu trúc <strong>12 nhân 16 luồng</strong> mang lại cho sản phẩm tốc độ đáng kinh ngạc lên tới <strong>1.0 GHz</strong>. 
             Năm nay, Dell Inspiron cũng được trang bị công nghệ Turbo Boost cùng bộ Ram <strong>16GB LPDDR5 4800MHz</strong> đảm bảo xử lý mọi tác vụ về văn phòng như: Word, PowerPoint, Excel một cách nhanh chóng, mượt mà.
         </p>
         <p>
-            Cá nhân mình là người thường xuyên phải sử dụng Excel và PowerPoint để làm việc thì thấy khá thích sản phẩm mới này của <a class="text-[#0065EE] hover:text-[##3300CC]" href=""><strong>laptop Dell</strong></a>. 
+            Cá nhân mình là người thường xuyên phải sử dụng Excel và PowerPoint để làm việc thì thấy khá thích sản phẩm mới này của <a class="text-[#0065EE] hover:text-[#3300CC]" href=""><strong>laptop Dell</strong></a>. 
             Dell Inspiron 14 5430 giúp mình xử lý trơn tru các tác vụ của Excel từ các Sheet ít thông tin cho đến nhiều cột, hàng chứa nhiều công thức liên kết. Đặc biệt, ổ cứng SSD giúp mình đăng nhập, truy xuất dữ liệu một 
             cách “thần tốc” cùng khả năng lưu trữ tới <strong>1024 GB</strong> thì chắc chắn sẽ không phải lo tới việc hệ thống “báo đỏ” rồi nhé!
         </p>
@@ -44,7 +44,7 @@ export const datatest = {
             </div>
         </div>
         <p>
-            Để cho người dùng có được trải nghiệm đồ họa tốt nhất, <a class="text-[#0065EE] hover:text-[##3300CC]" href=""><strong>laptop</strong></a> đã trang bị thêm card đồ họa Intel Iris Xe Graphics. 
+            Để cho người dùng có được trải nghiệm đồ họa tốt nhất, <a class="text-[#0065EE] hover:text-[#3300CC]" href=""><strong>laptop</strong></a> đã trang bị thêm card đồ họa Intel Iris Xe Graphics. 
             Trong quá trình làm việc, mình vẫn thường phải render các video ngắn trên một số nền tảng như Photoshop, Figma thì thấy sản phẩm đáp ứng khá tốt.
         </p>
         <p>
@@ -94,6 +94,6 @@ export const datatest = {
             </div>
         </div>
         <p>Dù các cổng kết nối này số lượng không quá nhiều nhưng nó vẫn đáp ứng được nhu cầu cơ bản của mình. Tuy nhiên nếu bạn muốn có những trải nghiệm đa dạng hơn thì có thể dùng các hub USB chuyên dụng nhé!</p>
-        <p>Nhìn chung, Dell Inspiron 14 5430 i7 1360P chính là 1 trong những dòng <a class="text-[#0065EE] hover:text-[##3300CC]" href=""><strong>laptop văn phòng học tập</strong></a> đáng mua nhất thời điểm hiện nay. Hiện sản phẩm đang được bày bán tại các chi nhánh của <a class="text-[#0065EE] hover:text-[##3300CC]" href=""><strong>Thinkpro</strong></a>. Để liên hệ mua hàng, bạn hãy “Đặt hàng" ở phía trên hoặc liên hệ theo hotline: 1900633579 nhé!</p>
+        <p>Nhìn chung, Dell Inspiron 14 5430 i7 1360P chính là 1 trong những dòng <a class="text-[#0065EE] hover:text-[#3300CC]" href=""><strong>laptop văn phòng học tập</strong></a> đáng mua nhất thời điểm hiện nay. Hiện sản phẩm đang được bày bán tại các chi nhánh của <a class="text-[#0065EE] hover:text-[##3300CC]" href=""><strong>Thinkpro</strong></a>. Để liên hệ mua hàng, bạn hãy “Đặt hàng" ở phía trên hoặc liên hệ theo hotline: 1900633579 nhé!</p>
     `
 }

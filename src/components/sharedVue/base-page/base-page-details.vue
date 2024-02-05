@@ -420,7 +420,7 @@
                                 <h2 class="font-semibold text-[18px] leading-[150%]">
                                     Vận chuyển
                                 </h2>
-                                <button class="flex items-center space-x-1">
+                                <button @click="changeAddress" class="flex items-center space-x-1">
                                     <span class="text-sm leading-[150%] text-[#0065EE]">
                                         Chọn địa chỉ giao hàng
                                     </span>
@@ -442,7 +442,7 @@
                                 <h2 class="font-semibold text-[18px] leading-[150%]">
                                     Bảo hành & đổi trả
                                 </h2>
-                                <button class="flex items-center space-x-1">
+                                <button @click="changeGuarantee" class="flex items-center space-x-1">
                                     <span class="text-sm leading-[150%] text-[#0065EE]">
                                         12 tháng 
                                     </span>
@@ -464,16 +464,44 @@
                             <h2 class="font-semibold text-[18px] leading-[150%]">
                                 Bài viết mô tả
                             </h2>
-                            <div class="section-article-wrapper space-y-6" v-html="datatest.content"></div>
+                            <div class="section-article-wrapper space-y-6" v-html="datatest.content" :style="{ height: showFullText ? 'auto' : maxHeight + 'px' }"></div>
                             <div class="mt-4 justify-center flex">
-                                <button class="w-full !bg-transparent px-3 button-readmore">
+                                <button class="w-full !bg-transparent px-3 button-readmore" @click="readmore">
                                     <span class="text-[#0065EE] font-semibold">
-                                        Xem thêm
+                                        {{ showFullText ? 'Rút gọn' : 'Xem thêm' }}
                                     </span>
                                 </button>
                             </div>
                         </div>
-
+                        <div class="section-review pt-5">
+                            <div class="flex items-center justify-between">
+                                <h2 class="font-semibold text-[18px] leading-[150%]">
+                                    Đánh giá sản phẩm
+                                </h2>
+                            </div>
+                            <div class="mt-4 border rounded px-3 py-4 flex justify-between items-center">
+                                <div class="flex flex-col space-y-2">
+                                    <div aria-valuemax="5" aria-valuemin="0" aria-valuenow="0" tabindex="0"
+                                    class="pointer-events-none rating" style="--icon-size: 16px;">
+                                        <button v-for="item in ariaList" :key="item.ariaLabel" class="buttonRatting" :aria-label="item.ariaLabel" style="color: rgb(218, 221, 224)">
+                                            <!-- <i style="color: rgb(218, 221, 224)"> -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1rem" height="1rem" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                    <!-- <path id="ratting" fill="currentColor" d="M10.752 1.904c.393-1.205 2.103-1.205 2.495 0L15.24 8.02h6.447c1.27 0 1.799 1.622.77 2.367l-5.214 3.78 1.992 6.115c.392 1.206-.99 2.208-2.019 
+                                                    1.463L12 17.964l-5.215 3.78c-1.028.745-2.411-.257-2.019-1.463l1.992-6.115-5.215-3.78c-1.028-.745-.5-2.367.771-2.367H8.76l1.992-6.115Z"/> -->
+                                                    <use href="@/assets/iconSVG/productFeaturesSVG/ratingIcon.svg#rating"></use>
+                                                </svg>
+                                            <!-- </i> -->
+                                        </button>
+                                    </div>
+                                    <span class="text-sm leading-[150%]">Chưa có đánh giá</span>
+                                </div>
+                                <div class="button-review w-[240px]">
+                                    <button @click="changeReview" class="text-white h-[44px] bg-[#0065EE] w-full button-close">
+                                        Đánh giá ngay
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -583,6 +611,232 @@
                 </div>
             </div>
         </div>
+        <div v-show="showAddress" role="dialog" class="main-dialog main-dialog-center">
+            <div class="dialog-overlay"></div>
+            <div class="bg-white dialog-wrapper">
+                <div class="py-[0.75rem] px-[1.5rem] pr-[60px]">
+                    <div class="text-xl leading-[150%] font-semibold">
+                        Chọn Tỉnh / Thành phố
+                    </div>
+                    <button @click="closeAddress" class="dialog-close-button h-12 w-12 bg-white">
+                        <i class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="1.5rem" height="1.5rem" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 24 24">
+                                <use href="@/assets/iconSVG/navIconSVG/closeMenuNav.svg#closeMenuNav"></use>
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+                <div class="dialog-body">
+                    <div class="py-3 px-6">
+                        <div class="flex text-sm leading-[150%] font-semibold">
+                            <span class="text-[#6B7075]">Tỉnh / Thành phố</span>
+                        </div>
+                        <div class="mt-4">
+                            <div class="-m-[6px] py-5 relative divSharedHeader">
+                                    <div>
+                                        <form action="search">
+                                            <div class="px-4 py-3 divForm ring-1 leading-[150%] rounded-md text-[#1C1F23] bg-[#F6F9FC]">
+                                                <span class="mr-2">
+                                                    <i class="text-[#6B7075] align-[-0.125rem]">
+                                                        <img :src="searchSVG" alt="Search">
+                                                    </i>
+                                                </span>
+                                                <input class="bg-transparent border-none flex-1 outline-none" type="text" required
+                                                    placeholder="Tìm kiếm">
+                                            </div>
+                                        </form>
+                                    </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-show="showGuarantee" role="dialog" class="main-dialog main-dialog-center">
+            <div class="dialog-overlay"></div>
+            <div class="bg-white dialog-wrapper">
+                <div class="py-[0.75rem] px-[1.5rem] pr-[60px]">
+                    <div class="text-xl leading-[150%] font-semibold">
+                        Bảo hành
+                    </div>
+                    <button @click="closeGuarantee" class="dialog-close-button h-12 w-12 bg-white">
+                        <i class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="1.5rem" height="1.5rem" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 24 24">
+                                <use href="@/assets/iconSVG/navIconSVG/closeMenuNav.svg#closeMenuNav"></use>
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+                <div class="dialog-body max-w-[1000px]" style="overflow: auto;">
+                    <div class="py-4 px-6">
+                        <div class="guarantee-viewer">
+                            <div class="warranty-policy space-y-6" v-html="warrantyData.content"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-footer">
+                    <div class="flex justify-end">
+                        <button @click="closeGuarantee" class="text-white h-[44px] bg-[#0065EE] w-full button-close">
+                            Đóng
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-show="showReview" role="dialog" class="main-dialog main-dialog-center">
+            <div class="dialog-overlay"></div>
+            <div class="bg-white dialog-wrapper" style="width: 600px">
+                <div class="py-[0.75rem] px-[1.5rem] pr-[60px]">
+                    <div class="text-xl leading-[150%] font-semibold">
+                        Đánh giá và nhận xét
+                    </div>
+                    <button @click="closeReview" class="dialog-close-button h-12 w-12 bg-white">
+                        <i class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="1.5rem" height="1.5rem" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 24 24">
+                                <use href="@/assets/iconSVG/navIconSVG/closeMenuNav.svg#closeMenuNav"></use>
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+                <div class="dialog-body">
+                    <div class="p-6">
+                        <div class="flex flex-col items-center w-full space-y-2">
+                            <div class="w-[80px] overflow-hidden rounded bg-[#F6F9FC]">
+                                <img class="w-full h-full object-contain t-img" :src="test6[5].src" alt="">
+                            </div>
+                            <div class="max-w-[240px]">
+                                <span class="text-sm leading-[150%] font-semibold">
+                                    {{ test7 }}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col mt-4 space-y-4">
+                            <label class="flex flex-col items-center">
+                                <span class="form-control-title">
+                                    <span class="form-control-descript"></span>
+                                </span>
+                                <div aria-valuemax="5" aria-valuemin="0" :aria-valuenow="selectedRating" tabindex="0" class="rating">
+                                    <button v-for="item in ariaList" :key="item.ariaLabel" class="buttonRatting" 
+                                    :aria-label="item.ariaLabel" style="color: rgb(218, 221, 224)"
+                                    :class="{ active: item.rating <= selectedRating }"
+                                    @click="selectRating(item.rating)"
+                                    @mouseover="hoverRating(item.rating)"
+                                    @mouseleave="resetHover">
+                                        <i class="w-9 h-9">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                <use href="@/assets/iconSVG/productFeaturesSVG/ratingIcon.svg#rating"></use>
+                                            </svg>
+                                        </i>
+                                    </button>
+                                </div>
+                                <div v-if="selectedRating !== 0" class="inline-flex mt-2">
+                                    <span class="text-sm leading-[150%]">
+                                        {{ ariaList[selectedRating - 1].ratingReview }}
+                                    </span>
+                                </div>
+                                <div v-if="selectedRating === 0" class="inline-flex mt-2 text-[#FF0000] items-center">
+                                    <i class="w-4 h-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                            <path fill="currentColor" fill-rule="evenodd" d="M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-9.5 5.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0ZM12 5c-1.086 0-1.95.912-1.89 1.997l.307 5.505a1.586 1.586 0 003.166 0l.306-5.505A1.892 1.892 0 0012 5Z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </i>
+                                    <span class="ml-1 text-sm leading-[150%]">
+                                        Vui lòng chọn đánh giá
+                                    </span>
+                                </div>
+                            </label>
+                            <div>
+                                <textarea placeholder="Mọi sản phẩm đều có ưu nhược điểm riêng. Chia sẻ đánh giá của bạn về sản phẩm nhé." 
+                                class="textareaReview bg-[#F6F9FC] text-[#1C1F23]" rows="3">                                    
+                                </textarea>
+                            </div>
+                            <div class="formControl">
+                                <span class="formControl_title text-sm leading-[150%]">
+                                    Thêm ảnh thực tế (Tối đa 3 ảnh)
+                                </span>
+                                <div class="flexGap mt-3" style="--gap-x: 12px; --gap-y: 12px">
+                                    <div class="flexGapWrap">
+                                        <label class="labelUpload" for="imgURL">
+                                            <button aria-label="upload image" 
+                                            class="itemIMG flex items-center justify-center bg-[#F6F9FC]">
+                                                <i class="w-6 h-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                        <path fill="currentColor" fill-rule="evenodd" d="M7.447 3.106A2 2 0 019.237 2h5.527a2 2 0 011.789 1.106L17.5 5H20a3 3 0 013 3v10a3 3 0 01-3 3H4a3 3 0 01-3-3V8a3 3 0 013-3h2.5l.947-1.894ZM9 13a3 3 0 116 0 3 3 0 01-6 0Zm3-5a5 5 0 100 10 5 5 0 000-10Z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                </i>
+                                            </button>
+                                            <input accept="image/*" 
+                                            id="imgURL" type="file"
+                                            multiple="multiple" style="display: none;">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="formControl">
+                                    <span class="formControl_title">
+                                        <span class="block text-sm leading-[150%] mb-1">
+                                            Họ và tên
+                                        </span>
+                                    </span>
+                                    <input placeholder="Nhập họ và tên (bắt buộc)" v-model="fullName"
+                                    type="text" required class="textareaReview text-[#1C1F23] items-center !min-w-0">
+                                    <!-- đoạn này làm error message nhưng đang bí -->
+                                    <div v-if="!fullName.trim()" class="inline-flex mt-2 text-[#FF0000] items-center">
+                                        <i class="w-4 h-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                <path fill="currentColor" fill-rule="evenodd" d="M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-9.5 5.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0ZM12 5c-1.086 0-1.95.912-1.89 1.997l.307 5.505a1.586 1.586 0 003.166 0l.306-5.505A1.892 1.892 0 0012 5Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </i>
+                                        <span class="ml-1 text-sm leading-[150%]">
+                                            Vui lòng nhập số điện thoại
+                                        </span>
+                                    </div>
+                                </label>
+                                <label class="formControl">
+                                    <span class="formControl_title">
+                                        <span class="block text-sm leading-[150%] mb-1">
+                                            Số điện thoại
+                                        </span>
+                                    </span>
+                                    <input autocomplete="name" v-model="fullNumber" placeholder="Nhập số điện thoại (bắt buộc)" 
+                                    type="text" required class="textareaReview text-[#1C1F23] items-center !min-w-0">
+                                    <!-- đoạn này làm error message nhưng đang bí -->
+                                    <div v-if="!fullNumber.trim()" class="inline-flex mt-2 text-[#FF0000] items-center">
+                                        <i class="w-4 h-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                <path fill="currentColor" fill-rule="evenodd" d="M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-9.5 5.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0ZM12 5c-1.086 0-1.95.912-1.89 1.997l.307 5.505a1.586 1.586 0 003.166 0l.306-5.505A1.892 1.892 0 0012 5Z" clip-rule="evenodd"/>
+                                            </svg>
+                                        </i>
+                                        <span class="ml-1 text-sm leading-[150%]">
+                                            Vui lòng nhập số điện thoại
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
+                            <label aria-checked="true" class="checkboxLabel">
+                                <input type="checkbox" tabindex="-1" class="sr-only">
+                                <div class="checkboxLabelCheckmark"></div>
+                                <span class="text-sm leading-[150%] ml-2 text-[#1C1F23] ">
+                                    Tôi sẽ giới thiệu cho người thân, bạn bè
+                                </span>
+                            </label>         
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-footer">
+                    <button @click="changeReview" class="text-white h-[44px] bg-[#0065EE] w-full button-close">
+                        Gửi đánh giá
+                    </button>
+                </div>
+            </div>
+        </div>
         <!-- đoạn này sau thêm bằng mảng từ file js -->
         <div v-show="showRentailOutlet" role="dialog" class="main-dialog main-dialog-center">
             <div class="dialog-overlay"></div>
@@ -608,7 +862,7 @@
                                 Thành phố Hồ Chí Minh
                             </span>
                             <div class="mt-3 flex flex-col space-y-5">
-                                <div class="flex flex-col justify-between space-x-3 ">
+                                <div class="flex flex-col justify-between space-x-0 space-y-3 ">
                                     <div class="space-y-1">
                                         <div class="text-sm leading-[150%]">Số 5 - 7 Nguyễn Huy Tưởng, Phường 6, Quận Bình Thạnh, Hồ Chí Minh</div>
                                         <div class="flex items-center space-x-1 text-[#3BB346]">
@@ -619,16 +873,92 @@
                                                 </svg>
                                             </i>
                                             <span class="text-sm">Còn hàng</span>
-                                        </div>
-                                        <div>
-                                            
-                                        </div>
+                                        </div>                                        
+                                    </div>
+                                    <div>
+                                        <a class="inline-flex space-x-2 p-3 bg-[#F6F9FC] items-center rounded-full" href="">
+                                            <i class="w-5 h-5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="evenodd" 
+                                                        d="M9.784 12.973a41.274 41.274 0 01-1.7-1.806 1.1 1.1 0 01.287-1.684l1.685-.973a1.21 1.21 0 00.444-1.655L7.47 1.606a1.212 1.212 0 00-1.656-.443L1.615 3.587a1.21 1.21 0 00-.596.882c-.062.312.038.888.14 1.224a24.742 24.742 0 006.054 9.85 24.731 24.731 0 0011.76 6.593l.002-.002a1.213 1.213 0 001.27-.586l2.425-4.199a1.212 1.212 0 00-.444-1.655l-5.248-3.03a1.212 1.212 0 00-1.656.443L14.15 15.14a1.101 1.101 0 01-1.66.308 41.113 41.113 0 01-2.705-2.474Z"
+                                                        clip-rule="evenodd"/>
+                                                </svg>
+                                            </i>
+                                            <span class="font-semibold text-sm leading-[150%] ">
+                                                1900.63.3579
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col justify-between space-x-0 space-y-3 ">
+                                    <div class="space-y-1">
+                                        <div class="text-sm leading-[150%]">95 Trần Thiện Chánh, F12, Q10, HCM</div>
+                                        <div class="flex items-center space-x-1 text-[#3BB346]">
+                                            <i class="w-3 h-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="evenodd" 
+                                                    d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </i>
+                                            <span class="text-sm">Còn hàng</span>
+                                        </div>                                        
+                                    </div>
+                                    <div>
+                                        <a class="inline-flex space-x-2 p-3 bg-[#F6F9FC] items-center rounded-full" href="">
+                                            <i class="w-5 h-5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="evenodd" 
+                                                        d="M9.784 12.973a41.274 41.274 0 01-1.7-1.806 1.1 1.1 0 01.287-1.684l1.685-.973a1.21 1.21 0 00.444-1.655L7.47 1.606a1.212 1.212 0 00-1.656-.443L1.615 3.587a1.21 1.21 0 00-.596.882c-.062.312.038.888.14 1.224a24.742 24.742 0 006.054 9.85 24.731 24.731 0 0011.76 6.593l.002-.002a1.213 1.213 0 001.27-.586l2.425-4.199a1.212 1.212 0 00-.444-1.655l-5.248-3.03a1.212 1.212 0 00-1.656.443L14.15 15.14a1.101 1.101 0 01-1.66.308 41.113 41.113 0 01-2.705-2.474Z"
+                                                        clip-rule="evenodd"/>
+                                                </svg>
+                                            </i>
+                                            <span class="font-semibold text-sm leading-[150%] ">
+                                                1900.63.3579
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col py-5">
-
+                            <span class="font-semibold text-base leading-[150%]">
+                                Hà Nội
+                            </span>
+                            <div class="mt-3 flex flex-col">
+                                <div class="flex flex-col justify-between space-x-0 space-y-3">
+                                    <div class="space-y-1">
+                                        <span class="text-sm leading-[150%]">
+                                            53 Thái Hà, Trung Liệt, Đống Đa, Hà Nội
+                                        </span>
+                                        <div class="flex items-center space-x-1 text-[#3BB346]">
+                                            <i class="w-3 h-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="evenodd" 
+                                                    d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
+                                                </svg>
+                                            </i>
+                                            <span class="text-sm">Còn hàng</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a class="inline-flex space-x-2 p-3 bg-[#F6F9FC] items-center rounded-full" href="">
+                                            <i class="w-5 h-5">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+                                                    viewBox="0 0 24 24">
+                                                    <path fill="currentColor" fill-rule="evenodd" 
+                                                        d="M9.784 12.973a41.274 41.274 0 01-1.7-1.806 1.1 1.1 0 01.287-1.684l1.685-.973a1.21 1.21 0 00.444-1.655L7.47 1.606a1.212 1.212 0 00-1.656-.443L1.615 3.587a1.21 1.21 0 00-.596.882c-.062.312.038.888.14 1.224a24.742 24.742 0 006.054 9.85 24.731 24.731 0 0011.76 6.593l.002-.002a1.213 1.213 0 001.27-.586l2.425-4.199a1.212 1.212 0 00-.444-1.655l-5.248-3.03a1.212 1.212 0 00-1.656.443L14.15 15.14a1.101 1.101 0 01-1.66.308 41.113 41.113 0 01-2.705-2.474Z"
+                                                        clip-rule="evenodd"/>
+                                                </svg>
+                                            </i>
+                                            <span class="font-semibold text-sm leading-[150%] ">
+                                                1900.63.3579
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -641,7 +971,8 @@
 <script>
 import { Swiper, SwiperSlide, Thumbs } from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
-import { datatest } from './data-test.js'
+import { datatest } from './data-test.js';
+import { warrantyData } from './data-base-page/warranty-policy.js'
 
 export default {
     components: {
@@ -650,18 +981,48 @@ export default {
     },
     data() {
         return {
+            searchSVG: require("@/assets/iconSVG/headerIconSVG/search.svg"),
+            fullNumber: '',
+            fullName: '',
+            selectedRating: 0,
+            hoveredRating: null,
+            showFullText: false,
             selectedItem: null,
             showMarquee: false,
             showDemand: false,
             showRentailOutlet: false,
+            showAddress: false,
+            showGuarantee: false,
+            showReview: false,
+            warrantyData: warrantyData,
+            maxHeight: 350,
             count: 1,
-            datatest: datatest,
             ariaList: [
-                { ariaLabel: "Đánh giá 1 sao" },
-                { ariaLabel: "Đánh giá 2 sao" },
-                { ariaLabel: "Đánh giá 3 sao" },
-                { ariaLabel: "Đánh giá 4 sao" },
-                { ariaLabel: "Đánh giá 5 sao" },
+                {
+                    rating: 1, 
+                    ariaLabel: "Đánh giá 1 sao",
+                    ratingReview: "Rất tệ"
+                },
+                { 
+                    rating: 2, 
+                    ariaLabel: "Đánh giá 2 sao",
+                    ratingReview: "Tệ"
+                },
+                { 
+                    rating: 3, 
+                    ariaLabel: "Đánh giá 3 sao",
+                    ratingReview: "Tạm ổn"
+                },
+                { 
+                    rating: 4, 
+                    ariaLabel: "Đánh giá 4 sao",
+                    ratingReview: "Tốt"
+                },
+                { 
+                    rating: 5, 
+                    ariaLabel: "Đánh giá 5 sao",
+                    ratingReview: "Rất tốt"
+                },
             ],
             vueMarqueeList: [
                 {
@@ -713,7 +1074,8 @@ export default {
                 },
             ],
 
-            // sau bỏ mảng dưới để truyền props, nhớ đổi tên trừ cái sectionDemand để tên như cũ 
+            // sau bỏ mảng dưới để truyền props, nhớ đổi tên trừ cái sectionDemand để tên như cũ
+            datatest: datatest,
             test: [
                 { detailsProduct: "i5 1340P, 16GB, 512GB, FHD+" },
                 { detailsProduct: "i7 1360P, 16GB, 1TB, 2.5K" },
@@ -917,6 +1279,36 @@ export default {
         },
         closeRentailOutlet() {
             this.showRentailOutlet = !this.showRentailOutlet
+        },
+        changeAddress() {
+            this.showAddress = !this.showAddress
+        },
+        closeAddress() {
+            this.showAddress = !this.showAddress
+        },
+        changeGuarantee() {
+            this.showGuarantee = !this.showGuarantee
+        },
+        closeGuarantee() {
+            this.showGuarantee = !this.showGuarantee
+        },
+        changeReview() {
+            this.showReview = !this.showReview
+        },
+        closeReview() {
+            this.showReview = !this.showReview
+        },
+        readmore() {
+            this.showFullText = !this.showFullText
+        },
+        selectRating(rating) {
+            this.selectedRating = rating
+        },
+        hoverRating(rating) {
+            this.hoveredRating = rating
+        },
+        resetHover() {
+            this.hoveredRating = null
         }
     },
     mounted() {
@@ -931,6 +1323,75 @@ export default {
 </script>
 
 <style scoped>
+.checkboxLabelCheckmark:after {
+    border-style: solid;
+}
+.checkboxLabelCheckmark {
+   border-radius: .125rem;
+   border-width: 1.5px;
+   flex-shrink: 0;
+   height: 1rem;
+   width: 1rem;
+   position: relative; 
+}
+.checkboxLabel {
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+}
+.itemIMG {
+    border-radius: .25rem;
+    height: 60px;
+    overflow: hidden;
+    width: 60px;
+    position: relative;
+}
+.textareaReview:focus-within {
+  box-shadow: 0 0 0 1px #007aff;
+
+}
+.textareaReview {
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 14px;
+    line-height: 150%;
+    min-width: 343px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding: .5rem .75rem;
+    width: 100%;
+    border-radius: 0.375rem;
+}
+.active {
+    color: gold !important;
+}
+.warranty-policy {
+    word-wrap: break-word;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+    position: relative;
+    font-size: 20px;
+    line-height: 150%;
+    font-weight: 400;
+}
+.divForm {
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 0 1px #FFFFFF;
+    display: inline-flex;
+    position: relative;
+    width: 400px;
+    font-size: 14px;
+  }
+  
+  .divForm:focus-within {
+    box-shadow: 0 0 0 1px #007aff;
+  }
+.divSharedHeader {
+    border: 6px solid transparent;
+  }
 .image-viewer {
     --tw-aspect-h: 9;
     --tw-aspect-w: 16;
@@ -946,7 +1407,6 @@ export default {
     justify-content: center;
 }
 .section-article-wrapper {
-    /* max-height: 300px; */
     overflow: hidden;
     position: relative;
 }
@@ -1129,6 +1589,10 @@ export default {
     --gap-y: 8px;
     --gap-x-negative: calc(var(--gap-x)* -1);
     --gap-y-negative: calc(var(--gap-y)* -1);
+}
+.labelUpload {
+    margin-top: var(--gap-x);
+    margin: var(--gap-y);
 }
 .flexGapWrap {
     display: flex;
