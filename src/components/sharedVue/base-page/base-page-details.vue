@@ -24,11 +24,11 @@
                             <div class="divide-y space-y-4">
                                 <div class="flex flex-col">
                                     <div class="flex items-center space-x-2 text-sm leading-[150%]">
-                                        <span>SKU: Inspirion14543003NF</span>
+                                        <span>{{ laptopData[0].productSKU }}</span>
                                     </div>
                                     <div class="mt-2">
                                         <h1 class="text-base leading-[150%] font-semibold">
-                                            Dell Inspiron 14 5430 - i7 1360P, 16GB, 1TB, 2.5K - Platinum Silver - Mới, Full box, Nhập khẩu
+                                            {{ laptopData[0].productDetailsName }}
                                         </h1>
                                     </div>
                                     <div class="mt-2 flex items-center space-x-2">
@@ -55,7 +55,7 @@
                                                 <div class="mt-2">
                                                     <div class="flexGap">
                                                         <div class="flexGapWrap">
-                                                            <label v-for="item in test" :key="item.detailsProduct" :for="item.detailsProduct" class="t-radio">
+                                                            <label v-for="item in laptopData[0].productVersion" :key="item.detailsProduct" :for="item.detailsProduct" class="t-radio">
                                                                 <input type="radio" class="sr-only" :value="item.detailsProduct">
                                                                 <router-link to="" class="itemRouter">
                                                                     <p class="whitespace-pre-line">
@@ -74,7 +74,7 @@
                                                 <div class="mt-2">
                                                     <div class="flexGap">
                                                         <div class="flexGapWrap">
-                                                            <label v-for="item in test2" :key="item.colorProduct" :for="item.colorProduct" class="t-radio">
+                                                            <label v-for="item in laptopData[0].productDetailsColor" :key="item.colorProduct" :for="item.colorProduct" class="t-radio">
                                                                 <input type="radio" class="sr-only" :value="item.colorProduct">
                                                                 <router-link to="" class="itemRouter">
                                                                     <p class="whitespace-pre-line">
@@ -93,7 +93,7 @@
                                                 <div class="mt-2">
                                                     <div class="flexGap">
                                                         <div class="flexGapWrap">
-                                                            <div v-for="item in test3" :key="item.typeProduct" 
+                                                            <div v-for="item in laptopData[0].productTypes" :key="item.typeProduct" 
                                                             @mousemove="changeDescription(item)"
                                                             @mouseleave="hideDescription(item)"
                                                             @mousemove.stop>
@@ -156,14 +156,14 @@
                                 <div class="flex items-center justify-between pt-4 space-x-8">
                                     <div class="flex flex-col">
                                         <span class="text-xl leading-[150%] text-[#FE3464] font-semibold">
-                                            19.990.000
+                                            {{ laptopData[0].productPrice }}
                                         </span>
                                         <div class="flex items-center space-x-1 text-xs leading-[150%] ">
                                             <span class="line-through">
-                                                28.990.000
+                                                {{ laptopData[0].productOldPrice }}
                                             </span>
                                             <span class="text-[#FE3464]">
-                                                -31%
+                                                {{ laptopData[0].productDiscount }}
                                             </span>
                                         </div>
                                     </div>
@@ -199,13 +199,14 @@
                                 <ul class="mt-2 ml-6 list-inside list-disc text-xs leading-[150%] space-y-1">
                                     <li>
                                         <span>
-                                            Chuột E-DRA EM604W 149.000đ
+                                            {{ laptopData[0].productGiftDetail }}
                                         </span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div class="mt-4 bg-white rounded px-5 divide-y">
+                            <!-- ở đây sau nếu làm chi tiết hơn sẽ có 2 cái mua kèm, 1 cái 800k balo 1 cái 600k phần mềm microsoft -->
                             <div class="py-4">
                                 <div class="flex items-center space-x-2">
                                     <div class="w-4 h-4 rounded-full overflow-hidden flex items-center justify-center text-white bg-[#FE3464]">
@@ -233,7 +234,7 @@
                                 </div>
                                 <div class="mt-2 ml-6">
                                     <span class="line-clamp-1 text-xs leading-[150%]">
-                                        Balo Cao Cấp Element - By NiceDesign, Balo Cao Cấp Element - By NiceDesign, Balo Cao Cấp Element - By NiceDesign, Balo Cao Cấp Element - By NiceDesign
+                                        {{ laptopData[0].productJointDemandGoods }}
                                     </span>
                                 </div>
                             </div>
@@ -241,13 +242,13 @@
                         <section class="bg-white p-6">
                             <div class="space-x-3 flex">
                                 <div class="w-[42px] h-[42px] flex items-center justify-center">
-                                    <img class="" :src="test5" alt="Dell Inspiron 14">
+                                    <img class="" :src="laptopData[0].productBrandImg" :alt="laptopData[0].productBrand">
                                 </div>
                                 <div class="flex-1 flex flex-col space-y-1">
                                     <div class="flex items-center">
                                         <div class="flex-1 flex items-center space-x-1">
                                             <a class="line-clamp-1 text-sm leading-[150%] font-semibold" href="#">
-                                                Dell Inspiron 14
+                                                {{ laptopData[0].productBrand }}
                                             </a>
                                         </div> 
                                         <a class="flex items-center space-x-1" href="#">
@@ -282,10 +283,10 @@
                                 <swiper class="swiper gallery-thumbs" 
                                 :options="swiperOptionThumbs" ref="swiperThumbs"
                                 @swiper="setThumbsSwiper">
-                                    <swiper-slide v-for="item in test6" :key="item.src"
+                                    <swiper-slide v-for="item in laptopData[0].productDetailsImg" :key="item.src"
                                     class="aspect-w-1 aspect-h-1"
                                     style="border: 1px solid transparent; border-radius: 0.25rem; height: 100px;">
-                                        <img :src="item.src" :alt="test7" class="w-full h-full t-img object-contain">
+                                        <img :src="item.src" :alt="laptopData[0].productDetailsName" class="w-full h-full t-img object-contain">
                                     </swiper-slide>
                                 </swiper>
                             </div>
@@ -293,8 +294,8 @@
                         <div class="section-media_main">
                             <div class="!aspect-w-1 !aspect-h-1 h-full">
                                 <swiper class="swiper gallery-top" :options="swiperOptionTop" ref="swiperTop">
-                                    <swiper-slide v-for="item in test6" :key="item.src" class="">
-                                        <img :src="item.src" :alt="test7" class="w-full h-full t-img object-contain">
+                                    <swiper-slide v-for="item in laptopData[0].productDetailsImg" :key="item.src" class="">
+                                        <img :src="item.src" :alt="laptopData[0].productDetailsName" class="w-full h-full t-img object-contain">
                                     </swiper-slide>
                                     <div class="swiper-button-next swiper-button-black" slot="button-next"></div>
                                     <div class="swiper-button-prev swiper-button-black" slot="button-prev"></div>
@@ -354,7 +355,7 @@
                             </div>
                             <div class="mt-5 bg-white">
                                 <div class="grid grid-cols-3 gap-x-12 gap-y-6">
-                                    <div  v-for="item in sectionDemand" :key="item.demand" class="flex flex-col">
+                                    <div  v-for="item in laptopData[0].productDemand" :key="item.demand" class="flex flex-col">
                                         <div class="flex justify-between items-center text-xs leading-[150%]">
                                             <span>{{ item.demand }}</span>
                                             <span>{{ item.score }}</span>
@@ -384,7 +385,7 @@
                                 </h2>
                             </div> 
                             <div class="grid-cols-2 grid gap-4 mt-5">
-                                <div v-for="item in attributeList" :key="item.infor0" class="flex flex-col space-y-1 text-sm">
+                                <div v-for="item in laptopData[0].productAttribute" :key="item.infor0" class="flex flex-col space-y-1 text-sm">
                                     <span class="font-semibold">{{ item.infor0 }}</span>
                                     <div class="block">
                                         <span>{{ item.infor1 }}</span>
@@ -464,7 +465,7 @@
                             <h2 class="font-semibold text-[18px] leading-[150%]">
                                 Bài viết mô tả
                             </h2>
-                            <div class="section-article-wrapper space-y-6" v-html="datatest.content" :style="{ height: showFullText ? 'auto' : maxHeight + 'px' }"></div>
+                            <div class="section-article-wrapper space-y-6" v-html="laptopData[0].content" :style="{ height: showFullText ? 'auto' : maxHeight + 'px' }"></div>
                             <div class="mt-4 justify-center flex">
                                 <button class="w-full !bg-transparent px-3 button-readmore" @click="readmore">
                                     <span class="text-[#0065EE] font-semibold">
@@ -708,11 +709,11 @@
                     <div class="p-6">
                         <div class="flex flex-col items-center w-full space-y-2">
                             <div class="w-[80px] overflow-hidden rounded bg-[#F6F9FC]">
-                                <img class="w-full h-full object-contain t-img" :src="test6[5].src" alt="">
+                                <img class="w-full h-full object-contain t-img" :src="laptopData[0].productDetailsImg[5].src" :alt="laptopData[0].productDetailsName">
                             </div>
                             <div class="max-w-[240px]">
                                 <span class="text-sm leading-[150%] font-semibold">
-                                    {{ test7 }}
+                                    {{ laptopData[0].productDetailsName }}
                                 </span>
                             </div>
                         </div>
@@ -725,9 +726,7 @@
                                     <button v-for="item in ariaList" :key="item.ariaLabel" class="buttonRatting" 
                                     :aria-label="item.ariaLabel" style="color: rgb(218, 221, 224)"
                                     :class="{ active: item.rating <= selectedRating }"
-                                    @click="selectRating(item.rating)"
-                                    @mouseover="hoverRating(item.rating)"
-                                    @mouseleave="resetHover">
+                                    @click="selectRating(item.rating)">
                                         <i class="w-9 h-9">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                                 <use href="@/assets/iconSVG/productFeaturesSVG/ratingIcon.svg#rating"></use>
@@ -785,17 +784,17 @@
                                             Họ và tên
                                         </span>
                                     </span>
-                                    <input placeholder="Nhập họ và tên (bắt buộc)" v-model="fullName"
+                                    <input autocomplete="name" placeholder="Nhập họ và tên (bắt buộc)" v-model.trim="fullName"
                                     type="text" required class="textareaReview text-[#1C1F23] items-center !min-w-0">
                                     <!-- đoạn này làm error message nhưng đang bí -->
-                                    <div v-if="!fullName.trim()" class="inline-flex mt-2 text-[#FF0000] items-center">
+                                    <div v-if="!fullName" class="inline-flex mt-2 text-[#FF0000] items-center">
                                         <i class="w-4 h-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                                 <path fill="currentColor" fill-rule="evenodd" d="M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-9.5 5.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0ZM12 5c-1.086 0-1.95.912-1.89 1.997l.307 5.505a1.586 1.586 0 003.166 0l.306-5.505A1.892 1.892 0 0012 5Z" clip-rule="evenodd"/>
                                             </svg>
                                         </i>
                                         <span class="ml-1 text-sm leading-[150%]">
-                                            Vui lòng nhập số điện thoại
+                                            Vui lòng nhập họ và tên
                                         </span>
                                     </div>
                                 </label>
@@ -805,10 +804,10 @@
                                             Số điện thoại
                                         </span>
                                     </span>
-                                    <input autocomplete="name" v-model="fullNumber" placeholder="Nhập số điện thoại (bắt buộc)" 
-                                    type="text" required class="textareaReview text-[#1C1F23] items-center !min-w-0">
+                                    <input v-model.trim="fullNumber" autocomplete="tel" placeholder="Nhập số điện thoại (bắt buộc)" 
+                                    type="tel" required class="textareaReview text-[#1C1F23] items-center !min-w-0">
                                     <!-- đoạn này làm error message nhưng đang bí -->
-                                    <div v-if="!fullNumber.trim()" class="inline-flex mt-2 text-[#FF0000] items-center">
+                                    <div v-if="!fullNumber" class="inline-flex mt-2 text-[#FF0000] items-center">
                                         <i class="w-4 h-4">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                                                 <path fill="currentColor" fill-rule="evenodd" d="M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-9.5 5.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0ZM12 5c-1.086 0-1.95.912-1.89 1.997l.307 5.505a1.586 1.586 0 003.166 0l.306-5.505A1.892 1.892 0 0012 5Z" clip-rule="evenodd"/>
@@ -831,7 +830,7 @@
                     </div>
                 </div>
                 <div class="dialog-footer">
-                    <button @click="changeReview" class="text-white h-[44px] bg-[#0065EE] w-full button-close">
+                    <button @click="successAlert" class="text-white h-[44px] bg-[#0065EE] w-full button-close">
                         Gửi đánh giá
                     </button>
                 </div>
@@ -859,12 +858,12 @@
                     <div class="flex flex-col divide-y px-6">
                         <div class="flex flex-col py-5">
                             <span class="font-semibold text-base leading-[150%]">
-                                Thành phố Hồ Chí Minh
+                                {{ laptopData[0].productLocation.city1 }}
                             </span>
                             <div class="mt-3 flex flex-col space-y-5">
                                 <div class="flex flex-col justify-between space-x-0 space-y-3 ">
                                     <div class="space-y-1">
-                                        <div class="text-sm leading-[150%]">Số 5 - 7 Nguyễn Huy Tưởng, Phường 6, Quận Bình Thạnh, Hồ Chí Minh</div>
+                                        <div class="text-sm leading-[150%]">{{ laptopData[0].productLocation.detailsLocation1 }}</div>
                                         <div class="flex items-center space-x-1 text-[#3BB346]">
                                             <i class="w-3 h-4">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -872,7 +871,7 @@
                                                     d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </i>
-                                            <span class="text-sm">Còn hàng</span>
+                                            <span class="text-sm">{{ laptopData[0].productLocation.productSituation1 }}</span>
                                         </div>                                        
                                     </div>
                                     <div>
@@ -886,14 +885,14 @@
                                                 </svg>
                                             </i>
                                             <span class="font-semibold text-sm leading-[150%] ">
-                                                1900.63.3579
+                                                {{ laptopData[0].productLocation.phoneNumber }}
                                             </span>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="flex flex-col justify-between space-x-0 space-y-3 ">
                                     <div class="space-y-1">
-                                        <div class="text-sm leading-[150%]">95 Trần Thiện Chánh, F12, Q10, HCM</div>
+                                        <div class="text-sm leading-[150%]">{{ laptopData[0].productLocation.detailsLocation2 }}</div>
                                         <div class="flex items-center space-x-1 text-[#3BB346]">
                                             <i class="w-3 h-4">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -901,7 +900,7 @@
                                                     d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </i>
-                                            <span class="text-sm">Còn hàng</span>
+                                            <span class="text-sm">{{ laptopData[0].productLocation.productSituation1 }}</span>
                                         </div>                                        
                                     </div>
                                     <div>
@@ -915,7 +914,7 @@
                                                 </svg>
                                             </i>
                                             <span class="font-semibold text-sm leading-[150%] ">
-                                                1900.63.3579
+                                                {{ laptopData[0].productLocation.phoneNumber }}
                                             </span>
                                         </a>
                                     </div>
@@ -924,13 +923,13 @@
                         </div>
                         <div class="flex flex-col py-5">
                             <span class="font-semibold text-base leading-[150%]">
-                                Hà Nội
+                                {{ laptopData[0].productLocation.city2 }}
                             </span>
                             <div class="mt-3 flex flex-col">
                                 <div class="flex flex-col justify-between space-x-0 space-y-3">
                                     <div class="space-y-1">
                                         <span class="text-sm leading-[150%]">
-                                            53 Thái Hà, Trung Liệt, Đống Đa, Hà Nội
+                                            {{ laptopData[0].productLocation.detailsLocation3 }}
                                         </span>
                                         <div class="flex items-center space-x-1 text-[#3BB346]">
                                             <i class="w-3 h-4">
@@ -939,7 +938,7 @@
                                                     d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </i>
-                                            <span class="text-sm">Còn hàng</span>
+                                            <span class="text-sm">{{ laptopData[0].productLocation.productSituation1 }}</span>
                                         </div>
                                     </div>
                                     <div>
@@ -953,7 +952,7 @@
                                                 </svg>
                                             </i>
                                             <span class="font-semibold text-sm leading-[150%] ">
-                                                1900.63.3579
+                                                {{ laptopData[0].productLocation.phoneNumber }}
                                             </span>
                                         </a>
                                     </div>
@@ -971,8 +970,8 @@
 <script>
 import { Swiper, SwiperSlide, Thumbs } from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
-import { datatest } from './data-test.js';
-import { warrantyData } from './data-base-page/warranty-policy.js'
+import { warrantyData } from './data-base-page/warranty-policy.js';
+import { laptopData } from '../../../data-js/laptop-data.js'
 
 export default {
     components: {
@@ -981,6 +980,7 @@ export default {
     },
     data() {
         return {
+            laptopData,
             searchSVG: require("@/assets/iconSVG/headerIconSVG/search.svg"),
             fullNumber: '',
             fullName: '',
@@ -1073,156 +1073,6 @@ export default {
                     descriptEx: "Tuyệt vời"
                 },
             ],
-
-            // sau bỏ mảng dưới để truyền props, nhớ đổi tên trừ cái sectionDemand để tên như cũ
-            datatest: datatest,
-            test: [
-                { detailsProduct: "i5 1340P, 16GB, 512GB, FHD+" },
-                { detailsProduct: "i7 1360P, 16GB, 1TB, 2.5K" },
-                { detailsProduct: "i7 1360P, 16GB, 1TB, FHD+" },
-            ],
-            test2: [
-                { colorProduct: "Platinum Silver" }
-            ],
-            test3: [
-                { 
-                    typeProduct: "Mới, Full box, Nhập khẩu",
-                    productDescrip1: "Nhập khẩu: Là sản phẩm được nhập khẩu và phân phối bởi ThinkPro, được bảo hành tại tất cả các cửa hàng thuộc hệ thống ThinkPro.",
-                    productDescrip2: "Mới, Fullbox: Là sản phẩm mới 100% chưa qua sử dụng đầy đủ hộp, phụ kiện, sách hướng dẫn sử dụng đi kèm.",
-                    showDescription: false,
-                },
-                { 
-                    typeProduct: "Used, Nhập khẩu",
-                    productDescrip1: "Nhập khẩu: Là sản phẩm được nhập khẩu và phân phối bởi ThinkPro, được bảo hành tại tất cả các cửa hàng thuộc hệ thống ThinkPro.",
-                    productDescrip2: "Used: Là sản phẩm đã qua sử dụng, có bao gồm sản phẩm và phụ kiện chính đi kèm (sạc đối với Laptop hoặc cáp sạc đối với phụ kiện.",
-                    showDescription: false,
-                },
-                { 
-                    typeProduct: "Outlet, Nhập khẩu",
-                    productDescrip1: "Nhập khẩu: Là sản phẩm được nhập khẩu và phân phối bởi ThinkPro, được bảo hành tại tất cả các cửa hàng thuộc hệ thống ThinkPro.",
-                    productDescrip2: "Outlet: Là sản phẩm tồn kho được bán giảm giá hoặc hàng trả bảo hành từ nhà sản xuất, có đầy đủ máy và phụ kiện đi kèm.",
-                    showDescription: false,
-                },
-            ],
-            test5: "https://images.thinkgroup.vn/unsafe/84x84/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/brands/2023/4/5/logo-dell-thinkpro-10.png",
-            test6: [
-                {
-                    src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/980932B0EC-SP-13170602.jpg"
-                },
-                {
-                    src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/B14BADE506-SP-13170602.jpg"
-                },
-                {
-                    src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/6812C016E5-SP-13170602.jpg"
-                },
-                {
-                    src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/6BE1ABFF40-SP-13170602.jpg"
-                },
-                {
-                    src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/881D351EB2-SP-13170602.jpg"
-                },
-                {
-                    src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/in5430nt-cnb-00000ff090-sl-2pc.jpg"
-                },
-                {
-                    src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/in5430nt-cnb-00055rf110-sl-nonfpr-2pc.jpg"
-                },
-                {
-                    src: "https://images.thinkgroup.vn/unsafe/fit-in/200x200/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/3/9/in5430nt-cnb-00055lf110-sl-nonfpr-2pc.jpg"
-                },
-            ],
-            test7: "Dell Inspiron 14 5430 - i7 1360P, 16GB, 1TB, 2.5K - Platinum Silver - Mới, Full box, Nhập khẩu",            
-            sectionDemand: [
-                {
-                    demand: 'Văn phòng, học tập',
-                    score: '10/10',
-                    progressBar: 'width: 100%; background-color: #3BB346;'
-                },
-                {
-                    demand: '2D Design',
-                    score: '8/10',
-                    progressBar: 'width: 80%; background-color: #3BB346;'
-                },
-                {
-                    demand: 'Quay dựng Video',
-                    score: '4/10',
-                    progressBar: 'width: 40%; background-color: #FC8800;'
-                },
-                {
-                    demand: '3D design',
-                    score: '4/10',
-                    progressBar: 'width: 40%; background-color: #FC8800;'
-                },
-                {
-                    demand: 'Gaming',
-                    score: '4/10',
-                    progressBar: 'width: 40%; background-color: #FC8800;'
-                },
-                {
-                    demand: 'Lập trình',
-                    score: '6/10',
-                    progressBar: 'width: 60%; background-color: #FC8800;'
-                },
-            ],
-            attributeList: [
-                {
-                    infor0: "Bộ xử lý",
-                    infor1: "Loại CPU: Intel Core i7 1360P, 12C/16T",
-                    infor2: "Tốc độ: 1GHz , Lên tới",
-                    infor3: "Bộ nhớ đệm: 12MB"
-                },
-                {
-                    infor0: "Card đồ họa",
-                    infor1: "Card onboard: Intel Iris Xe Graphics",
-                    infor2: "Card rời: Không"
-                },
-                {
-                    infor0: "RAM",
-                    infor1: "Dung lượng: 16GB LPDDR5 4800MHz",
-                    infor2: "Hỗ trợ tối đa: 16GB (Không thể nâng cấp)"
-                },
-                {
-                    infor0: "Ổ cứng",
-                    infor1: "Dung lượng SSD: 1024GB (M.2 NVMe)",
-                    infor2: "Khả năng nâng cấp: Hỗ trợ 1 SSD",
-                },
-                {
-                    infor0: "Màn hình",
-                    infor1: "Màn hình: 14inches, 2560 x 1600px, 90Hz",
-                    infor2: "Tấm phủ: Nhám, Không cảm ứng",
-                    infor3: "Thông số khác: Tỉ lệ 16:10, WVA, 300Nits, 100 sRGB"
-                },
-                {
-                    infor0: "Khối lượng & Kích thước",
-                    infor1: "Khối lượng: 1.55kg",
-                    infor2: "Kích thước: 314mm x 226.6mm x 15.74mm",
-                    infor3: "Chất liệu vỏ: Kim loại"
-                },
-                {
-                    infor0: "Pin",
-                    infor1: "54WHr Li-Polymer"
-                },
-                {
-                    infor0: "Webcam và Âm thanh",
-                    infor1: "Có"
-                },
-                {
-                    infor0: "Cổng kết nối",
-                    infor1: "Cổng kết nối: 1 x USB Type C, 2 x USB Type A, HDMI, Jack tai nghe 3.5mm.",
-                    infor2: "Khe thẻ SD/ Micro SD: 1 khe thẻ SD, khe micro SD"
-                },
-                {
-                    infor0: "Kết nối",
-                    infor1: "Bluetooth: Có",
-                    infor2: "Kết nối LTE/WWAN: Không hỗ trợ"
-                },
-                {
-                    infor0: "Hệ điều hành",
-                    infor1: "Windows 11"
-                }
-            ],
-            // bỏ đến đây
-
             swiperOptionTop: {
                 modules: [Thumbs],
                 spaceBetween: 10,
@@ -1304,13 +1154,21 @@ export default {
         selectRating(rating) {
             this.selectedRating = rating
         },
-        hoverRating(rating) {
-            this.hoveredRating = rating
-        },
-        resetHover() {
-            this.hoveredRating = null
+        successAlert() {
+            if(this.fullName.trim() !== "" && this.fullNumber.trim() !== "") {
+                alert('Bạn đã gửi đánh giá thành công')
+            }
+            else {
+                alert('Vui lòng nhập đủ thông tin')
+            }
         }
     },
+    // computed: {
+    //     filteredProduct() {
+    //         const productID = parseInt(this.$router.params.id)
+    //         return this.laptopData.find((product) => product.id === productID)
+    //     }
+    // },
     mounted() {
         this.$nextTick(() => {
             const swiperTop = this.$refs.swiperTop.$swiper

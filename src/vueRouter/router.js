@@ -35,7 +35,7 @@ import AccountingService from '@/components/service-footer/accounting-service.vu
 import QualityAssuranceService from '@/components/service-footer/quality-assurance-service.vue';
 import ShoppingTutorialService from '@/components/service-footer/shopping-tutorial-service.vue';
 import AboutMe from '@/components/service-footer/about-me.vue';
-import test from '@/components/sharedVue/base-page/base-page-details.vue';
+import DetailsProduct from '@/components/sharedVue/base-page/base-page-details.vue';
 
 Vue.use(VueRouter)
 
@@ -265,7 +265,7 @@ const routes = [
     {
         path: '/Laptop/:id',
         name: 'detailsProduct',
-        component: test
+        component: DetailsProduct
     },
 ]
 
