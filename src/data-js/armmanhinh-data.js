@@ -67,6 +67,6 @@ export const armmanhinhData = [
         productName: "Arm màn hình Human Motion T2",
         productPrice: "1.190.000",
         productDiscount: "-23%",
-        productColor1: "border: 1px solid #DADDE0; background: #FFFFFF;",
+        productColor: "border: 1px solid #DADDE0; background: #FFFFFF;",
     },
 ]

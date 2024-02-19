@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import LaptopSuggest from '../suggest/laptop-suggest';
+import LaptopSuggest from '../suggest/laptop-suggest.vue';
 import KeyboardSuggest from '../production/Ban-phim/banphim-product-container.vue';
-import SoundSuggest from '../suggest/sound-suggest';
+import SoundSuggest from '../suggest/sound-suggest.vue';
 import GameConsoleSuggest from '../suggest/game-console-suggest.vue'
 import EgronomicChairSuggest from '../production/Chair/chair-product-container.vue';
 import TableSuggest from '../production/Ban-nang-ha/ban-nang-ha-product-container.vue';

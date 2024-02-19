@@ -25,6 +25,15 @@ export const laptopData = [
         productBrandImg: "https://images.thinkgroup.vn/unsafe/84x84/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/brands/2023/4/5/logo-dell-thinkpro-10.png",
         productBrand: "Dell Inspiron 14",
         productSKU: "SKU: Inspirion14543003NF",
+        productCpuInfor: "CPU: Core i7 1360P, 12 Cores",
+        productRamInfor: "RAM: 16GB, 4800Mhz",
+        productSsdInfor: "Ổ cứng: SSD 1024GB",
+        productMonitorInfor: "Màn hình: 14\", 2560 x 1600, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i7 1360P",
+        productShortInfor2: "2.5K",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
         productVersion: [
             { detailsProduct: "i5 1340P, 16GB, 512GB, FHD+" },
             { detailsProduct: "i7 1360P, 16GB, 1TB, 2.5K" },
@@ -275,7 +284,16 @@ export const laptopData = [
         productDiscount: "-33%",
         productColor: "border: 1px solid #000000; background: #000000;",
         productSKU: "SKU: Test 2",
-        productGift: "Quà tặng 399.000",                  
+        productGift: "Quà tặng 399.000",
+        productCpuInfor: "CPU: Core i5 1335P, 10 Cores",
+        productRamInfor: "RAM: 16GB, 6400Mhz",
+        productSsdInfor: "Ổ cứng: SSD 256GB",
+        productMonitorInfor: "Màn hình: 14\", 1920 x 1200, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 1335P",
+        productShortInfor2: "FHD+",
+        productShortInfor3: "16GB",
+        productShortInfor4: "256GB",         
         name: 'detailsProduct'   
         
     },
@@ -287,9 +305,17 @@ export const laptopData = [
         productPrice: "22.390.000",
         productDiscount: "-25%",
         productColor: "border: 1px solid rgb(102 102 102); background: rgb(102 102 102);",
-        productGift: "Quà tặng 100.000",                    
-        
-
+        productGift: "Quà tặng 100.000",           
+        productCpuInfor: "CPU: AMD 7000, 8 Cores",
+        productRamInfor: "RAM: 16GB, 4800Mhz",
+        productSsdInfor: "Ổ cứng: SSD 256GB",
+        productMonitorInfor: "Màn hình: 16\", 2560 x 1600, 60Hz",
+        productVgaInfor: "Card: AMD Radeon 680M",
+        productShortInfor1: "AMD 7000",
+        productShortInfor2: "2.5K",
+        productShortInfor3: "16GB",
+        productShortInfor4: "256GB",
+        productShortInfor5: "AMD Radeon 680M"
     },
     {
         id: 20003,
@@ -298,7 +324,15 @@ export const laptopData = [
         productPrice: "23.990.000",
         productDiscount: "-20%",
         productColor: "border: 1px solid rgb(110 109 109); background: rgb(110 109 109);",                    
-        
+        productCpuInfor: "CPU: Core i5 13500H, 12 Cores",
+        productRamInfor: "RAM: 32GB, 5200Mhz",
+        productSsdInfor: "Ổ cứng: SSD 1024GB",
+        productMonitorInfor: "Màn hình: 16\", 2880 x 1800, 90Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 13500H",
+        productShortInfor2: "QHD+",
+        productShortInfor3: "16GB",
+        productShortInfor4: "1024GB",
     },
     {
         id: 20004,
@@ -308,7 +342,15 @@ export const laptopData = [
         productDiscount: "-34%",
         productColor: "border: 1px solid rgb(139 203 255); background: rgb(139 203 255);",
         productColor2: "border: 1px solid rgb(113 65 65); background: rgb(113 65 65);",                    
-        
+        productCpuInfor: "CPU: Core i5 1230U, 10 Cores",
+        productRamInfor: "RAM: 8GB, 5200Mhz",
+        productSsdInfor: "Ổ cứng: SSD 1024GB",
+        productMonitorInfor: "Màn hình: 13.4\", 1920 x 1200, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 1230U",
+        productShortInfor2: "FHD+",
+        productShortInfor3: "8GB",
+        productShortInfor4: "1024GB",
     },
     // có quà
     {
@@ -319,7 +361,15 @@ export const laptopData = [
         productDiscount: "-37%",
         productColor: "border: 1px solid #000000; background: #000000;",
         productGift: "Quà tặng 898.000",                    
-        
+        productCpuInfor: "CPU: Core i7 10610U, 4 Cores",
+        productRamInfor: "RAM: 16GB, 2133Mhz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 14\", 2560 x 1440, 60Hz",
+        productVgaInfor: "Card: Intel UHD Graphics",
+        productShortInfor1: "i7 10610U",
+        productShortInfor2: "2K",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
     },
     // có quà
     {
@@ -330,7 +380,15 @@ export const laptopData = [
         productDiscount: "-31%",
         productColor: "border: 1px solid #000000; background: #000000;",
         productGift: "Quà tặng 499.000",                    
-        
+        productCpuInfor: "CPU: Core i5 1240P, 12 Cores",
+        productRamInfor: "RAM: 16GB, 5200Mhz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 14\", 1920 x 1200,  60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 1240P",
+        productShortInfor2: "FHD+",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
     },
     // có quà
     {
@@ -341,8 +399,16 @@ export const laptopData = [
         productDiscount: "-41%",
         productColor: "border: 1px solid rgb(236 236 236); background: rgb(236 236 236);",
         productColor2: "border: 1px solid #353535; background: #353535;",
-        productGift: "Quà tặng 399.000",                    
-        
+        productGift: "Quà tặng 399.000",                 
+        productCpuInfor: "CPU: Core i7 1260P, 12 Cores",
+        productRamInfor: "RAM: 16GB, 5200Mhz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 13.4\", 3456 x 2160, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i7 1260P",
+        productShortInfor2: "4K",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
     },
     {
         id: 20008,
@@ -351,7 +417,16 @@ export const laptopData = [
         productPrice: "26.990.000",
         productDiscount: "-33%",
         productColor: "border: 1px solid #666666; background: #666666;",                    
-        
+        productCpuInfor: "CPU: Core i7 12700H, 14 Cores",
+        productRamInfor: "RAM: 16GB, 4800MHz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 16\", 2560 x 1600, 165Hz",
+        productVgaInfor: "Card: Geforce RTX 3050Ti 4GB",
+        productShortInfor1: "i7 12700H",
+        productShortInfor2: "2.5K",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
+        productShortInfor5: "RTX 3050Ti"
     },
     {
         id: 20009,
@@ -360,7 +435,15 @@ export const laptopData = [
         productPrice: "11.990.000",
         productDiscount: "-25%",
         productColor: "border: 1px solid #000000; background: #000000;",                    
-        
+        productCpuInfor: "CPU: Core i5 1140G7, 4 Cores",
+        productRamInfor: "RAM: 8GB, 4267MHz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 13\", 1920 x 1280, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 1140G7",
+        productShortInfor2: "FHD+",
+        productShortInfor3: "8GB",
+        productShortInfor4: "512GB",
     },
     // có quà
     {
@@ -371,7 +454,15 @@ export const laptopData = [
         productDiscount: "-10%",
         productColor: "border: 1px solid #E5E4E2; background: #E5E4E2;",
         productGift: "Quà tặng 399.000",                    
-        
+        productCpuInfor: "CPU: Core i5 1235U, 10 Cores",
+        productRamInfor: "RAM: 16GB, 4800MHz",
+        productSsdInfor: "Ổ cứng: SSD 256GB",
+        productMonitorInfor: "Màn hình: 13\", 2880x1920, 120Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 1235U",
+        productShortInfor2: "QHD+",
+        productShortInfor3: "16GB",
+        productShortInfor4: "256GB",
     },
     {
         id: 20011,
@@ -380,7 +471,15 @@ export const laptopData = [
         productPrice: "15.490.000",
         productDiscount: "-34%",
         productColor: "border: 1px solid #000000; background: #000000;",                    
-        
+        productCpuInfor: "CPU: Ryzen 5 7530U, 10 Cores",
+        productRamInfor: "RAM: 8GB, 3200MHz",
+        productSsdInfor: "Ổ cứng: SSD 256GB",
+        productMonitorInfor: "Màn hình: 16\", 1920 x 1200, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "Ryzen 5 7530U",
+        productShortInfor2: "FHD+",
+        productShortInfor3: "8GB",
+        productShortInfor4: "256GB",
     },
     // có quà
     {
@@ -391,7 +490,15 @@ export const laptopData = [
         productDiscount: "-19%",
         productColor: "border: 1px solid #C0C0C0; background: #C0C0C0;",
         productGift: "Quà tặng 100.000",                    
-        
+        productCpuInfor: "CPU: Core i5 1135G7, 4 Cores",
+        productRamInfor: "RAM: 8GB, 3200MHz",
+        productSsdInfor: "Ổ cứng: SSD 256GB",
+        productMonitorInfor: "Màn hình: 14\", 1920 x 1080, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 1135G7",
+        productShortInfor2: "FHD",
+        productShortInfor3: "8GB",
+        productShortInfor4: "256GB",
     },
     {
         id: 20013,
@@ -400,7 +507,15 @@ export const laptopData = [
         productPrice: "27.990.000",
         productDiscount: "-15%",
         productColor: "border: 1px solid #ECECEC; background: #ECECEC;",                    
-        
+        productCpuInfor: "CPU: Core i5 1135G7, 4 Cores",
+        productRamInfor: "RAM: 8GB, 3200MHz",
+        productSsdInfor: "Ổ cứng: SSD 256GB",
+        productMonitorInfor: "Màn hình: 14\", 1920 x 1080, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 1135G7",
+        productShortInfor2: "FHD",
+        productShortInfor3: "8GB",
+        productShortInfor4: "256GB",
     },
     // có quà
     {
@@ -414,7 +529,15 @@ export const laptopData = [
         productColor3: "border: 1px solid #F2F2F2; background: #F2F2F2;",
         productColor4: "border: 1px solid #747272; background: #747272;",
         productGift: "Quà tặng 499.000",                    
-        
+        productCpuInfor: "CPU: Apple M2, 8 Cores",
+        productRamInfor: "RAM: 8GB, 6400MHz",
+        productSsdInfor: "Ổ cứng: SSD 256GB",
+        productMonitorInfor: "Màn hình: 13.4\", 2560 x 1600, 60Hz",
+        productVgaInfor: "Card: Apple GPU",
+        productShortInfor1: "Apple M2",
+        productShortInfor2: "QHD",
+        productShortInfor3: "8GB",
+        productShortInfor4: "256GB",
     },
     {
         id: 20015,
@@ -423,18 +546,34 @@ export const laptopData = [
         productPrice: "21.490.000",
         productDiscount: "-12%",
         productColor: "border: 1px solid #8C8C8C; background: #8C8C8C;",                    
-        
+        productCpuInfor: "CPU: Core i5 13500H, 12 Cores",
+        productRamInfor: "RAM: 16GB, 5200MHz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 16\", 2880 x 1800, 90Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 13500H",
+        productShortInfor2: "2.5K+",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
     },
     // có quà
     {
         id: 20016,
         productImg: "https://images.thinkgroup.vn/unsafe/460x460/https://media-api-beta.thinkpro.vn/media/core/products/2023/11/6/lg-gram-17-2022-nhap-khau-thinkpro-uhT.png",
-        productName: "LG Gram 17 2022 (Nhập khẩu)",
-        productPrice: "18.990.000",
-        productDiscount: "-39%",
+        productName: "LG Gram 17 2022",
+        productPrice: "24.990.000",
+        productDiscount: "-48%",
         productColor: "border: 1px solid #8D8D8D; background: #8D8D8D;",
         productGift: "Quà tặng 399.000",                    
-        
+        productCpuInfor: "CPU: Core i7 1260P, 12 Cores",
+        productRamInfor: "RAM: 16GB, 5200MHz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 17\", 2560 x 1600, 90Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i7 1260P",
+        productShortInfor2: "2.5K",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
     },
     {
         id: 20017,
@@ -443,7 +582,15 @@ export const laptopData = [
         productPrice: "18.490.000",
         productDiscount: "-38%",
         productColor: "border: 1px solid #000000; background: #000000;",                    
-        
+        productCpuInfor: "CPU: Ryzen 5 6650U, 6 Cores",
+        productRamInfor: "RAM: 16GB, 3200MHz",
+        productSsdInfor: "Ổ cứng: SSD 256GB",
+        productMonitorInfor: "Màn hình: 14\", 1920 x 1200, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "Ryzen 5 6650U",
+        productShortInfor2: "FHD+",
+        productShortInfor3: "16GB",
+        productShortInfor4: "256GB",
     },
     // có quà
     {
@@ -455,7 +602,15 @@ export const laptopData = [
         productColor: "border: 1px solid #ECECEC; background: #ECECEC;",
         productColor2: "border: 1px solid #134953; background: #134953;",
         productGift: "Quà tặng 399.000",                    
-        
+        productCpuInfor: "CPU: Core i5 12500H, 12 Cores",
+        productRamInfor: "RAM: 16GB, 4800MHz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 14\", 2240 x 1400, 60Hz",
+        productVgaInfor: "Card: Intel Iris Xe Graphics",
+        productShortInfor1: "i5 12500H",
+        productShortInfor2: "QHD",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
     },
     // có quà
     {
@@ -466,7 +621,15 @@ export const laptopData = [
         productDiscount: "-28%",
         productColor: "border: 1px solid #B2AFAF; background: #B2AFAF;",
         productGift: "Quà tặng 100.000",                    
-        
+        productCpuInfor: "CPU: Ryzen 5 5625U, 6 Cores",
+        productRamInfor: "RAM: 16GB, 3200MHz",
+        productSsdInfor: "Ổ cứng: SSD 512GB",
+        productMonitorInfor: "Màn hình: 16\", 1920 x 1200, 60Hz",
+        productVgaInfor: "Card: AMD Radeon Graphics",
+        productShortInfor1: "Ryzen 5 5625U",
+        productShortInfor2: "FHD",
+        productShortInfor3: "16GB",
+        productShortInfor4: "512GB",
     },
 ].map(item => {
     return {

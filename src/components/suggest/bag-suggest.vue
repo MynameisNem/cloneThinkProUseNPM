@@ -1,145 +1,19 @@
 <template>
-    <BaseProductContainer :product-infor="productInfor"></BaseProductContainer>
+    <BasePromoContainer 
+        :infor-product="balotuiData">
+    </BasePromoContainer>
 </template>
 
 <script>
-import BaseProductContainer from '@/components/sharedVue/base-page/base-product-container.vue';
+import BasePromoContainer from '@/components/sharedVue/base-page/base-promo-container.vue';
+import { balotuiData } from '@/data-js/balotui-data.js';
 export default {
     components: {
-        BaseProductContainer
+        BasePromoContainer
     },
     data() {
         return {
-            productInfor: [
-                // inspiron 14 5430
-                {
-                    id: 21100,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/5/27/balo-cao-cap-element-by-nicedesign-thinkpro-nicespace.jpg",
-                    productName: "Balo Cao Cấp Element - By NiceDesign",
-                    productPrice: "799.000",
-                    productDiscount: "-47%",
-                    productColor: "border: 1px solid #000000; background: #000000;"
-                },
-                // có quà
-                {
-                    id: 21101,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/4/23/wiwu-pioneer-shouder-grey-0jpg",
-                    productName: "Túi chống sốc Wiwu Pioneer Shoulder for Laptop/UltraBook - M348",
-                    productPrice: "600.000",
-                    productDiscount: "-8%",
-                    productColor: "border: 1px solid #DADDE0; background: #FFFFFF;"
-                },
-                // có quà
-                {
-                    id: 21102,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/5/10/fit-black-0jpg",
-                    productName: "Túi Laptop Cartinoe Fit cho laptop 15.4 inch",
-                    productPrice: "460.000",
-                    productDiscount: "-18%",
-                    productColor: "border: 1px solid #000000; background: #000000;"
-                },
-                {
-                    id: 21103,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/5/10/tp-lamando-black-0jpg",
-                    productName: "Túi xách Cartinoe Lamando cho laptop 13.3 inch",
-                    productPrice: "440.000",
-                    productDiscount: "-19%",
-                    productColor: "border: 1px solid #000000; background: #000000;"
-                },
-                {
-                    id: 21104,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/5/31/newelite-grey-0jpg",
-                    productName: "Túi đeo chéo Cartinoe New Elite cho laptop 14 inch",
-                    productPrice: "450.000",
-                    productDiscount: "-35%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
-                },
-                // có quà
-                {
-                    id: 21106,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/3/11/a13gr-00jpg",
-                    productName: "Túi chống sốc tomtoc 360 Protective 16\" - A13",
-                    productPrice: "849.000",
-                    productDiscount: "-6%",
-                    productColor: "border: 1px solid #171616; background: #171616;",
-                    productColor2: "border: 1px solid #747272; background: #747272;",
-                },
-                // có quà
-                {
-                    id: 21107,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2020/11/25/predatorSUV_00.jpg",
-                    productName: "Balo Acer Predator SUV",
-                    productPrice: "799.000",
-                    productDiscount: "-53%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
-                },
-                {
-                    id: 21108,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/1/20/H61_00.png",
-                    productName: "Balo tomtoc Premium Urban Business cho laptop 15.6″ - H61",
-                    productPrice: "2.290.000",
-                    productDiscount: "-23%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
-                },
-                {
-                    id: 21109,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/1/19/40014002_00.png",
-                    productName: "Túi Laptop chống sốc ReeYee 4001/4002",
-                    productPrice: "560.000",
-                    productDiscount: "-15%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
-                },        
-                {
-                    id: 21110,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/1/16/A13BL_00.png",
-                    productName: "Túi chống sốc tomtoc 360 Protective 13\" - A13",
-                    productPrice: "819.000",
-                    productDiscount: "-6%",
-                    productColor: "border: 1px solid #747272; background: #747272;",
-                },
-                {
-                    id: 21111,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/1/20/H61_00.png",
-                    productName: "Balo tomtoc Premium Urban Business cho laptop 15.6\" - H61",
-                    productPrice: "2.290.000",
-                    productDiscount: "-23%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
-                },
-                {
-                    id: 21112,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/1/19/1018_00.png",
-                    productName: "Balo Laptop đa năng ReeYee 17 RY1018/1019",
-                    productPrice: "1.090.000",
-                    productDiscount: "-5%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
-                    productColor2: "border: 1px solid #E0E0E0; background: #E0E0E0;",
-
-                },
-                {
-                    id: 21113,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/backend/uploads/product/avatar/2021/1/20/1007_00.png",
-                    productName: "Balo Laptop đa năng ReeYee 15 RY1007/1008",
-                    productPrice: "990.000",
-                    productDiscount: "-18%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
-                },
-                {
-                    id: 21114,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/19/mt3a2348-thinkpro.jpg",
-                    productName: "Balo Laptop Đa Năng Cao Cấp ReeYee RY-112B",
-                    productPrice: "1.090.000",
-                    productDiscount: "-17%",
-                    productColor: "border: 1px solid #000000; background: #000000;",
-                },
-                {
-                    id: 21115,
-                    productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/9/25/tui-chong-soc-laptop-reeyee-40034004-thinkpro-nicespace-fvD.png",
-                    productName: "Túi Chống Sốc laptop ReeYee 4003/4004",
-                    productPrice: "430.000",
-                    productDiscount: "-19%",
-                    productColor: "border: 1px solid #8C8C8C; background: #8C8C8C;",
-                },
-            ],
+            balotuiData
         }
     }
 }
