@@ -5,7 +5,7 @@
                 :img-promotion="imgPromotion"
                 :altImgPromotion="textHeadPromo"
                 :textHeadPromo="textHeadPromo"
-                :product-promo="productPromo">
+                :product-promo="counterProduct">
             </BasePageImg>
             <MarshallAllProducts></MarshallAllProducts>
             <!-- <component :is="selectedItemComponent" :selected-item="selectedItem"></component> -->
@@ -16,7 +16,7 @@
 <script>
 import BasePageImg from '@/components/sharedVue/base-page/base-page-img.vue';
 import MarshallAllProducts from '../Marshall/marshall-all-products.vue';
-// import MarshallHeadphone from './marshall-headphone.vue';
+import { speakerData } from '@/data-js/speaker-data.js';
 export default {
     components: {
         BasePageImg,
@@ -26,20 +26,6 @@ export default {
         return {
             imgPromotion: "https://images.thinkgroup.vn/unsafe/2400x640/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/banners/2023/5/30/untitled-design-fgf-thinkpro.png",
             textHeadPromo: "MARSHALL SALE TO - LO CHI VỀ GIÁ",
-            productPromo: [
-                {
-                    allProduct: "Tất cả",
-                    quantityProduct: "13",
-                },
-                {
-                    allProduct: "Tai nghe",
-                    quantityProduct: "2",
-                },
-                {
-                    allProduct: "Loa",
-                    quantityProduct: "11",
-                },
-            ],
             selectedItem: null,
         }
     },
@@ -48,19 +34,38 @@ export default {
             this.selectedItem = item;
         },
     },
-    // computed: {
-    //     selectedItemComponent() {
-    //         const productPromoMapping = {
-    //             'Tất cả': MarshallAllProducts,
-    //             'Tai nghe': MarshallHeadphone
-    //         };
-    //         if (this.selectedItem) {
-    //             const selectedProduct = this.selectedItem.allProduct
-    //             return productPromoMapping[selectedProduct] || MarshallAllProducts
-    //         }
-    //         return MarshallAllProducts
-    //     }
-    // } 
+    computed: {
+        counterProduct() {
+            // Lọc sản phẩm có productName chứa "Marshall"
+            const allMarshall = speakerData.filter(item => item.productName.includes("Marshall"));
+
+            // Lọc sản phẩm có "Loa Marshall"
+            const loaMarshall = allMarshall.filter(item => item.productName.includes("Loa Marshall"));
+
+            // Lọc sản phẩm có "Tai nghe"
+            const taiNgheMarshall = allMarshall.filter(item => item.productName.includes("Tai nghe"));
+            
+            // Đếm số lượng sản phẩm sau khi lọc
+            const totalMarshallProducts = allMarshall.length;
+            const totalLoaMarshallProducts = loaMarshall.length;
+            const totalTaiNgheProducts = taiNgheMarshall.length;
+
+            return [
+                {
+                    allProduct: "Tất cả",
+                    quantityProduct: totalMarshallProducts.toString(),
+                },
+                {
+                    allProduct: "Tai nghe",
+                    quantityProduct: totalTaiNgheProducts.toString(),
+                },
+                {
+                    allProduct: "Loa",
+                    quantityProduct: totalLoaMarshallProducts.toString(),
+                },
+            ];
+        }
+    },
 }
 </script>
 

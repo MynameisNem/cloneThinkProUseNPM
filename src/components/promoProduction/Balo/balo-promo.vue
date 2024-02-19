@@ -5,7 +5,7 @@
                 :img-promotion="imgPromotion"
                 :altImgPromotion="textHeadPromo"
                 :textHeadPromo="textHeadPromo"
-                :productPromo="productPromo">
+                :productPromo="counterProduct">
             </BasePageImg>
             <BaloAllProducts></BaloAllProducts>
         </section>
@@ -15,6 +15,7 @@
 <script>
 import BasePageImg from '@/components/sharedVue/base-page/base-page-img.vue';
 import BaloAllProducts from './balo-all-products';
+import { balotuiData } from '@/data-js/balotui-data';
 export default {
     components: {
         BasePageImg,
@@ -24,25 +25,31 @@ export default {
         return {
             imgPromotion: "https://images.thinkgroup.vn/unsafe/2400x640/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/banners/2023/3/19/Ảnh màn hình 2023-03-19 lúc 13.44.02.jpeg",
             textHeadPromo: "Xả Kho Balo,Túi - SIÊU SALE ĐÓN NĂM MỚI",
-            productPromo: [
+            selectedItem: null,
+        }
+    },
+    computed: {
+        counterProduct() {
+            // Tính toán quantityProduct dựa trên dữ liệu từ mảng balotuiData
+            const bag = balotuiData.filter(item => item.productName.includes("Túi"));
+            const balo = balotuiData.filter(item => item.productName.includes("Balo"));
+            const total = balotuiData.length;
+
+            return [
                 {
                     allProduct: "Tất cả",
-                    quantityProduct: "39",
+                    quantityProduct: total.toString(),
                 },
                 {
                     allProduct: "Túi",
-                    quantityProduct: "18",
+                    quantityProduct: bag.length.toString(),
                 },
                 {
                     allProduct: "Balo",
-                    quantityProduct: "20",
+                    quantityProduct: balo.length.toString(),
                 },
-            ],
-            selectedItem: null,
+            ];
         }
     },
 }
 </script>
-
-<style scoped>
-</style>
