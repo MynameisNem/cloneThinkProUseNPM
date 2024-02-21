@@ -1,3 +1,5 @@
+const slugPath = "Ban-nang-ha"
+
 export const bannanghaData = [
     {
         id: 20900,
@@ -157,4 +159,9 @@ export const bannanghaData = [
         productColor2: "border: 1px solid #DADDE0; background: #FFFFFF;",
         productGift: "Quà tặng 800.000"
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

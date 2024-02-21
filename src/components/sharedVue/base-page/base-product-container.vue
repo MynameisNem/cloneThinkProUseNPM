@@ -3,7 +3,7 @@
         <SharedStyles></SharedStyles>
         <section>
             <div class="productContainer container mr-auto ml-auto grid-cols-5">
-                <router-link v-for="itemProduct in displayedProductList" :key="itemProduct.id" class="productItems bg-white shadow-none h-full" :to="{ name: itemProduct.name, params: {id: itemProduct.id} }">
+                <router-link v-for="itemProduct in displayedProductList" :key="itemProduct.id" class="productItems bg-white shadow-none h-full" :to="{ name: 'detailsProduct', params: {slug: itemProduct.slugPath , id: itemProduct.id} }">
                     <div class="absolute top-4 left-4 z-[1] flex items-center space-x-1"></div>
                     <div class="relative">
                         <div class="productImage">

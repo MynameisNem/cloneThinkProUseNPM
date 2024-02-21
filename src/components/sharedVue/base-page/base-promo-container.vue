@@ -3,8 +3,10 @@
         <section class=" grid gap-3 grid-cols-5">
             <!-- Thinkpad T16 có quà tặng -->
             <div v-for="(item, index) in inforProduct" :key="item.id" style="grid-gap: 0.75rem">
-                <a v-if="index < 20" class="bg-[#FFFFFF] cursor-pointer flex flex-col relative overflow-hidden rounded-[0.75rem] h-full">
-                    <!-- :to="{name: item.name, params: {id: item.id}}" -->
+                <router-link v-if="index < 20" 
+                class="bg-[#FFFFFF] cursor-pointer flex flex-col relative overflow-hidden rounded-[0.75rem] h-full"
+                :to="{ name: 'detailsProduct', params: {slug: item.slugPath , id: item.id} }">
+                    <!--  -->
                     <div class="absolute top-4 left-4 z-[1] flex items-center space-x-1 ">
                     </div>
                     <div class="relative">
@@ -83,7 +85,7 @@
                             </div>
                         </template>                        
                     </div>
-                </a>
+                </router-link>
             </div>           
         </section>
     </div>

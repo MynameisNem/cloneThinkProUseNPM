@@ -1,5 +1,5 @@
 <template>
-    <main class="bg-[#F6F9FC]">
+    <main class="bg-[#F6F9FC]" v-if="productDataFilter">
         <div class="container mr-auto ml-auto pb-10">
             <div class="relative flex pt-5 items-start">
                 <div class="sticky inset-0 h-full ml-6 overflow-visible w-2/5 z-10 divLeft">
@@ -15,7 +15,7 @@
                                         </svg>
                                     </i>
                                     <div class="flex-1 font-semibold line-clamp-1">
-                                        DELL INSPIRON HIỆU SUẤT CAO
+                                        {{ productDataFilter.productBrandName }}
                                     </div>
                                 </div>
                             </div>
@@ -24,11 +24,11 @@
                             <div class="divide-y space-y-4">
                                 <div class="flex flex-col">
                                     <div class="flex items-center space-x-2 text-sm leading-[150%]">
-                                        <span>{{ laptopData[0].productSKU }}</span>
+                                        <span>{{ productDataFilter.productSKU }}</span>
                                     </div>
                                     <div class="mt-2">
                                         <h1 class="text-base leading-[150%] font-semibold">
-                                            {{ laptopData[0].productDetailsName }}
+                                            {{ productDataFilter.productDetailsName }}
                                         </h1>
                                     </div>
                                     <div class="mt-2 flex items-center space-x-2">
@@ -55,7 +55,7 @@
                                                 <div class="mt-2">
                                                     <div class="flexGap">
                                                         <div class="flexGapWrap">
-                                                            <label v-for="item in laptopData[0].productVersion" :key="item.detailsProduct" :for="item.detailsProduct" class="t-radio">
+                                                            <label v-for="item in productDataFilter.productVersion" :key="item.detailsProduct" :for="item.detailsProduct" class="t-radio">
                                                                 <input type="radio" class="sr-only" :value="item.detailsProduct">
                                                                 <router-link to="" class="itemRouter">
                                                                     <p class="whitespace-pre-line">
@@ -74,7 +74,7 @@
                                                 <div class="mt-2">
                                                     <div class="flexGap">
                                                         <div class="flexGapWrap">
-                                                            <label v-for="item in laptopData[0].productDetailsColor" :key="item.colorProduct" :for="item.colorProduct" class="t-radio">
+                                                            <label v-for="item in productDataFilter.productDetailsColor" :key="item.colorProduct" :for="item.colorProduct" class="t-radio">
                                                                 <input type="radio" class="sr-only" :value="item.colorProduct">
                                                                 <router-link to="" class="itemRouter">
                                                                     <p class="whitespace-pre-line">
@@ -93,7 +93,7 @@
                                                 <div class="mt-2">
                                                     <div class="flexGap">
                                                         <div class="flexGapWrap">
-                                                            <div v-for="item in laptopData[0].productTypes" :key="item.typeProduct" 
+                                                            <div v-for="item in productDataFilter.productTypes" :key="item.typeProduct" 
                                                             @mousemove="changeDescription(item)"
                                                             @mouseleave="hideDescription(item)"
                                                             @mousemove.stop>
@@ -156,14 +156,14 @@
                                 <div class="flex items-center justify-between pt-4 space-x-8">
                                     <div class="flex flex-col">
                                         <span class="text-xl leading-[150%] text-[#FE3464] font-semibold">
-                                            {{ laptopData[0].productPrice }}
+                                            {{ productDataFilter.productPrice }}
                                         </span>
                                         <div class="flex items-center space-x-1 text-xs leading-[150%] ">
                                             <span class="line-through">
-                                                {{ laptopData[0].productOldPrice }}
+                                                {{ productDataFilter.productOldPrice }}
                                             </span>
                                             <span class="text-[#FE3464]">
-                                                {{ laptopData[0].productDiscount }}
+                                                {{ productDataFilter.productDiscount }}
                                             </span>
                                         </div>
                                     </div>
@@ -178,7 +178,7 @@
                                 </div>
                             </div>
                         </section>
-                        <div class="bg-white px-6 py-5 rounded">
+                        <div class="bg-white px-6 py-5 rounded" v-if="productDataFilter.productGiftDetail">
                             <div class="free-gift">
                                 <div class="flex items-start space-x-2">
                                     <div class="mt-1">
@@ -199,13 +199,13 @@
                                 <ul class="mt-2 ml-6 list-inside list-disc text-xs leading-[150%] space-y-1">
                                     <li>
                                         <span>
-                                            {{ laptopData[0].productGiftDetail }}
+                                            {{ productDataFilter.productGiftDetail }}
                                         </span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="mt-4 bg-white rounded px-5 divide-y">
+                        <div class="mt-4 bg-white rounded px-5 divide-y" v-if="productDataFilter.productJointDemandGoods">
                             <!-- ở đây sau nếu làm chi tiết hơn sẽ có 2 cái mua kèm, 1 cái 800k balo 1 cái 600k phần mềm microsoft -->
                             <div class="py-4">
                                 <div class="flex items-center space-x-2">
@@ -234,7 +234,7 @@
                                 </div>
                                 <div class="mt-2 ml-6">
                                     <span class="line-clamp-1 text-xs leading-[150%]">
-                                        {{ laptopData[0].productJointDemandGoods }}
+                                        {{ productDataFilter.productJointDemandGoods }}
                                     </span>
                                 </div>
                             </div>
@@ -242,13 +242,13 @@
                         <section class="bg-white p-6">
                             <div class="space-x-3 flex">
                                 <div class="w-[42px] h-[42px] flex items-center justify-center">
-                                    <img class="" :src="laptopData[0].productBrandImg" :alt="laptopData[0].productBrand">
+                                    <img class="" :src="productDataFilter.productBrandImg" :alt="productDataFilter.productBrand">
                                 </div>
                                 <div class="flex-1 flex flex-col space-y-1">
                                     <div class="flex items-center">
                                         <div class="flex-1 flex items-center space-x-1">
                                             <a class="line-clamp-1 text-sm leading-[150%] font-semibold" href="#">
-                                                {{ laptopData[0].productBrand }}
+                                                {{ productDataFilter.productBrand }}
                                             </a>
                                         </div> 
                                         <a class="flex items-center space-x-1" href="#">
@@ -283,10 +283,10 @@
                                 <swiper class="swiper gallery-thumbs" 
                                 :options="swiperOptionThumbs" ref="swiperThumbs"
                                 @swiper="setThumbsSwiper">
-                                    <swiper-slide v-for="item in laptopData[0].productDetailsImg" :key="item.src"
+                                    <swiper-slide v-for="item in productDataFilter.productDetailsImg" :key="item.src"
                                     class="aspect-w-1 aspect-h-1"
                                     style="border: 1px solid transparent; border-radius: 0.25rem; height: 100px;">
-                                        <img :src="item.src" :alt="laptopData[0].productDetailsName" class="w-full h-full t-img object-contain">
+                                        <img :src="item.src" :alt="productDataFilter.productDetailsName" class="w-full h-full t-img object-contain">
                                     </swiper-slide>
                                 </swiper>
                             </div>
@@ -294,8 +294,8 @@
                         <div class="section-media_main">
                             <div class="!aspect-w-1 !aspect-h-1 h-full">
                                 <swiper class="swiper gallery-top" :options="swiperOptionTop" ref="swiperTop">
-                                    <swiper-slide v-for="item in laptopData[0].productDetailsImg" :key="item.src" class="">
-                                        <img :src="item.src" :alt="laptopData[0].productDetailsName" class="w-full h-full t-img object-contain">
+                                    <swiper-slide v-for="item in productDataFilter.productDetailsImg" :key="item.src" class="">
+                                        <img :src="item.src" :alt="productDataFilter.productDetailsName" class="w-full h-full t-img object-contain">
                                     </swiper-slide>
                                     <div class="swiper-button-next swiper-button-black" slot="button-next"></div>
                                     <div class="swiper-button-prev swiper-button-black" slot="button-prev"></div>
@@ -336,7 +336,7 @@
                             </i>
                         </div>
                     </div>
-                    <div class="card bg-white ">
+                    <div class="card bg-white" v-if="productDataFilter.productDemand">
                         <div class="section-demand">
                             <div class="flex items-center justify-between space-x-1">
                                 <h2 class="text-xl leading-[150%] font-semibold">
@@ -355,7 +355,7 @@
                             </div>
                             <div class="mt-5 bg-white">
                                 <div class="grid grid-cols-3 gap-x-12 gap-y-6">
-                                    <div  v-for="item in laptopData[0].productDemand" :key="item.demand" class="flex flex-col">
+                                    <div  v-for="item in productDataFilter.productDemand" :key="item.demand" class="flex flex-col">
                                         <div class="flex justify-between items-center text-xs leading-[150%]">
                                             <span>{{ item.demand }}</span>
                                             <span>{{ item.score }}</span>
@@ -385,7 +385,7 @@
                                 </h2>
                             </div> 
                             <div class="grid-cols-2 grid gap-4 mt-5">
-                                <div v-for="item in laptopData[0].productAttribute" :key="item.infor0" class="flex flex-col space-y-1 text-sm">
+                                <div v-for="item in productDataFilter.productAttribute" :key="item.infor0" class="flex flex-col space-y-1 text-sm">
                                     <span class="font-semibold">{{ item.infor0 }}</span>
                                     <div class="block">
                                         <span>{{ item.infor1 }}</span>
@@ -461,17 +461,30 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="section-article pt-5">
+                        <div class="section-article pt-5" v-if="productDataFilter.content">
                             <h2 class="font-semibold text-[18px] leading-[150%]">
                                 Bài viết mô tả
                             </h2>
-                            <div class="section-article-wrapper space-y-6" v-html="laptopData[0].content" :style="{ height: showFullText ? 'auto' : maxHeight + 'px' }"></div>
+                            <div class="section-article-wrapper space-y-6" v-html="productDataFilter.content" :style="{ height: showFullText ? 'auto' : maxHeight + 'px' }"></div>
                             <div class="mt-4 justify-center flex">
                                 <button class="w-full !bg-transparent px-3 button-readmore" @click="readmore">
                                     <span class="text-[#0065EE] font-semibold">
                                         {{ showFullText ? 'Rút gọn' : 'Xem thêm' }}
                                     </span>
                                 </button>
+                            </div>
+                        </div>
+                        <div class="section-video pt-5" v-if="productDataFilter.productVideoReview">
+                            <h2 class="text-lg leading-[150%] font-semibold">
+                                Video review
+                            </h2>
+                            <div class="mt-4 rounded overflow-hidden relative">
+                                <div class="image-viewer">
+                                    <div>
+                                        <iframe class="w-full h-full object-cover" :src="productDataFilter.productVideoReview" title="YouTube video player" frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="section-review pt-5">
@@ -502,7 +515,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -709,11 +722,11 @@
                     <div class="p-6">
                         <div class="flex flex-col items-center w-full space-y-2">
                             <div class="w-[80px] overflow-hidden rounded bg-[#F6F9FC]">
-                                <img class="w-full h-full object-contain t-img" :src="laptopData[0].productDetailsImg[5].src" :alt="laptopData[0].productDetailsName">
+                                <img class="w-full h-full object-contain t-img" :src="productDataFilter.productDetailsImg[2].src" :alt="productDataFilter.productDetailsName">
                             </div>
                             <div class="max-w-[240px]">
                                 <span class="text-sm leading-[150%] font-semibold">
-                                    {{ laptopData[0].productDetailsName }}
+                                    {{ productDataFilter.productDetailsName }}
                                 </span>
                             </div>
                         </div>
@@ -858,12 +871,12 @@
                     <div class="flex flex-col divide-y px-6">
                         <div class="flex flex-col py-5">
                             <span class="font-semibold text-base leading-[150%]">
-                                {{ laptopData[0].productLocation.city1 }}
+                                {{ productDataFilter.productLocation.city1 }}
                             </span>
                             <div class="mt-3 flex flex-col space-y-5">
                                 <div class="flex flex-col justify-between space-x-0 space-y-3 ">
                                     <div class="space-y-1">
-                                        <div class="text-sm leading-[150%]">{{ laptopData[0].productLocation.detailsLocation1 }}</div>
+                                        <div class="text-sm leading-[150%]">{{ productDataFilter.productLocation.detailsLocation1 }}</div>
                                         <div class="flex items-center space-x-1 text-[#3BB346]">
                                             <i class="w-3 h-4">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -871,7 +884,7 @@
                                                     d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </i>
-                                            <span class="text-sm">{{ laptopData[0].productLocation.productSituation1 }}</span>
+                                            <span class="text-sm">{{ productDataFilter.productLocation.productSituation1 }}</span>
                                         </div>                                        
                                     </div>
                                     <div>
@@ -885,14 +898,14 @@
                                                 </svg>
                                             </i>
                                             <span class="font-semibold text-sm leading-[150%] ">
-                                                {{ laptopData[0].productLocation.phoneNumber }}
+                                                {{ productDataFilter.productLocation.phoneNumber }}
                                             </span>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="flex flex-col justify-between space-x-0 space-y-3 ">
                                     <div class="space-y-1">
-                                        <div class="text-sm leading-[150%]">{{ laptopData[0].productLocation.detailsLocation2 }}</div>
+                                        <div class="text-sm leading-[150%]">{{ productDataFilter.productLocation.detailsLocation2 }}</div>
                                         <div class="flex items-center space-x-1 text-[#3BB346]">
                                             <i class="w-3 h-4">
                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
@@ -900,7 +913,7 @@
                                                     d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </i>
-                                            <span class="text-sm">{{ laptopData[0].productLocation.productSituation1 }}</span>
+                                            <span class="text-sm">{{ productDataFilter.productLocation.productSituation1 }}</span>
                                         </div>                                        
                                     </div>
                                     <div>
@@ -914,7 +927,7 @@
                                                 </svg>
                                             </i>
                                             <span class="font-semibold text-sm leading-[150%] ">
-                                                {{ laptopData[0].productLocation.phoneNumber }}
+                                                {{ productDataFilter.productLocation.phoneNumber }}
                                             </span>
                                         </a>
                                     </div>
@@ -923,13 +936,13 @@
                         </div>
                         <div class="flex flex-col py-5">
                             <span class="font-semibold text-base leading-[150%]">
-                                {{ laptopData[0].productLocation.city2 }}
+                                {{ productDataFilter.productLocation.city2 }}
                             </span>
                             <div class="mt-3 flex flex-col">
                                 <div class="flex flex-col justify-between space-x-0 space-y-3">
                                     <div class="space-y-1">
                                         <span class="text-sm leading-[150%]">
-                                            {{ laptopData[0].productLocation.detailsLocation3 }}
+                                            {{ productDataFilter.productLocation.detailsLocation3 }}
                                         </span>
                                         <div class="flex items-center space-x-1 text-[#3BB346]">
                                             <i class="w-3 h-4">
@@ -938,7 +951,7 @@
                                                     d="M21.352 4.265a1.5 1.5 0 01.383 2.087l-10 14.5a1.5 1.5 0 01-2.334.169l-6.5-7a1.5 1.5 0 012.198-2.042l5.228 5.63 8.938-12.96a1.5 1.5 0 012.087-.384Z" clip-rule="evenodd"/>
                                                 </svg>
                                             </i>
-                                            <span class="text-sm">{{ laptopData[0].productLocation.productSituation1 }}</span>
+                                            <span class="text-sm">{{ productDataFilter.productLocation.productSituation1 }}</span>
                                         </div>
                                     </div>
                                     <div>
@@ -952,7 +965,7 @@
                                                 </svg>
                                             </i>
                                             <span class="font-semibold text-sm leading-[150%] ">
-                                                {{ laptopData[0].productLocation.phoneNumber }}
+                                                {{ productDataFilter.productLocation.phoneNumber }}
                                             </span>
                                         </a>
                                     </div>
@@ -971,16 +984,22 @@
 import { Swiper, SwiperSlide, Thumbs } from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
 import { warrantyData } from './data-base-page/warranty-policy.js';
-import { laptopData } from '../../../data-js/laptop-data.js'
+import { laptopData } from '@/data-js/laptop-data';
+import { armmanhinhData } from '@/data-js/armmanhinh-data.js';
 
 export default {
     components: {
         Swiper,
         SwiperSlide,
     },
+    // props: {
+    //     productId: Number,
+    //     productData: Object
+    // },
     data() {
         return {
-            laptopData,
+            productId:  Number(this.$route.params.id),
+            dataList: [ ...laptopData, ...armmanhinhData ],
             searchSVG: require("@/assets/iconSVG/headerIconSVG/search.svg"),
             fullNumber: '',
             fullName: '',
@@ -1163,12 +1182,6 @@ export default {
             }
         }
     },
-    // computed: {
-    //     filteredProduct() {
-    //         const productID = parseInt(this.$router.params.id)
-    //         return this.laptopData.find((product) => product.id === productID)
-    //     }
-    // },
     mounted() {
         this.$nextTick(() => {
             const swiperTop = this.$refs.swiperTop.$swiper
@@ -1176,11 +1189,26 @@ export default {
             swiperTop.controller.control = swiperThumbs
             swiperThumbs.controller.control = swiperTop
         })
+        console.log("check prop from base page: ","props ID", this.productId,"props Data", this.productDataFilter)
+    },
+    computed: {        
+        productDataFilter() {
+            return this.dataList.find(item => item.id === this.productId)
+        }
     }
 }
 </script>
 
 <style scoped>
+.image-viewer > * {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
 .checkboxLabelCheckmark:after {
     border-style: solid;
 }

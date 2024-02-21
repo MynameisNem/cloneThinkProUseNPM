@@ -1,3 +1,5 @@
+const slugPath = "Balo-tui"
+
 export const balotuiData = [
     {
         id: 21100,
@@ -264,4 +266,9 @@ export const balotuiData = [
         productDiscount: "-42%",
         productColor1: "border: 1px solid #87A96B; background: #87A96B;",
     },
-]
+].map(item =>{
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

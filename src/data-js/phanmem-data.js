@@ -1,3 +1,5 @@
+const slugPath = "Phan-mem"
+
 export const phanmemData = [
     {
         id: 20700,
@@ -22,4 +24,9 @@ export const phanmemData = [
         productPrice: "2.190.000",
         productDiscount: "-27%",
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

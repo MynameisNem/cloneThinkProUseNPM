@@ -1,3 +1,5 @@
+const slugPath = "Ban-phim"
+
 export const banphimData = [
     {
         id: 20100,
@@ -194,4 +196,9 @@ export const banphimData = [
         productColor: "border: 1px solid #545050; background: #545050;",
         
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

@@ -1,3 +1,5 @@
+const slugPath = "Ram-may-tinh"
+
 export const ramData = [
     {
         id: 21200,
@@ -120,4 +122,9 @@ export const ramData = [
         productPrice: "499.000",
         productColor: "border: 1px solid #87A96B; background: #87A96B;",
     },   
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

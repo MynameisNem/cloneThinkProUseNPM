@@ -1,3 +1,5 @@
+const slugPath = "Noi-that"
+
 export const noithatData = [
     {
         id: 20700,
@@ -20,4 +22,9 @@ export const noithatData = [
         productDiscount: "-13%",
         productColor: "border: 1px solid #000000; background: #000000;"
     }, 
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

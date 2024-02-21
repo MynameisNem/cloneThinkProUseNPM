@@ -263,7 +263,7 @@ const routes = [
         key: 35
     },
     {
-        path: '/Laptop/:id',
+        path: '/:slug/:id',
         name: 'detailsProduct',
         component: DetailsProduct
     },

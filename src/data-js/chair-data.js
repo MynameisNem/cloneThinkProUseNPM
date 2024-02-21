@@ -1,3 +1,5 @@
+const slugPath = "Ghe-cong-thai-hoc"
+
 export const chairData = [
     {
         id: 20200,
@@ -194,4 +196,9 @@ export const chairData = [
         productColor2: "border: 1px solid #205381; background: #205381;",
         productColor3: "border: 1px solid #FF0000; background: #FF0000;",
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

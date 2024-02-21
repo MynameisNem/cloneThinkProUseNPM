@@ -1,3 +1,5 @@
+const slugPath = "Gia-do-laptop"
+
 export const giadolaptopData = [
     {
         id: 20900,
@@ -75,4 +77,9 @@ export const giadolaptopData = [
         productDiscount: "-4%",
         productColor: "border: 1px solid #C0C0C0; background: #C0C0C0;",
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

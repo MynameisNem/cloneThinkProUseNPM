@@ -1,3 +1,5 @@
+const slugPath = "Am-thanh"
+
 export const speakerData = [
     {
         productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/10/27/thumb/loa-marshall-willen-5955-thumb.png",
@@ -258,4 +260,9 @@ export const speakerData = [
         productColor2: "border: 1px solid #0000FF; background: #0000FF;",
         productColor3: "border: 1px solid #7F7B7B; background: #7F7B7B;"
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

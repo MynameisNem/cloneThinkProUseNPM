@@ -1,3 +1,5 @@
+const slugPath = "Ban-ghe-tre-em"
+
 export const banghetreemData = [
     {
         id: 20950,
@@ -9,4 +11,9 @@ export const banghetreemData = [
         productColor2: "border: 1px solid #FFB5C5; background: #FFB5C5;",
         productColor3: "border: 1px solid #8D8D8D; background: #8D8D8D;"
     },
-]
+].map(item =>{
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

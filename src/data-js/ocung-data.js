@@ -1,3 +1,5 @@
+const slugPath = "O-cung"
+
 export const ocungData = [
     {
         id: 21300,
@@ -130,4 +132,9 @@ export const ocungData = [
         productPrice: "199.000",
         productColor: "border: 1px solid #000000; background: #000000;",
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})

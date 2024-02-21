@@ -1,5 +1,6 @@
 // cái này dùng chung
 // const dungchung = [];
+const slugPath = "Game-console"
 
 export const gameconsoleData = [
     {
@@ -290,7 +291,12 @@ export const gameconsoleData = [
         productColor3: "border: 1px solid #CC1495; background: #CC1495;",
 
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})
 
 // cụm bên dưới để định nghĩa dùng chung nếu có nhiều phần tử chung
 // .map((item, index) => {

@@ -1,3 +1,5 @@
+const slugPath = "Phu-kien-&-Setup"
+
 export const phukiensetupData = [
     {
         id: 20800,
@@ -234,4 +236,9 @@ export const phukiensetupData = [
         productPrice: "600.000",
         productColor: "border: 1px solid #000000; background: #000000;"
     },
-]
+].map(item => {
+    return {
+        ...item,
+        slugPath: slugPath
+    }
+})
