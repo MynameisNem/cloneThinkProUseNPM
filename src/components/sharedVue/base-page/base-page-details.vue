@@ -50,7 +50,7 @@
                                 <div class="flex flex-col">
                                     <div class="version">
                                         <div class="flex flex-col pt-4 space-y-3">
-                                            <div>
+                                            <div v-if="productDataFilter.productVersion">
                                                 <div class="text-sm leading-[150%] font-semibold text-[#6B7075]">Phiên bản</div>
                                                 <div class="mt-2">
                                                     <div class="flexGap">
@@ -396,6 +396,27 @@
                                     <div v-if="item.infor3" class="block">
                                         <span>{{ item.infor3 }}</span>
                                     </div>
+                                    <div v-if="item.infor4" class="block">
+                                        <span>{{ item.infor4 }}</span>
+                                    </div>
+                                    <div v-if="item.infor5" class="block">
+                                        <span>{{ item.infor5 }}</span>
+                                    </div>
+                                    <div v-if="item.infor6" class="block">
+                                        <span>{{ item.infor6 }}</span>
+                                    </div>
+                                    <div v-if="item.infor7" class="block">
+                                        <span>{{ item.infor7 }}</span>
+                                    </div>
+                                    <div v-if="item.infor8" class="block">
+                                        <span>{{ item.infor8 }}</span>
+                                    </div>
+                                    <div v-if="item.infor9" class="block">
+                                        <span>{{ item.infor9 }}</span>
+                                    </div>
+                                    <div v-if="item.infor10" class="block">
+                                        <span>{{ item.infor10 }}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -465,7 +486,7 @@
                             <h2 class="font-semibold text-[18px] leading-[150%]">
                                 Bài viết mô tả
                             </h2>
-                            <div class="section-article-wrapper space-y-6" v-html="productDataFilter.content" :style="{ height: showFullText ? 'auto' : maxHeight + 'px' }"></div>
+                            <div class="section-article-wrapper space-y-6" style="text-align: justify" v-html="productDataFilter.content" :style="{ height: showFullText ? 'auto' : maxHeight + 'px' }"></div>
                             <div class="mt-4 justify-center flex">
                                 <button class="w-full !bg-transparent px-3 button-readmore" @click="readmore">
                                     <span class="text-[#0065EE] font-semibold">
@@ -986,6 +1007,7 @@ import 'swiper/css/swiper.css';
 import { warrantyData } from './data-base-page/warranty-policy.js';
 import { laptopData } from '@/data-js/laptop-data';
 import { armmanhinhData } from '@/data-js/armmanhinh-data.js';
+import { banphimData } from '@/data-js/baphim-data.js';
 
 export default {
     components: {
@@ -999,7 +1021,7 @@ export default {
     data() {
         return {
             productId:  Number(this.$route.params.id),
-            dataList: [ ...laptopData, ...armmanhinhData ],
+            dataList: [ ...laptopData, ...armmanhinhData, ...banphimData ],
             searchSVG: require("@/assets/iconSVG/headerIconSVG/search.svg"),
             fullNumber: '',
             fullName: '',

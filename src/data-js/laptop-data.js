@@ -301,26 +301,15 @@ export const laptopData = [
         productShortInfor4: "256GB",
         productVideoReview: "https://www.youtube.com/embed/NFyDF2XWfxo?si=MUI6U8TrL2sHI73k?rel=0",
         productVersion: [
-            { detailsProduct: "i5 1340P, 16GB, 512GB, FHD+" },
-            { detailsProduct: "i7 1360P, 16GB, 1TB, 2.5K" },
-            { detailsProduct: "i7 1360P, 16GB, 1TB, FHD+" },
+            { detailsProduct: "i5 1335U, 16GB, 512GB, FHD+" },
+            { detailsProduct: "i7 1370P, 32GB, 512GB, FHD+" },
+            { detailsProduct: "i5 1335U, 16GB, 256GB, FHD+" },
+            { detailsProduct: "i7 1355U, 16GB, 256GB, FHD+ Touch" },
         ],
         productDetailsColor: [
-            { colorProduct: "Platinum Silver" }
+            { colorProduct: "Black" }
         ],
         productTypes: [
-            { 
-                typeProduct: "Mới, Full box, Nhập khẩu",
-                productDescrip1: "Nhập khẩu: Là sản phẩm được nhập khẩu và phân phối bởi ThinkPro, được bảo hành tại tất cả các cửa hàng thuộc hệ thống ThinkPro.",
-                productDescrip2: "Mới, Fullbox: Là sản phẩm mới 100% chưa qua sử dụng đầy đủ hộp, phụ kiện, sách hướng dẫn sử dụng đi kèm.",
-                showDescription: false,
-            },
-            { 
-                typeProduct: "Used, Nhập khẩu",
-                productDescrip1: "Nhập khẩu: Là sản phẩm được nhập khẩu và phân phối bởi ThinkPro, được bảo hành tại tất cả các cửa hàng thuộc hệ thống ThinkPro.",
-                productDescrip2: "Used: Là sản phẩm đã qua sử dụng, có bao gồm sản phẩm và phụ kiện chính đi kèm (sạc đối với Laptop hoặc cáp sạc đối với phụ kiện.",
-                showDescription: false,
-            },
             { 
                 typeProduct: "Outlet, Nhập khẩu",
                 productDescrip1: "Nhập khẩu: Là sản phẩm được nhập khẩu và phân phối bởi ThinkPro, được bảo hành tại tất cả các cửa hàng thuộc hệ thống ThinkPro.",
