@@ -221,87 +221,74 @@ export const banphimData = [
                 </div>
             </div>
             <p>
-                Xét một cách tổng quan, Arm màn hình Human Motion T9 Pro hướng tới phân khúc màn hình nặng với khả năng chịu tải lên tới 20kg, thích hợp cho màn hình kích thước lớn tối đa 40 inch.
+                Về độ hoàn thiện, FL-Esports là một trong những thương hiệu đảm bảo hàng đầu ở tầm giá 2 triệu Đồng. Với chất nhựa khá dày, mẫu phím này tỏ ra bền bỉ, giúp người dùng yên tâm khi sử dụng và tránh được tình trạng quá rỗng dẫn đến chất âm bị ảnh hưởng. 
+                Ngoài ra, với việc sử dụng ngàm để kết nối giữa hai mảnh nắp và đáy thay vì bắt ốc, sự chắc chắn này lại càng thêm quan trọng.
             </p>
-            <h2 class="text-[16px] font-semibold leading-[150%]">Linh hoạt lắp đặt</h2>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Switch dạng stem box chắc chắn, cảm giác gõ mượt</h2>
+            <p>
+                Bàn phím cơ FL-Esports CMK75 sẽ sử dụng hai tùy chọn switch là <strong>FL CMMK Ice Pink (Linear)</strong> và <strong>FL CMMK Ice Violet (Tactile)</strong>, với chất âm và trải nghiệm khác nhau để phục vụ đa dạng đối tượng. 
+                Điểm chung của cả hai là đều đã được lube sẵn từ trong nhà máy, đi kèm thiết kế dạng stem box để giữ chân switch chắc chắn, chống lọt bụi vào ảnh hưởng tới độ bền và khả năng phản hồi của linh kiện.
+            </p>
             <div class="viewer">
                 <div class="image-viewer">
-                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/social/articles/2023/1/4/arm-man-hinh-human-motion-t9-pro-5.png">
-                </div>
-                <div class="mt-3 text-[16px] leading-[150%] text-center">
-                    Arm màn hình Human Motion T9 Pro cũng hỗ trợ hai chuẩn ngàm VESA
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/23/dsc00804-1-thinkpro.jpg">
                 </div>
             </div>
             <p>
-                Arm màn hình Human Motion T9 Pro hỗ trợ hai hình thức lắp đặt thông minh: Lắp kiểu khoan lỗ và lắp kiểu kẹp. 
-                Với cách khoan lỗ, chúng ta sẽ cố định chân Arm lên mặt bàn một cách chắc chắn hơn. 
-                Còn kiểu kẹp thì có thể tháo gỡ dễ dàng khi không cần dùng có thể tháo giá đỡ ra.
+                Cảm giác gõ khi dùng switch này là khá mượt, rất ít sạn, với những người dùng mới thì người viết tin rằng đây sẽ là chất lượng đủ tốt.
             </p>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Keycap tối ưu trải nghiệm, gõ bao bền</h2>
             <p>
-                Arm màn hình Human Motion T9 Pro cũng hỗ trợ hai chuẩn ngàm VESA vô cùng phổ biến trên thị trường hiện nay là 75 x 75 mm và 100 x 100 mm. 
-                Do vậy, nó có thể tương thích dễ dàng với hầu hết các loại màn hình.
+                FL-Esports CMK75 sẽ có keycap được làm từ nhựa PBT, in ký tự theo dạng double-shot để đảm bảo độ bền. 
+                Việc sử dụng nhựa PBT cũng giúp cho âm thanh phát ra từ phím khi gõ được gọn gàng hơn, tạo nên cảm giác thích tai với những bạn mới chơi phím cơ.
             </p>
-            <h2 class="text-[16px] font-semibold leading-[150%]">Công nghệ trợ lực HumanForce 3.0</h2>
             <div class="viewer">
                 <div class="image-viewer">
-                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/social/articles/2023/1/4/arm-man-hinh-human-motion-t9-pro-6.png">
-                </div>
-                <div class="mt-3 text-[16px] leading-[150%] text-center">
-                    Human Motion T9 Pro được hỗ trợ công nghệ trợ lực Piston HumanForce 3.0 độc quyền
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/23/dsc00800-1-thinkpro.jpg">
                 </div>
             </div>
             <p>
-                Arm màn hình Human Motion T9 Pro được hỗ trợ công nghệ trợ lực Piston HumanForce 3.0 độc quyền. 
-                Khác biệt lớn so với những dòng arm trước chỉ dùng lò xo trợ lực, Piston tăng khả năng chịu lực của arm màn hình T9 Pro lên tầm 60%.
+                Profile của keycap này sử dụng sẽ là FSA, một biến thể từ hình dạng SA nổi tiếng. 
+                So với SA, FSA sẽ hơi thấp hơn để giúp người dùng mới dễ làm quen nhất có thể, trong khi vẫn giữ được dáng vẻ đặc trưng dễ gây hút mắt của SA nguyên bản.
             </p>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Kết cấu dày dặn, đúng “chuẩn” FL-Esports</h2>
             <p>
-                Công nghệ Piston HumanForce 3.0 này giúp chiếc arm T9 Pro chuyển động mượt mà, êm ái hơn. 
-                Trợ lực tốt sẽ hỗ trợ rất nhiều cho thao tác nâng hạ màn hình, cùng khả năng chịu tải mạnh mẽ lên đến 20kg - dễ dàng nâng đỡ được những chiếc màn hình có kích thước lớn từ 17 - 49 inch.
+                Với một sản phẩm được đánh giá cao về chất lượng mặc định, FL-Esports CMK75 cũng sở hữu “nội thất" cực kỳ đầy đủ để góp phần tạo nên chất âm “ăn liền" đỉnh cao. 
+                Giữa plate và mạch PCB của phím sẽ có các lớp foam khá dày, ít nhất là hai lớp ở trên và dưới PCB, giúp tạo cảm giác chắc chắn, triệt tiêu âm thanh rung lắc và tản sáng cho LED RGB tốt hơn.
             </p>
-            <h2 class="text-[16px] font-semibold leading-[150%]">Nâng hạ và xoay chuyển màn hình linh hoạt</h2>
             <div class="viewer">
                 <div class="image-viewer">
-                    <img alt="Màn hình cho chất lượng hiển thị tốt" class="object-contain" src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/social/articles/2023/1/4/arm-man-hinh-human-motion-t9-pro-1.png">
-                </div>
-                <div class="mt-3 text-[16px] leading-[150%] text-center">
-                    Với cấu trúc 3 khớp nối này, người dùng có thể dễ dàng nâng hạ để tùy chỉnh độ cao màn hình
+                    <img alt="Màn hình cho chất lượng hiển thị tốt" class="object-contain" src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/23/dsc00808-1-thinkpro.jpg">
                 </div>
             </div>
             <p>
-                Được hãng trang bị cấu trúc 3 khớp nối, các khớp này chuyển động mượt mà và linh hoạt, dễ dàng điều chỉnh màn hình tới vị trí thích hợp với tầm nhìn của người dùng. 
-                Với cấu trúc 3 khớp nối này, người dùng có thể dễ dàng nâng hạ để tùy chỉnh độ cao màn hình, tinh tiến lại gần ra xa để chỉnh khoảng cách tầm mắt, xoay dọc, xoay ngang, di chuyển lên/xuống. 
-                Điều này giúp bạn dễ dàng điều chỉnh góc độ màn hình thích hợp với nhu cầu của mình nhất, tạo sự thoải mái khi ngồi làm việc hàng giờ đồng hồ liền, cải thiện tư thế ngồi cũng như nâng cao hiệu suất công việc.
+                Đáy của phím cũng sẽ có lớp foam dày để lấp đầy các khoảng trống, tạo cảm giác đầm và âm gõ ra cũng gọn hơn. 
+                Cuối cùng, sản phẩm cũng đi kèm cơ chế là <strong>Gasket mount</strong> để vừa tạo cảm giác “nhún nhảy", vừa giúp âm trên các hàng phím được đều nhau tăm tắp.
             </p>
             <p>
-                Đồng thời arm màn hình Human Motion T9 Pro có thể gấp gọn hoặc dời vị trí màn hình đi khi không có nhu cầu dùng. 
-                Arm màn hình Human Motion T9 Pro cũng hỗ trợ về mặt công thái học, trong việc dễ dàng di chuyển màn hình theo hướng, độ cao thích hợp, giúp người dùng tránh được các cơn đau lưng, vai, cổ hay thậm chí là mỏi mắt.
+                Về mạch phím, mạch sẽ là mạch xuôi để lắp keycap và switch không bị cấn. 
+                Bên cạnh đó, tính năng thay nóng switch (hot-swap) cũng được hỗ trợ để người dùng thuận tiện khi sửa chữa, tuỳ biến, hỗ trợ cả switch 3 chân lẫn 5 chân.
             </p>
-            <h2 class="text-[16px] font-semibold leading-[150%]">Hộp giấu dây lớn, chuẩn setup công thái học</h2>
             <div class="viewer">
                 <div class="image-viewer">
-                    <img alt="Màn hình cho chất lượng hiển thị tốt" class="object-contain" src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/social/articles/2023/1/4/arm-man-hinh-human-motion-t9-pro-2.png">
-                </div>
-                <div class="mt-3 text-[16px] leading-[150%] text-center">
-                    Khoang giấu dây của arm màn hình được làm lớn
+                    <img alt="Màn hình cho chất lượng hiển thị tốt" class="object-contain" src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/23/dsc00807-1-thinkpro.jpg">
                 </div>
             </div>
-            <p>Đáng nói đến là phần khoảng giấu dây của arm được thiết kế khá rộng rãi, cho phép người dùng có thể thoải mái đi dây, mang đến một không gian làm việc gọn gàng và đẹp mắt hơn rất nhiều.</p>
-            <h2 class="text-[16px] font-semibold leading-[150%]">Arm màn hình Human Motion T9 Pro giá bao nhiêu? Mua Human Motion T9 Pro ở đâu uy tín?</h2>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Kết nối dồi dào, an tâm trải nghiệm</h2>
             <p>
-                Là một mẫu arm màn hình cao cấp nên mức giá Arm màn hình Human Motion T9 Pro cũng “không hề dễ chịu”. 
-                Hiện ThinkPro đang cung cấp đến người dùng mẫu sản phẩm này với mức giá vào khoảng 2 triệu. 
-                Tuy nhiên, đổi lại chúng ta sẽ có một mẫu sản phẩm thực sự cao cấp về thiết kế, chất lượng và nhiều tính năng “hay ho”.
+                Như mọi mẫu bàn phím cơ ở năm 2024, FL-Esports CMK75 sẽ hỗ trợ ba dạng kết nối là <strong>có dây, Bluetooth</strong> và không dây qua <strong>receiver 2.4GHz</strong>. 
+                Về hệ điều hành tương thích, sản phẩm sẽ <strong>dùng được với cả Windows lẫn macOS</strong> để đáp ứng mọi nhu cầu của người dùng.
             </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Màn hình cho chất lượng hiển thị tốt" class="object-contain" src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/23/dsc00796-1-thinkpro.jpg">
+                </div>
+            </div>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Thời lượng pin tạm ổn</h2>
             <p>
-                Liên hệ đặt hàng trực tiếp sản phẩm tại trang sản phẩm trên Website, Hotline <strong>1900.63.3579</strong> hoặc 
-                <a class="text-[#0065EE] hover:text-[#3300CC] underline" href="https://www.facebook.com/thinkpro.vn">Fanpage ThinkPro - Hệ thống Máy tính và Phụ kiện</a>, 
-                <a class="text-[#0065EE] hover:text-[#3300CC] underline" href="https://t.me/thinkprocommunity">Telegram Pro Community</a> và <a class="text-[#0065EE] hover:text-[#3300CC] underline" href="https://zalo.me/3877075650294314763">Zalo ThinkPro</a> để được tư vấn miễn phí. 
-                Quý khách cũng có thể ghé thăm các Showroom <strong>Dạo Bước Công Nghệ</strong> của <strong>ThinkPro</strong> trên toàn quốc để trải nghiệm sản phẩm trực tiếp.
+                Với viên pin <strong>1.600mAh</strong>, FL-Esports CMK75 sẽ có thể trụ được <strong>khoảng 3 ngày, với mỗi ngày sử dụng khoảng 7-8 tiếng</strong>. 
+                Người dùng có thể cải thiện thời lượng này bằng cách tắt đi LED RGB hoặc sử dụng Bluetooth làm kết nối chính.
             </p>
-            <p>
-                ---------------------------
-            </p>
-            <p style="text-align: justify;">ThinkPro là hệ thống bán lẻ máy tính và phụ kiện uy tín tại Việt Nam với chuỗi cửa hàng trải nghiệm độc đáo và đội ngũ tư vấn chuyên sâu, hình thức thanh toán đa dạng và bảo hành uy tín, tin cậy giúp khách hàng tự tin lựa chọn các sản phẩm công nghệ phù hợp nhất.</p>
         `,
     },
     // có quà
@@ -309,9 +296,200 @@ export const banphimData = [
         id: 20102,
         productImg: "https://images.thinkgroup.vn/unsafe/460x460/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/3/KE12E0~1.JPG",
         productName: "Bàn phím Keychron K3 v2",
+        productDetailsName: "Bàn phím Keychron K3 v2 (Gateron Brown Switch - Đen - Mới, Sealed, Nhập khẩu)",
+        productBrandName: "KEYCHRON ON STOCK - SIÊU SALE GIÁNG SINH",
         productPrice: "1.690.000",
+        productOldPrice: "1.890.000",
         productDiscount: "-11%",
-        productColor: "border: 1px solid #000000; background: #000000;",                    
+        productColor: "border: 1px solid #000000; background: #000000;",
+        productBrandImg: "https://images.thinkgroup.vn/unsafe/84x84/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/brands/2023/3/17/logo-keychron-thinkpro-01.png",
+        productBrand: "Bàn phím Keychron",
+        productSKU: "SKU: keychronk306CS",
+        productVersion: [
+            {
+                detailsProduct: "Gateron Brown Switch"
+            }
+        ],
+        productDetailsImg: [
+            {
+                src: "https://images.thinkgroup.vn/unsafe/fit-in/1000x1000/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/3/KEEF67~1.JPG"
+            },
+            {
+                src: "https://images.thinkgroup.vn/unsafe/fit-in/1000x1000/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/3/Keychron-K3-ultra-slim-wireless-mechanical-keyboard--1_1800x1800.jpg"
+            },
+            {
+                src: "https://images.thinkgroup.vn/unsafe/fit-in/1000x1000/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/3/Keychron-K3-ultra-slim-wireless-mechanical-keyboard--2_1800x1800.jpg"
+            },
+            {
+                src: "https://images.thinkgroup.vn/unsafe/fit-in/1000x1000/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/3/Keychron-K3-ultra-slim-wireless-mechanical-keyboard--3_1800x1800.jpg"
+            },
+            {
+                src: "https://images.thinkgroup.vn/unsafe/fit-in/1000x1000/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/3/Keychron-K3-ultra-slim-wireless-mechanical-keyboard--4_1800x1800.jpg"
+            },
+            {
+                src: "https://images.thinkgroup.vn/unsafe/fit-in/1000x1000/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/products/2023/4/3/Keychron-K3-ultra-slim-wireless-mechanical-keyboard--5_1800x1800.jpg"
+            },
+        ],
+        productDetailsColor: [
+            { colorProduct: "Đen" }
+        ],
+        productTypes: [
+            {
+                typeProduct: "Mới, Sealed, Nhập khẩu",
+                productDescrip1: "Nhập khẩu: Là sản phẩm được nhập khẩu và phân phối bởi ThinkPro, được bảo hành tại tất cả các cửa hàng thuộc hệ thống ThinkPro.",
+                productDescrip2: "Mới, Sealed: Mới, Sealed: Là sản phẩm mới 100% chưa qua sử dụng còn nguyên tem niêm phong của nhà sản xuất trên vỏ hộp hoặc bao bì sản phẩm.",
+                showDescription: false,
+            }
+        ],
+        content: `
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychronk3-1-thinkpro.jpg">
+                </div>
+            </div>
+            <p>Keychron K3 V2 là mẫu bàn phím chất lượng</p>
+            <h2 class="text-[16px] font-semibold leading-[150%]"><strong>Đánh giá tổng quan Keychron K3 V2</strong></h2>
+            <p><a class="text-[#0065EE] hover:text-[#3300CC]" href="#">Keychron K3 V2</a> là chiếc bàn phím mang đến cho người dùng đầy đủ các tính năng. Cực kỳ tiện dụng với khả năng kết nối linh hoạt cùng sự tương thích ưu việt với nhiều hệ điều hành.</p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v2-2-thinkpro.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Keychron K3 V2 đảm bảo nhiều tính năng linh hoạt
+                </div>
+            </div>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Thiết kế siêu mỏng</h2>
+            <p>
+                Chiếc bàn phím này sở hữu thiết kế siêu mỏng chỉ từ <strong>17-22mm</strong> nhưng vẫn mang lại trải nghiệm gõ tốt nhất cho người dùng. 
+                Với thiết kế thanh mảnh, gọn nhẹ này, sản phẩm rất phù hợp cho những người cần phải di chuyển nhiều.
+            </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v2-3-thinkpro.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Keychron K3 V2 được thiết kế mỏng nhẹ
+                </div>
+            </div>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Linh hoạt với kết nối không dây và có dây</h2>
+            <p>
+                Kết nối K3 nhanh chóng và ổn định với 3 thiết bị cùng một lúc nhờ <strong>Bluetoot 5.1</strong> mới nhất. 
+                Bạn cũng có thể kết nối trực tiếp với máy tính thông qua <strong>Usb C</strong> để ổn định hơn
+            </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v2-4-thinkpro.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Bàn phím có thể kết nối có dây hoặc không dây
+                </div>
+            </div>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Phù hợp với mọi thiết bị</h2>
+            <p>
+                Bàn phím có thiết kế đa nhiệm phù hợp với nhiều hệ điều hành. 
+                Bạn có thể kết nối dễ dàng với <strong>MacOs, Window</strong> hay các hệ điều hành điện thoại như <strong>iOS, Android</strong>.
+            </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v2-5-thinkpro.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Bàn phím tương thích với nhiều hệ điều hành
+                </div>
+            </div>
+            <p>
+                Bao gồm keycaps cho cả MacOS và Windows (3 keycaps cho mỗi loại) cho phép bạn chuyển đổi giữa các hệ điều hành một cách dễ dàng. 
+                Đối với người dùng Linux, chúng tôi cũng có một nhóm người dùng chuyên dụng để trợ giúp trải nghiệm của bạn.
+            </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v2-6-thinkpro.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Keycaps có thể chuyển đổi linh hoạt giữa MacOS và Windows
+                </div>
+            </div>
+            <p>
+                Bạn có thể kết nối không dây tối đa 3 thiết bị trên K3 ngay cả với các hệ điều hành khác nhau. 
+                Nhấn Fn + 1/2/3 để chuyển đổi nhanh chóng giữa máy tính xách tay, PC và máy tính bảng của bạn.
+            </p>
+            <h2 class="text-[16px] font-semibold leading-[150%]"><strong>Tùy chọn Hotswap mang đến trải nghiệm tuyệt vời</strong></h2>
+            <p>
+                <a class="text-[#0065EE] hover:text-[#3300CC]" href="#">Bàn phím Keychron</a> này là chiếc bàn phím đầu tiên trên thế giới có thể Hotswap <strong>Switch Low Profile</strong>. 
+                Bạn chỉ cần chưa mất đến 5s để có thể tuỳ chọn trải nghiệm gõ của riêng mình.
+            </p>
+            <p class="italic">
+                <strong>Note: Tính năng Hot Swap chỉ có trên phiên bản Optical Switch (Switch Quang Keychron)</strong>
+            </p>
+            <h2 class="text-[16px] font-semibold leading-[150%]"><strong>Phản hồi nhanh chóng với Optical Switch</strong></h2>
+            <p>
+                Keychron K3 sử dụng <strong>Optical Switch</strong> cho tốc độ phản hồi nhanh hơn, chính xác hơn và giảm thiểu tối đa độ Delay như công tắc cơ học bình thường. 
+                Đây là một trong những mẫu bàn phím tiên phong sử dụng Switch Low profile Optical.
+            </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Thiết kế tối giản với hợp kim nhôm sang trọng" class="object-contain " src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v2-7-thinkpro-FVm.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Bàn phím có tốc độ phản hồi nhanh
+                </div>
+            </div>
+            <p>
+                Keychron Low Profiles Optical Switch nhanh và chính xác với độ trễ cực thấp <strong>0,2ms</strong> là lựa chọn tốt nhất cho những game thủ chuyên nghiệp đang tìm kiếm thời gian phản ứng mili giây. 
+                Với nhiều tuỳ chọn về Switch mang lại cho bạn trải nghiệm đa dạng về trải nghiệm.
+            </p>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Thiết kế Keycap đột phá</h2>
+            <p>
+                Thiết kế chân Keycap của K3 hoàn toàn giống với các chân Keycap bình thường khác trên thị trường. 
+                Bên cạnh đó Keychron cũng dành 1 năm để thiết kế nên hệ thống Stablilize ổn định nhất
+            </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Màn hình cho chất lượng hiển thị tốt" class="object-contain" src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v3-8-thinkpro.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Ổn định hơn với hệ thống Stablilize
+                </div>
+            </div>
+            <p>
+                Một thiết kế đột phá như vậy sẽ cải thiện độ tin cậy của bàn phím, mang lại trải nghiệm đánh máy tốt hơn và có thể mở đường cho các nhà sản xuất keycap khác tung ra các keycaps thay thế. 
+                (Xem ảnh ở trên để so sánh các gốc bàn phím giữa K3 với bàn phím Roccat Vulcan 120 Aimo.) Bước đột phá về thiết kế này trên K3 cũng sẽ dẫn đến việc nâng cấp cho các bàn phím cấu hình thấp Keychron trong tương lai.
+            </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Màn hình cho chất lượng hiển thị tốt" class="object-contain" src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v3-9-thinkpro.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Keycaps được thiết kế hoàn toàn đột phá
+                </div>
+            </div>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Sở hữu layout 75% nhỏ gọn</h2>
+            <p>
+                Bàn phím sở hữu <strong>layout 75%</strong>. Đây là một trong những Layout được ưa chuộng nhất bởi thiết kế nhỏ gọn nhưng vẫn mang lại cảm giác quen thuộc và đủ các chức năng cho công việc và giải trí. 
+                Dù bạn để làm việc tại nhà, đi cà phê hay đi làm thì đây cũng là chiếc bàn phím phù hợp với bạn
+            </p>
+            <div class="viewer">
+                <div class="image-viewer">
+                    <img alt="Màn hình cho chất lượng hiển thị tốt" class="object-contain" src="https://images.thinkgroup.vn/unsafe/1600x900/filters:quality(100)/https://media-api-beta.thinkpro.vn/media/core/site-configs/2024/1/30/keychron-k3-v3-10-thinkpro.jpg">
+                </div>
+                <div class="mt-3 text-[16px] leading-[150%] text-center">                
+                    Bàn phím nhỏ gọn giúp dễ dàng di chuyển
+                </div>
+            </div>
+            <h2 class="text-[16px] font-semibold leading-[150%]">Sáng tạo với 15 chế độ Led RGB</h2>
+            <p>
+                Bàn phím có nhiều chế độ <strong>Led RGB</strong> đa dạng, bạn có thể sáng tạo nên không gian của riêng mình. 
+                Đi kèm với thiết kế keycap nổi với hơn 15 kiểu cài đặt đèn nền RGB cũng như tùy chọn đèn nền trắng tĩnh. 
+                Bạn cũng có thể điều chỉnh độ sáng bàn phím để đồng bộ với tâm trạng của mình. 
+                Nhiều mẫu đèn nền khác nhau có sẵn trên phiên bản K3 White Backlight. Đây là video để hiển thị một số cài đặt đèn nền RGB.
+            </p>
+            <p>
+                Keychron K3 V2 là sản phẩm sáng giá cho công việc và hoạt động giải trí hàng ngày. 
+                Sản phẩm này nhận được rất nhiều sự ưu ái từ khách hàng của <a class="text-[#0065EE] hover:text-[#3300CC]" href="#">Thinkpro</a>. 
+                Đặc biệt hiện nay chúng tôi cũng đang bày bán rất nhiều mẫu bàn phím chất lượng của Keychron như <a class="text-[#0065EE] hover:text-[#3300CC]" href="#">Keychron V1 Max</a>, <a class="text-[#0065EE] hover:text-[#3300CC]" href="#">Keychron K3 Pro</a>, <a class="text-[#0065EE] hover:text-[#3300CC]" href="#">Keychron Q3 Pro</a>,... 
+                Để mua hàng, bạn hãy click " Đặt hàng" hoặc gọi cho chúng tôi qua số hotline <a class="text-[#0065EE] hover:text-[#3300CC]" href="#">1900633579</a>.
+            </p>
+        `,
     },
     {
         id: 20103,

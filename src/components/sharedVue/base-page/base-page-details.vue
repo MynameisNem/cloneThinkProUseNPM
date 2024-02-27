@@ -1014,10 +1014,6 @@ export default {
         Swiper,
         SwiperSlide,
     },
-    // props: {
-    //     productId: Number,
-    //     productData: Object
-    // },
     data() {
         return {
             productId:  Number(this.$route.params.id),
@@ -1211,7 +1207,6 @@ export default {
             swiperTop.controller.control = swiperThumbs
             swiperThumbs.controller.control = swiperTop
         })
-        console.log("check prop from base page: ","props ID", this.productId,"props Data", this.productDataFilter)
     },
     computed: {        
         productDataFilter() {
