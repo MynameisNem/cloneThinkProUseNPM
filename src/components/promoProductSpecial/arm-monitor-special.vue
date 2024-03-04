@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import SectionPromoSpecial from '../mainPage/sectionPromoProductSpecial'
+import SectionPromoSpecial from '../mainPage/sectionPromoProductSpecial.vue'
 import { armmanhinhData } from '@/data-js/armmanhinh-data.js';
 export default {
     components: {

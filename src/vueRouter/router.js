@@ -46,18 +46,6 @@ const routes = [
         component: MainPage,
         key: 1
     },
-    // {
-    //     path: '/category/:slug',
-    //     name: 'catategory',
-    //     component: Category,
-    // },
-    // {    
-
-    // {
-    //     path: '/:category/:id',
-    //     name: 'detailsProduct',
-    //     component: test,
-    // },
     {
         path: '/Laptop',
         name: 'Laptop',

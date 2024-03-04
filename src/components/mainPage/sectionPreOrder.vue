@@ -21,7 +21,7 @@
                             class="cursor-pointer flex-shrink-0 h-full relative w-[293px]"
                             style="transition-property: transform; backface-visibility: hidden;">
                             <a class="rounded-xl cursor-pointer flex flex-col overflow-hidden relative ring-0 bg-[#FFFFFF]"
-                                href="">
+                                href="#">
                                 <div class="absolute top-4 left-4 z-[1] flex items-center space-x-1">
                                     <div class="flex flex-col items-start space-y-1">
                                         <div class="text-[#FFFFFF] bg-[#0065EE] rounded py-[2px] px-2 items-center cursor-pointer inline-flex text-xs whitespace-nowrap leading-[150%]">

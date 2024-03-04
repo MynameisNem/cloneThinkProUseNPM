@@ -9,8 +9,8 @@
                     :key="itemInforPromo.id"
                     class="cursor-pointer flex-shrink-0 h-full relative w-[288px]"
                     style="transition-property: transform;">
-                    <a class="rounded-xl cursor-pointer flex flex-col overflow-hidden relative ring-0 bg-[#FFFFFF]"
-                        href="#">
+                    <router-link class="rounded-xl cursor-pointer flex flex-col overflow-hidden relative ring-0 bg-[#FFFFFF]"
+                    :to="{ name: 'detailsProduct', params: {slug: itemInforPromo.slugPath , id: itemInforPromo.id} }">
                         <div
                             class="absolute top-4 left-4 z-[1] flex items-center space-x-1">
                         </div>
@@ -102,7 +102,7 @@
                                 </template>
                             </div>                            
                         </div>
-                    </a>
+                    </router-link>
                 </div>
             </div>
             <ButtonPrevPromoProductSpecial 
