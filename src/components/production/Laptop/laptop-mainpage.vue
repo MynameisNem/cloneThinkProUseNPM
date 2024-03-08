@@ -9,7 +9,8 @@
         <LaptopProductContainer></LaptopProductContainer>
     </main>
 </template>
-
+<!-- hleo 12312312313 -->
+<!-- đoàn tuấn khang nguyễn đức tùng -->
 <script>
 import LaptopProductContainer from './laptop-product-container.vue'
 import BasePage from '@/components/sharedVue/base-page/base-page.vue';
